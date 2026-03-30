@@ -3,423 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EkoMobile - О компании</title>
+    <title>Список HTML страниц</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/fonts/fonts.css">
 </head>
+<style>
+    body {
+        font-family: 'Manrope', sans-serif;
+        background-color: var(--light-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    h2 {
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 65px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #2C3E50;
+        margin-bottom: 40px;
+    }
+
+    .tabs-content {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tab-btn {
+        display: inline-block;
+        padding: 15px 30px;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        text-decoration: none;
+        border: 2px solid #2C3E50;
+        border-radius: 36px;
+        color: #2C3E50;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .tab-btn:hover {
+        background-color: #2C3E50;
+        color: white;
+    }
+</style>
 <body>
-<section class="about">
     <div class="container">
-        <div class="about-tabs">
-            <button class="tab-btn active" data-tab="brand">О бренде</button>
-            <button class="tab-btn" data-tab="history">История</button>
-            <button class="tab-btn" data-tab="contacts">Контакты</button>
-        </div>
-
-        <div class="tabs-content">
-            <div class="tab-content active" id="brand">
-                <div class="tab-inner-brand">
-                    <div class="brand-images">
-                        <div class="brand-image-left">
-                            <div class="brand-image__text">
-                                <p class="brand-image__text--title">
-                                    Если одна сеть
-                                    не работает — работает другая.
-                                </p>
-                                <p class="brand-image__text--subtitle">
-                                    Мы объединили сети операторов в единый сервис,
-                                    который просто держит связь в нужный момент.
-                                </p>
-                            </div>
-                            <img src="assets/images/about/brand-left.svg" alt="EkoMobile левое изображение">
-                        </div>
-                        <div class="brand-logo">
-                            <img src="assets/images/about/logo-ecomobail.svg" alt="EkoMobile логотип">
-                        </div>
-                        <div class="brand-image-right">
-
-                            <img src="assets/images/about/brand-right.png" alt="EkoMobile правое изображение">
-                        </div>
-                    </div>
-
-                    <div class="brand-cards-title">
-                        <h2>Экомобайл</h2>
-                        <p>Мы верим, что связь не должна быть обязательством.
-                            Поэтому объединяем сети всех операторов в один сервис — чтобы она просто работала, где бы вы
-                            ни находились.</p>
-                    </div>
-                    <div class="brand-cards">
-                        <div class="brand-card active" data-card="1">
-                            <div class="brand-card-header">
-                                <img class="brand-card-icon" src="assets/images/about/star.svg" alt="">
-                            </div>
-                            <div class="brand-card-content">
-                                <span class="brand-card-title">ЧТО МЫ ДЕЛАЕМ</span>
-                                <p>Объединяем сети операторов в один понятный сервис.</p>
-                            </div>
-                        </div>
-                        <div class="brand-card" data-card="2">
-                            <div class="brand-card-header">
-                                <img class="brand-card-icon" src="assets/images/about/star-blue.svg" alt="">
-                            </div>
-                            <div class="brand-card-content">
-                                <span class="brand-card-title">Зачем это нужно</span>
-                                <p>Чтобы связь не зависела от одного провайдера.</p>
-                            </div>
-                        </div>
-                        <div class="brand-card" data-card="3">
-                            <div class="brand-card-header">
-                                <img class="brand-card-icon" src="assets/images/about/star-blue.svg" alt="">
-                            </div>
-                            <div class="brand-card-content">
-                                <span class="brand-card-title">Что получает человек</span>
-                                <p>Связь, которая работает тогда, когда она действительно нужна.</p>
-                            </div>
-                        </div>
-                        <div class="brand-card" data-card="4">
-                            <div class="brand-card-header">
-                                <img class="brand-card-icon" src="assets/images/about/star-blue.svg" alt="">
-                            </div>
-                            <div class="brand-card-content">
-                                <span class="brand-card-title">Во что мы верим</span>
-                                <p>Связь должна быть надёжной по умолчанию, а не вопросом удачи.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-content" id="history">
-                <div class="tab-inner">
-                    <div class="history">
-
-                        <div class="timeline-wrapper">
-                            <div class="timeline" id="timeline"></div>
-                        </div>
-
-                        <div class="advantages">
-                            <div class="advantages-item blue">
-                                <p class="advantages-item-heading">
-                                    Связь давно стала базовой частью жизни, но по-прежнему зависит от одного оператора и случайных условий.
-                                </p>
-                                <p>
-                                    Мы увидели в этом не норму, а ограничение, которое можно убрать.
-                                </p>
-                            </div>
-                            <div class="advantages-item yellow">
-                                <p class="advantages-item-heading">
-                                    Вместо ещё одного оператора
-                                    мы объединили сети разных операторов в один сервис.
-                                </p>
-                                <p>
-                                    Без сложного выбора, лишних условий и привязки к одному варианту
-                                </p>
-                            </div>
-                            <div class="advantages-item green">
-                                <p class="advantages-item-heading">
-                                    Мы верим, что мобильная связь должна работать так же просто, как электричество или интернет дома — незаметно и надёжно.
-                                </p>
-                                <p>
-                                    И постепенно именно такой она и станет.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-content" id="contacts">
-                <div class="tab-inner">
-                    <div class="contacts-commands">
-                        <h3>Полезные команды</h3>
-
-                        <div class="commands-content">
-                            <div class="commands-block">
-                                <a class="btn btn-big btn-transparent"
-                                   href="mailto:info@ekomobile.ru">info@ekomobile.ru</a>
-
-                                <div class="commands-list">
-                                    <a href="tel:0522">0522</a>
-                                    <ul>
-                                        <li>
-                                            в сети билайн и Теле2 — бесплатно по РФ, кроме Республики Крым и г.
-                                            Севастополь 
-                                        </li>
-                                        <li>
-                                            в сети Мегафон и МТС — бесплатно по Москве и Московской области
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="commands-list">
-                                    <a href="tel:+74950110522">+7 495 011-05-22</a>
-                                    <ul>
-                                        <li>
-                                            доступен для звонков по всему миру
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <span class="contacts-links-title">Следите за новостями</span>
-
-                                <div class="contacts-links">
-                                    <a href="#">
-                                        <img src="assets/images/about/vk.svg" alt="">
-                                    </a>
-                                    <a href="#">
-                                        <img src="assets/images/about/tg.svg" alt="">
-                                    </a>
-                                    <a href="#">
-                                        <img src="assets/images/about/dzen.svg" alt="">
-                                    </a>
-                                    <a href="#">
-                                        <img src="assets/images/about/t.svg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="commands-block">
-                                <div class="technical-support">
-                                    <div class="technical-support-content">
-                                        <span class="technical-support-title">Техническая поддержка</span>
-                                        <span class="technical-support-text">Мы всегда на связи с тобой</span>
-                                        <span class="technical-support-list-title">Говорим на <b>2х языках</b>:</span>
-                                        <ul>
-                                            <li>
-                                                Русском
-                                            </li>
-                                            <li>
-                                                Узбекском
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a class="btn btn-big" href="#">Напиши нам в чате приложения</a>
-                                    <a class="link" href="tel:0522">или позвони по номеру 0522</a>
-                                </div>
-
-                                <div class="foreign">
-                <span class="contacts-links-title">Для иностранных граждан</span>
-
-                                    <a class="btn btn-big" href="mailto:welcome.ekomobile.ru">
-                                        welcome.ekomobile.ru
-
-                                        <div class="foreign-icons">
-                                            <span class="foreign-icon">ru</span>
-                                            <span class="foreign-icon">tg</span>
-                                            <span class="foreign-icon">uz</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="address">
-                           <h3>Центральный офис обслуживания клиентов</h3>     
-
-                           <div class="address-content">
-                                <div class="address-text">
-                                    <div class="address-text-item">
-                                        <span class="address-text-title">Адрес:</span>
-                                        <p>г. Москва, м. Павелецкая, ул Кожевническая , д 1, стр 1, 5 этаж, офис 515</p>
-                                    </div>
-                                    
-                                    <div class="address-text-item">
-                                        <span class="address-text-title">Пешком:</span>
-                                        <p>Первый вагон из центра, из метро — выход #3, далее к светофору, переходим через дорогу. У БЦ на Павелецкой проходим через шлагбаум. Затем идем налево мимо пункта выдачи ОЗОН до больших деревянных дверей с колоннами в БЦ на Павелецкой.</p>
-                                    </div>
-                                    
-                                    <div class="address-text-item">
-                                        <span class="address-text-title">Время работы:</span>
-                                        <p style="margin-bottom: 20px;">Ежедневно с 09:00 до 21:00</p>
-                                        <p>*Обратите внимание: приём клиентов осуществляется с 9:00 до 20:00.
-                                        Офис работает до 21:00, и в отдельных случаях мы сможем помочь и позже — если ситуация срочная или нет возможности обратиться раньше.</p>
-                                    </div>
-                                </div>
-
-                                <div class="map">
-                                    <img src="assets/images/map.png" alt="">
-                                </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="media">
-            <h3>сми</h3>
-
-            <div class="media-slider">
-
-                <div class="media-slide active">
-                    <img src="assets/images/media-slider/media-slide-1.svg" class="media-bg" alt="">
-                    <img src="assets/images/media-slider/media-slide-1-tablet.svg" class="media-bg-tablet" alt="">
-                    <img src="assets/images/media-slider/media-slide-1-mobile.svg" class="media-bg-mobile" alt="">
-
-                    <!--                    <div class="media-overlay"></div>-->
-
-                    <div class="media-logo">
-                        <img src="assets/images/media-slider/slide-logo.png" alt="">
-                    </div>
-
-                    <div class="media-content">
-                        <div class="media-date">26 Ноября. /CNEWS/.</div>
-                        <h2 class="media-title">
-                            Половина россиян хотят получать деньги назад за неиспользованный трафик
-                        </h2>
-                        <p class="media-text">
-                            Согласно опросу, проведенному агрегатором мобильной связи «Экомобайл», пользователи
-                            стремятся самостоятельно контролировать свои тарифы. Почти половина опрошенных (48%) хотели
-                            бы обменивать неиспользованные гигабайты на деньги, а 41% заявили о необходимости полного
-                            безлимита на все мобильные услуги.
-                        </p>
-                    </div>
-
-                    <a href="#" target="_blank" class="media-button">подробнее</a>
-                </div>
-                <div class="media-slide">
-                    <img src="assets/images/media-slider/media-slide-2.svg" class="media-bg" alt="">
-                    <img src="assets/images/media-slider/media-slide-1-tablet.svg" class="media-bg-tablet" alt="">
-                    <img src="assets/images/media-slider/media-slide-1-mobile.svg" class="media-bg-mobile" alt="">
-                    <!--                    <div class="media-overlay"></div>-->
-
-                    <div class="media-logo vilvet">
-                        <img src="assets/images/media-slider/slide-logo-2.png" alt="">
-                    </div>
-
-                    <div class="media-content">
-                        <div class="media-date">15 января. /ТАСС/.</div>
-                        <h2 class="media-title">
-                            Опрошенные россияне недовольны стоимостью мобильной связи
-                        </h2>
-                        <p class="media-text">
-                            Россияне считают главными раздражающими факторами в работе мобильных операторов навязывание
-                            дополнительных услуг, плохую связь и высокую стоимость. Об этом говорится
-                            в исследовании агрегатора услуг мобильной связи в России "Экомобайл", которое есть у ТАСС.
-                        </p>
-                    </div>
-
-                    <a href="#" target="_blank" class="media-button">подробнее</a>
-
-                </div>
-                <div class="media-slide">
-                    <img src="assets/images/media-slider/media-slide-3.svg" class="media-bg" alt="">
-                    <img src="assets/images/media-slider/media-slide-1-tablet.svg" class="media-bg-tablet" alt="">
-                    <img src="assets/images/media-slider/media-slide-1-mobile.svg" class="media-bg-mobile" alt="">
-                    <!--                    <div class="media-overlay"></div>-->
-
-                    <div class="media-logo">
-                        <img src="assets/images/media-slider/slide-logo.png" alt="">
-                    </div>
-
-                    <div class="media-content">
-                        <div class="media-date">10 января. /КОМПЬЮТЕРРА/.</div>
-                        <h2 class="media-title">
-                            Что такое агрегатор мобильной связи и зачем он нужен
-                        </h2>
-                        <p class="media-text">
-                            Агрегатор мобильной связи — это площадка, которая объединяет предложения разных операторов и
-                            позволяет пользователю выбрать подходящий тариф под свои задачи. По сути, это инструмент
-                            свободы выбора. Как работает модель и кому она выгодна, рассказывает основатель компании
-                            «Экомобайл» Игорь Жиленко.
-                        </p>
-                    </div>
-
-                    <a href="#" target="_blank" class="media-button">подробнее</a>
-
-                </div>
-
-                <div class="media-dots"></div>
-
-                <img class="media-arrow" src="assets/images/media-slider/media-arrow.svg" alt="">
-
-            </div>
-        </div>
-
-        <div class="posts-blocks">
-            <div class="news">
-                <img src="assets/images/about/news.svg" alt="">
-                <img class="tablet-img" src="assets/images/about/news-tablet.svg" alt="">
-                <img class="mobile-img" src="assets/images/about/news-mobile.svg" alt="">
-             
-                    <a class="button-all" href="#" target="_blank">новости</a>
-            
-               
-                <div class="posts-content">
-                    <a href="#" target="_blank" class="post-link"><span class="post-link-text">Обновление мобильного приложения</span></a>
-                    <a href="#" target="_blank" class="post-link"><span class="post-link-text">Изменения на ряде тарифных планов</span></a>
-                    <a href="#" target="_blank" class="post-link"><span class="post-link-text">Недоступность мессенджеров</span></a>
-                    <a href="#" target="_blank" class="post-link"><span class="post-link-text">Недоступность мессенджеров</span></a>
-                </div>
-            </div>
-
-            <div class="articles">
-                <img src="assets/images/about/articles.svg" alt="">
-                <img class="tablet-img" src="assets/images/about/articles-tablet.svg" alt="">
-                <img class="mobile-img" src="assets/images/about/article-mobile.svg" alt="">
-            
-                    <a class="button-all" href="#" target="_blank">статьи</a>
-              
-                
-                <div class="posts-content">
-                    <a href="#" target="_blank" class="post-link"><span class="post-link-text">Что происходит с мобильным интернетом? Объясняем спокойно.</span></a>
-                    <a href="#" target="_blank" class="post-link"><span
-                            class="post-link-text">Почему меняются тарифы?</span></a>
-                    <a href="#" target="_blank" class="post-link"><span class="post-link-text">Почему важно перезагружать телефон: советы от компании Экомобайл</span></a>
-                    <a href="#" target="_blank" class="post-link"><span
-                            class="post-link-text">4G — новая скорость!</span></a>
-                </div>
-            </div>
-        </div>
+        <h2>Доступные страницы</h2>
+        <ul class="tabs-content">
+            <li style="margin-bottom: 10px;"><a target="_blank" class="tab-btn btn-transparent" href="about.html">О компании</a></li>
+        </ul>
     </div>
-</section>
-
-<script src="assets/js/slider.js"></script>
-<script src="assets/js/timeline.js"></script>
-<script>
-
-    
-    const advantages = document.querySelector('.advantages');
-const items = document.querySelectorAll('.advantages-item');
-
-let currentIndex = 0;
-
-items[0].classList.add('active');
-
-advantages.addEventListener('click', function () {
-    if (window.innerWidth > 768) {
-        advantages.classList.toggle('active');
-    };
-
-    items.forEach(item => item.classList.remove('active'));
-
-    currentIndex = (currentIndex + 1) % items.length;
-    items[currentIndex].classList.add('active');
-});
-
-
-    document.querySelectorAll('.tab-btn').forEach(button => {
-        button.addEventListener('click', function () {
-            const tabId = this.getAttribute('data-tab');
-
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-
-            this.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
-        });
-    });
-
-    document.querySelectorAll('.brand-card').forEach(card => {
-        card.addEventListener('click', function () {
-            const cardId = this.getAttribute('data-card');
-
-            document.querySelectorAll('.brand-card').forEach(c => c.classList.remove('active'));
-
-            this.classList.add('active');
-        });
-    });
-
-
-</script>
 </body>
 </html>
