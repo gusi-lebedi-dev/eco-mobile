@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EkoMobile - FAQ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <style>
+       .faq {
+            padding: 200px 0 80px;
+       }     
+
+       .faq h2 {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 34px;
+            line-height: 46px;
+            text-align: center;
+            color: #2C3E50;
+            margin-bottom: 36px;
+            text-transform: none;
+        }
+
+        .search-container {
+            max-width: 818px;
+            margin: 0 auto;
+            margin-bottom: 75px;
+        }
+
+        .search-input {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 16px;
+            height: 42px;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid #2C3E50;
+            border-radius: 20px;
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            color: rgba(44, 62, 80, 0.5);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #2C3E50;
+            color: rgba(44, 62, 80, 1);
+        }
+        
+        .faq-grid-title {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 34px;
+            line-height: 46px;
+            color: #2C3E50;
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .faq-card {
+            background: url(assets/images/faq/faq-bg.svg) no-repeat;
+            border-radius: 36px;
+            padding: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 397px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .arrow-faq {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-2%);
+            width: 55px;
+            height: 55px;
+        }
+
+        .faq-card:hover  .arrow-faq {
+            animation: faqFlipRightToLeft 1s linear forwards;
+        }
+
+        @keyframes faqFlipRightToLeft {
+            0% {
+                transform: translateX(0) translateY(-2%);
+                opacity: 1;
+            }
+            40% {
+                transform: translateX(30px) translateY(-2%);
+                opacity: 0;
+            }
+            60% {
+                transform: translateX(-30px) translateY(-2%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0) translateY(-2%);
+                opacity: 1;
+            }
+        }
+
+        .faq-card-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .faq-card h4 {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 34px;
+            line-height: 46px;
+            color: #2C3E50;
+        }
+
+        .faq-card p {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            color: #2C3E50;
+            max-width: 290px;
+        }
+
+        .faq-two-block {
+            margin-bottom: 80px;
+        }
+
+        .faq-two-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .faq-two-block,
+        .faq-two-block-container {
+            display: flex;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .faq-card.chat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            background: #2C3E50;
+            border-radius: 36px;
+            align-self: stretch;
+            padding: 52px 75px;
+        }
+
+        .chat-text h4 {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 34px;
+            line-height: 46px;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .chat-text p {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .faq-card.chat a {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0 24px;
+            gap: 8px;
+            background: #DEE4EE;
+            border-radius: 20px;
+            max-width: max-content;
+            height: 49px;
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            color: #2C3E50;
+            text-decoration: none;
+        }
+
+        .faq-card.chat a:hover {
+            border: 2px solid rgba(225, 250, 63, 1);
+        }
+
+        .fast-commands {
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+        }
+        
+        .fast-commands .faq-grid-title {
+            margin-bottom: 0;
+        }
+
+        .fast-commands-container {
+            display: flex;
+            justify-content: center;
+            gap: 92px;
+        }
+
+        .fast-commands-item {
+            flex-direction: column;
+            display: flex;
+            gap: 20px;
+            max-width: max-content;
+        }
+
+        .fast-commands-item:last-child {
+            max-width: 220px;
+        }
+
+        .fast-commands-item-title {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 33px;
+            color: #2C3E50;
+        }
+
+
+        .fast-commands-item p {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            color: #2C3E50;
+    
+            max-width: 320px;
+        }
+
+        .faq-full-info,
+        .faq-full-info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .faq-full-info .faq-grid-title {
+            margin-bottom: 0;
+        }
+
+        .faq-full-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            max-width: 856px;
+            width: 100%;
+        }
+
+        .faq-full-info-item .faq-full-info-title {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 33px;
+            color: #2C3E50;
+        }
+
+        .faq-full-info-item  p a {
+        color: #F0EFEE;
+        }
+
+        .faq-full-info-item  p a:hover  {
+            color: #2C3E50;
+        }
+
+        .faq-full-info-item p {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            color: #2C3E50;
+        }
+
+        .faq-full-info-item p b {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: #2C3E50;
+        }
+
+        .faq-full-info-container {
+            display: flex;
+            gap: 80px;
+            justify-content: space-between;
+        }
+
+        .faq-full-info-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+        }
+
+        .faq-full-info-link {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 25px;
+            color: #2C3E50;
+        }
+
+        .faq-full-info-list-title {
+            margin-bottom: -24px;
+        }
+
+        .faq-full-info-item ol {
+            margin-top: 24px;
+        }
+
+        .faq-full-info-item ol,
+        .faq-full-info-item ul {
+            padding-left: 20px;
+        }
+
+        .faq-full-info-item ol li,
+        .faq-full-info-item ul li {
+            font-family: 'Manrope', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            color: #2C3E50;
+        }
+
+        .faq-full-info-item ol li::marker,
+        .faq-full-info-item ul li::marker {
+            font-size: 12px;
+        }
+
+
+
+
+
+        @media (max-width: 1300px) {
+            .faq-grid {
+                gap: 20px;
+            }
+
+            .faq-card.chat a {
+                    padding: 0 15px;
+            }
+
+            .faq-card {
+                background: url(assets/images/faq/faq-bg-tablet.svg) no-repeat;
+                width: 262px;
+                height: 232px;
+                padding: 30px 20px;
+                margin: 0 auto;
+            }
+
+            .arrow-faq {
+                transform: translateY(-24%);
+            }
+
+            .faq-card h4 {
+                font-size: 24px;
+                line-height: 100%;
+            }
+
+            .faq-card p {
+                font-size: 12px;
+            }
+
+            .faq-card.chat {
+                padding: 50px 45px;
+            }
+
+            @keyframes faqFlipRightToLeft {
+            0% {
+                transform: translateX(0) translateY(-24%);
+                opacity: 1;
+            }
+            40% {
+                transform: translateX(30px) translateY(-24%);
+                opacity: 0;
+            }
+            60% {
+                transform: translateX(-30px) translateY(-24%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0) translateY(-24%);
+                opacity: 1;
+            }
+        }
+        }
+    
+
+        @media (max-width: 1076px) {
+            .fast-commands-container {
+                gap: 40px;
+            }
+
+            .faq-grid-title {
+                margin-bottom: 24px;
+            }
+
+             .faq-card.chat a {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+
+            .search-input {
+                max-width: 390px;
+                margin: 0 auto 50px;
+            }
+             
+        }
+
+        
+        @media screen and (max-width: 970px) {
+            .faq-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .faq-card p {
+                max-width: 160px;
+            }
+
+            .faq-two-block {
+                flex-direction: column;
+            }    
+
+            .faq-card.chat {
+                gap: 50px;
+                max-width: 610px;
+            }
+        }
+
+        @media (max-width: 768px) {
+           
+            .fast-commands-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+            }
+
+            .faq-grid-title {
+                font-size: 24px;
+            }
+
+            .fast-commands-item,
+            .fast-commands {
+                align-items: center;
+            }
+
+            .fast-commands-item p {
+                text-align: center;
+            }
+
+            .fast-commands {
+                gap: 50px;
+            }
+
+             .faq-grid-title {
+                margin: 0 auto 24px;
+                width: max-content;
+            }
+
+            .faq-full-info-container {
+                flex-direction: column;
+            }
+
+            .faq-full-info-item .faq-full-info-title {
+                font-size: 18px;
+                line-height: 100%;
+            }
+
+            .faq-full-info-item p b,
+            .faq-full-info-item ol li, .faq-full-info-item ul li,
+            .faq-full-info-item p {
+                font-size: 12px;
+                line-height: 100%;
+            }
+        }
+
+        @media (max-width: 620px) {
+             .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .faq-two-block-container {
+                flex-direction: column;
+            }
+
+            .faq-card.chat {
+                max-width: 262px;
+            }
+
+            .search-input {
+                margin: 0 auto 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+<section class="faq">
+    <div class="container">
+        <h2>Тут можно спросить</h2>
+        <div class="search-container">
+            <input type="text" placeholder="найти" class="search-input">
+        </div>
+
+        <h3 class="faq-grid-title main-title">Про мобильную связь</h3>
+
+        <div class="faq-grid">
+<div class="faq-card" data-category="tarif">
+                <h4>Тарифы</h4>
+                <div class="faq-card-text">
+                    <p>Как узнать, какой у меня тариф?</p>
+                    <p>Как часто можно менять тарифный план?</p>
+                </div>
+           
+                 <img class="arrow-faq" src="assets/images/publications/arrow-plans.svg" alt="" srcset="">   
+            </div>
+<div class="faq-card" data-category="svyaz">
+                <h4>Связь и услуги</h4>
+                <div class="faq-card-text">
+                    <p>Что делать, если случайно отключил нужную услугу?</p>
+                </div>
+                <img class="arrow-faq" src="assets/images/publications/arrow-plans.svg" alt="" srcset="">
+            </div>
+<div class="faq-card" data-category="perenos">
+                <h4>Перенос номера</h4>
+                 <div class="faq-card-text">
+                    <p>Как перенести номер на другого оператора?</p>
+                </div>
+                <img class="arrow-faq" src="assets/images/publications/arrow-plans.svg" alt="" srcset="">
+            </div>
+<div class="faq-card" data-category="platezhi">
+                <h4>Платежи и финансы</h4>
+                <div class="faq-card-text">
+                    <p>Как узнать баланс?</p>
+                    <p>Где посмотреть историю расходов?</p>
+                </div>
+                <img class="arrow-faq" src="assets/images/publications/arrow-plans.svg" alt="" srcset="">
+            </div>
+<div class="faq-card" data-category="mezhdunarod">
+                <h4>Международная связь</h4>
+                <div class="faq-card-text">
+                    <p>Как подключить роуминг?</p>
+                    <p>Как узнать стоимость связи за границей?</p>
+                </div>
+                <img class="arrow-faq" src="assets/images/publications/arrow-plans.svg" alt="" srcset="">
+            </div>
+<div class="faq-card" data-category="rashody">
+                <h4>Расходы и управление услугами</h4>
+                 <div class="faq-card-text">
+                    <p>Как отключить ненужные услуги?</p>
+                    <p>Как получить детализацию?</p>
+                </div>
+                <img class="arrow-faq" src="assets/images/publications/arrow-plans.svg" alt="" srcset="">
+            </div>
+        </div>
+
+        <div class="faq-two-block">
+            <div class="faq-two-container">
+                <h3 class="faq-grid-title">Интернет и настройки</h3>
+                <div class="faq-two-block-container">
+<div class="faq-card" data-category="bezopasnost">
+                        <h4>Безопасность и защита данных</h4>
+                        <div class="faq-card-text">
+                            <p>Как защитить номер от мошенников?</p>
+                            <p>Что делать, если телефон потерялся или его украли?</p>
+                        </div>
+                
+                        <img class="arrow-faq" src="assets/images/publications/arrow-plans.svg" alt="" srcset="">   
+                    </div>
+<div class="faq-card" data-category="nastrojki">
+                        <h4>Помощь по настройкам устройств</h4>
+                                       
+                        <img class="arrow-faq" src="assets/images/publications/arrow-plans.svg" alt="" srcset="">   
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-card chat">
+                <div class="chat-text">
+                    <h4>Техподдержка</h4>
+                    <p>В чате в приложения</p>
+                    <p>Без ботов</p>
+                </div>
+                <a href="#">Перейти в чат</a>
+            </div>
+        </div>
+
+        <div class="fast-commands">
+            <h3 class="faq-grid-title">Удобные быстрые команды</h3>
+
+            <div class="fast-commands-container">
+                <div class="fast-commands-item">
+                    <span class="fast-commands-item-title">*132*001#✆</span>
+                    <p>
+                        (доступно только в сети билайн) <br>
+                        Запрос SMS с балансом
+                    </p>
+                </div>
+                
+                <div class="fast-commands-item">
+                    <span class="fast-commands-item-title">*132*002#✆</span>
+                    <p>
+                       Позволяет узнать свой номер телефона и получить краткое описание действующего тарифного плана
+                    </p>
+                </div>
+                
+                <div class="fast-commands-item">
+                    <span class="fast-commands-item-title">*132*003#✆</span>
+                    <p>
+                       Запрос остатка минут/ sms/ интернета по тарифному плану
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-full-info" data-faq="tarif">
+            <h3 class="faq-grid-title">Тарифы</h3>
+
+            <div class="faq-full-info-container">
+                <div class="faq-full-info-list">
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как часто можно менять тарифный план?</span>
+                        <p>
+                            Один раз в 30 дней — бесплатно. <br>
+                            Если с последней смены прошло меньше, переключение будет платным — 200 ₽.
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как отключить или активировать дополнительные опции?</span>
+                        <p>
+                            Через мобильное приложение в разделе «услуги», через службу поддержки по номеру 0522 / 495-011-05-22, личный кабинет в разделе «мои услуги». Доступность функций зависит от текущего тарифного плана.
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как проверить наполнение действующего тарифного плана?</span>
+                        <p>
+                            Остатки по пакетам услуг доступны в мобильном приложении (на главном экране), личном кабинете в разделе «остатки пакетов», или через USSD-команду *132*003#✆
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как узнать, какой у меня тариф?</span>
+                        <p>
+                            В приложении или Личном кабинете — на главной странице указан текущий тариф и его параметры.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-full-info-links">
+                     <a class="faq-full-info-link" href="#">Тарифы</a>   
+                    <a class="faq-full-info-link" href="#">Связь и услуги</a>   
+                    <a class="faq-full-info-link" href="#">Перенос номера</a>   
+                    <a class="faq-full-info-link" href="#">Платежи и финансы</a>   
+                    <a class="faq-full-info-link" href="#">Международная связь</a>   
+                    <a class="faq-full-info-link" href="#">Расходы и управление услугами</a>   
+                    <a class="faq-full-info-link" href="#">Безопасность и защита данных</a>   
+                    <a class="faq-full-info-link" href="#">Помощь по настройкам устройств</a>   
+                    <a class="faq-full-info-link" href="#">Техподдержка</a>   
+                </div>
+            </div>
+        
+        </div>
+        <div class="faq-full-info" data-faq="svyaz">
+            <h3 class="faq-grid-title">Связь и услуги</h3>
+
+            <div class="faq-full-info-container">
+                <div class="faq-full-info-list">
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Почему у меня плохой сигнал в некоторых местах?</span>
+                        <p>
+                            Связь зависит от покрытия, плотности застройки и помех, загруженности сети и других факторов.
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как проверить покрытие сети по моему местоположению?</span>
+                        <p>
+                            Карта покрытий сети доступна на официальном сайте оператора сотовой связи. Она отображает зону действия оператора связи и может использоваться для предварительной оценки качества покрытия сети.
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Что делать, если я не могу позвонить или отправить SMS?</span>
+                        <p class="faq-full-info-list-title">При возникновении проблем с вызовами или отправкой сообщений рекомендуется:</p>
+                        <ul>
+                            <li>Проверить наличие достаточного баланса и остатков трафика;</li>
+                            <li>Убедиться в наличии подключение к сети;</li>
+                            <li>Перезагрузить устройство;</li>
+                            <li>Обратиться в службу технической поддержки для решения возникшего вопроса.</li>
+                        </ul>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Что делать, если случайно отключил нужную услугу?</span>
+                        <p>
+                            Можно подключить снова — в приложении в разделе «услуги», или в личном кабинете в разделе «мои услуги». Никакой паники.
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как настроить переадресацию звонков?</span>
+                        <p>
+                            Включить или отключить можно в настройках телефона, либо через службу поддержки по тел. 0522 / 495-011-05-22.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-full-info-links">
+                     <a class="faq-full-info-link" href="#">Тарифы</a>   
+                    <a class="faq-full-info-link" href="#">Связь и услуги</a>   
+                    <a class="faq-full-info-link" href="#">Перенос номера</a>   
+                    <a class="faq-full-info-link" href="#">Платежи и финансы</a>   
+                    <a class="faq-full-info-link" href="#">Международная связь</a>   
+                    <a class="faq-full-info-link" href="#">Расходы и управление услугами</a>   
+                    <a class="faq-full-info-link" href="#">Безопасность и защита данных</a>   
+                    <a class="faq-full-info-link" href="#">Помощь по настройкам устройств</a>   
+                    <a class="faq-full-info-link" href="#">Техподдержка</a>   
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="faq-full-info" data-faq="perenos">
+            <h3 class="faq-grid-title">Перенос номера</h3>
+
+            <div class="faq-full-info-container">
+                <div class="faq-full-info-list">
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как перенести номер на другому оператору?</span>
+                        <p>
+                            Перенос номера осуществляется через заявку в службу поддержки.
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Сколько это занимает по времени?</span>
+                        <p>
+                          Через 28 дней с момента принятия заявки в работу. Точная дата поступит в виде СМС
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Какие документы нужны?</span>
+                        <p class="faq-full-info-list-title">Паспорт, заявление на перенос номера, договор. Все можно заполнить в офисе нашей компании, либо дистанционно.</p>
+                        
+                    </div>
+                </div>
+
+                <div class="faq-full-info-links">
+                     <a class="faq-full-info-link" href="#">Тарифы</a>   
+                    <a class="faq-full-info-link" href="#">Связь и услуги</a>   
+                    <a class="faq-full-info-link" href="#">Перенос номера</a>   
+                    <a class="faq-full-info-link" href="#">Платежи и финансы</a>   
+                    <a class="faq-full-info-link" href="#">Международная связь</a>   
+                    <a class="faq-full-info-link" href="#">Расходы и управление услугами</a>   
+                    <a class="faq-full-info-link" href="#">Безопасность и защита данных</a>   
+                    <a class="faq-full-info-link" href="#">Помощь по настройкам устройств</a>   
+                    <a class="faq-full-info-link" href="#">Техподдержка</a>   
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="faq-full-info" data-faq="platezhi">
+            <h3 class="faq-grid-title">Платежи и финансы</h3>
+
+            <div class="faq-full-info-container">
+                <div class="faq-full-info-list">
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как узнать баланс?</span>
+                        <p>
+                            Всё просто: Баланс можно проверить в мобильном приложении на главном экране, личном кабинете на главном экране, через USSD-команду *132*001#✆ (доступно только в сети билайн).
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как получить чек или квитанцию?</span>
+                        <p>
+                            Если оплата производилась через кнопку «Экомобайл», чек отображается в мобильном приложении. <br>
+                            При использовании кнопки оператора связи ссылка на чек направляется по SMS. 
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Где посмотреть историю расходов?</span>
+                        <p class="faq-full-info-list-title">В приложении в разделе «финансы» — «расходы» или ЛК в разделе «история финансовых операций» — за день, месяц или весь прошлый год.</p>
+                        
+                    </div>
+                </div>
+
+                <div class="faq-full-info-links">
+                     <a class="faq-full-info-link" href="#">Тарифы</a>   
+                    <a class="faq-full-info-link" href="#">Связь и услуги</a>   
+                    <a class="faq-full-info-link" href="#">Перенос номера</a>   
+                    <a class="faq-full-info-link" href="#">Платежи и финансы</a>   
+                    <a class="faq-full-info-link" href="#">Международная связь</a>   
+                    <a class="faq-full-info-link" href="#">Расходы и управление услугами</a>   
+                    <a class="faq-full-info-link" href="#">Безопасность и защита данных</a>   
+                    <a class="faq-full-info-link" href="#">Помощь по настройкам устройств</a>   
+                    <a class="faq-full-info-link" href="#">Техподдержка</a>   
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="faq-full-info" data-faq="mezhdunarod">
+            <h3 class="faq-grid-title">Международная связь</h3>
+
+            <div class="faq-full-info-container">
+                <div class="faq-full-info-list">
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как подключить роуминг?</span>
+                        <p>
+                            Роуминг и опции для выгодный связи подключается запросу в службу поддержки номеру 0522 / 495-011-05-22 или через чат в приложении в разделе «справка и поддержка», онлайн чат на сайте ekomobile.ru, по электронной почте <a href="mailto:info@ekomobile.ru">info@ekomobile.ru</a> Подключение опций происходит от нескольких минут до 1 часа.
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как узнать стоимость связи за границей?</span>
+                        <p>
+                          Тарифы на международный роуминг получить по запросу в службу поддержки по номеру <a href="tel:0522">0522</a> / <a href="tel:495-011-05-22">495-011-05-22</a> или через чат в приложении в разделе «справка и поддержка», онлайн чат на сайте <a href="mailto:ekomobile.ru">ekomobile.ru</a>, по электронной почте <a href="mailto:info@ekomobile.ru">info@ekomobile.ru</a>.
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как избежать неожиданных расходов?</span>
+                        <p class="faq-full-info-list-title">
+                          Чтобы избежать непредвиденных расходов, рекомендуется отключить автоматическое обновление приложений в настройках своего телефона и заранее ознакомиться с условиями тарифа в планируемом регионе использования. При необходимости наши специалисты всегда помогут разобраться с условиями подключения скидочных опций в чате приложения.
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <div class="faq-full-info-links">
+                     <a class="faq-full-info-link" href="#">Тарифы</a>   
+                    <a class="faq-full-info-link" href="#">Связь и услуги</a>   
+                    <a class="faq-full-info-link" href="#">Перенос номера</a>   
+                    <a class="faq-full-info-link" href="#">Платежи и финансы</a>   
+                    <a class="faq-full-info-link" href="#">Международная связь</a>   
+                    <a class="faq-full-info-link" href="#">Расходы и управление услугами</a>   
+                    <a class="faq-full-info-link" href="#">Безопасность и защита данных</a>   
+                    <a class="faq-full-info-link" href="#">Помощь по настройкам устройств</a>   
+                    <a class="faq-full-info-link" href="#">Техподдержка</a>   
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="faq-full-info" data-faq="rashody">
+            <h3 class="faq-grid-title">Расходы и управление услугами</h3>
+
+            <div class="faq-full-info-container">
+                <div class="faq-full-info-list">
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как добавить несколько номеров в один аккаунт?</span>
+                        <p>
+                            Можно объединить номера в группу через службу поддержки по номеру <a href="tel:0522">0522</a> / <a href="tel:495-011-05-22">495-011-05-22</a>. Один вход — все номера под рукой.
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Можно ли видеть расходы по каждому номеру отдельно?</span>
+                        <p>
+                          Да, для каждого номера — своя история платежей и расходов. Для просмотра в приложении переходим в раздел «финансы» — «расходы». В личном кабинете переходим в раздел «история финансовых операций»
+                        </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как отключить ненужные услуги?</span>
+                        <p class="faq-full-info-list-title">
+                        В пару кликов через приложение в разделе «услуги» или обратись в чат.
+                        </p>
+                    
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как получить детализацию?</span>
+                        <p class="faq-full-info-list-title">
+                        Детализацию можно запросить в мобильном приложении на главном экране, личном кабинете в разделе «детализация».
+                        </p>
+                    
+                    </div>
+                      <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как читать детализированный отчет по номеру?</span>
+                        <p class="faq-full-info-list-title">
+                        Отчет поступит в виде файла в формате excel, который можно открыть с помощью программы Microsoft Office или бесплатного аналога (например, Apache Open Office) <br>
+                        Для удобства чтения рекомендуется включить фильтр по столбцам.
+                        </p>
+                           
+                        <ol>
+                            <li>Выделите все столбцы в таблице отчета.</li>
+                            <li>На панели инструментов выберите «Сортировка и фильтр»</li>
+                            <li>В выпадающем меню выберите «Фильтр»</li>
+                        </ol>
+
+                        <p>
+                            Файл содержит следующие поля:
+                        </p>
+
+                        <p><b>Номер телефона</b> — абонентский номер, по которому сформирован детализированный отчет.</p>
+                        
+                        <p><b>Дата звонка</b> — дата, когда был совершен звонок, отправлено sms или совершен выход в интернет</p>
+                        <p><b>Время звонка</b> — время, когда был совершен звонок, отправлено sms или совершен выход в интернет.</p>
+                        <p><b>Продолжительность звонка</b> — фактическая продолжительность звонка без учета поминутного округления.</p>
+                        <p><b>Продолжительность звонка с округлением</b> — продолжительность звонка (минуты) с учетом поминутного округления. В случае с интернет-сессиями указывается объем потребленного трафика (мегабайты) с учетом округления.</p>
+                        <p><b>Стоимость звонка</b> — стоимость совершенного звонка, отправленного sms или выхода в интернет (с учетом НДС).</p>
+                        <p><b>Исходящий номер</b> — абонентский номер, который инициировал звонок или отправку sms. В случае с интернет-сессиями указывается ip-адрес.</p>
+                        <p><b>Входящий номер</b> — абонентский номер, который принял звонок или получил sms. В случае с интернет-сессиями указывается ip-адрес.</p>
+                        <p><b>Тип звонка</b> — указывает на тип связи. Может быть «Исходящий» (звонок или sms), «Входящий» (звонок или sms), «Услуга» (мобильный интернет). Мобильный интернет не разделяется на «Исходящий» и «Входящий», так как в одной строке указывается информация как о переданном, так и о полученном трафике в рамках одной интернет-сессии.</p>
+                        <p><b>Тип соединения</b> — указывается тип соединения, которое использовалось для оказания услуги связи.</p>
+                        <p><b>Описание звонка</b> — лаконичное описание звонка. Приставка (РЕГ) означает что услуга связи была оказана, при нахождении в другом регионе России, за пределами домашнего.</p>
+                        <p><b>Местонахождение абонента</b> — указывается в какой тарифной зоне находился абонент, на момент совершения звонка, отправки sms или совершения выхода в интернет.</p>
+                        <p><b>Направление вызова</b> — указывается в каком направлении был совершен вызов. Может сочетать в себе название региона/страны и название сотового оператора.</p>
+                        <p><b>№ базовой станции</b> — номер базовой станции, через которую была оказана услуга связи.</p>
+                        <p><b>Объем МБ</b> — фактически объем потребленного трафика в рамках текущей интернет-сессии без учета округления.</p>
+                        <p><b>Роуминговая сеть</b> — указывается название сети, в которой была оказана услуга, только в том случае, если услуга оказывалась за пределами домашнего региона. Если услуга была оказана в домашнем регионе — поле остается пустым.</p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Можно ли перейти на тарифный план Экомобайл со своим номером? Что для этого нужно?</span>
+                        <p>
+                            Подключиться к тарифным планам «Экомобайл» со своим номером можно! Для этого необходимо перейти на страницу “Перейти со своим номером” и оставить заявку
+                        </p>
+                        <p>
+                            Перед этим, необходимо убедиться в отсутствии задолженности на номере перед оператором «Билайн» Процедура перехода бесплатная и занимает всего несколько часов. Если текущий номер находится в сети другого оператора (МТС, МегаФон, Теле2), тогда изначально потребуется обратиться в офис Билайн для портации номера в Билайн (процедура занимает 8 дней). Уже на 9 день можно перевести номер в «Экомобайл».
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-full-info-links">
+                     <a class="faq-full-info-link" href="#">Тарифы</a>   
+                    <a class="faq-full-info-link" href="#">Связь и услуги</a>   
+                    <a class="faq-full-info-link" href="#">Перенос номера</a>   
+                    <a class="faq-full-info-link" href="#">Платежи и финансы</a>   
+                    <a class="faq-full-info-link" href="#">Международная связь</a>   
+                    <a class="faq-full-info-link" href="#">Расходы и управление услугами</a>   
+                    <a class="faq-full-info-link" href="#">Безопасность и защита данных</a>   
+                    <a class="faq-full-info-link" href="#">Помощь по настройкам устройств</a>   
+                    <a class="faq-full-info-link" href="#">Техподдержка</a>   
+                </div>
+            </div>
+        
+        </div>
+        <div class="faq-full-info" data-faq="bezopasnost">
+            <h3 class="faq-grid-title">Безопасность и защита данных</h3>
+
+            <div class="faq-full-info-container">
+                <div class="faq-full-info-list">
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Как защитить номер от мошенников?</span>
+                        <p>
+                       Не передавайте коды, включите двухфакторную защиту (пароль + отпечаток пальца, Приложения-генератор кодов, SMS-код и т. д.), используйте надёжные пароли и будьте внимательны к подозрительным звонкам.
+                     </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Что делать, если телефон потерялся или его украли?</span>
+                        <p>
+                       Необходимо обратиться в службу поддержки по тел. 0522 / 495-011-05-22 мы заблокируем услуги связи и проконсультируем о дальнейших действиях по восстановлению доступа к номеру.
+                     </p>
+                    </div>
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Можно ли временно заблокировать SIM-карту?</span>
+                        <p class="faq-full-info-list-title">
+                        SIM-карту можно временно заблокировать через мобильное приложение в разделе «услуги» — «добровольная блокировка». Для разблокировки можно так же использовать мобильное приложение.
+                    </p>
+                        
+                    </div>
+                </div>
+
+                <div class="faq-full-info-links">
+                     <a class="faq-full-info-link" href="#">Тарифы</a>   
+                    <a class="faq-full-info-link" href="#">Связь и услуги</a>   
+                    <a class="faq-full-info-link" href="#">Перенос номера</a>   
+                    <a class="faq-full-info-link" href="#">Платежи и финансы</a>   
+                    <a class="faq-full-info-link" href="#">Международная связь</a>   
+                    <a class="faq-full-info-link" href="#">Расходы и управление услугами</a>   
+                    <a class="faq-full-info-link" href="#">Безопасность и защита данных</a>   
+                    <a class="faq-full-info-link" href="#">Помощь по настройкам устройств</a>   
+                    <a class="faq-full-info-link" href="#">Техподдержка</a>   
+                </div>
+            </div>
+        
+        </div>
+
+         <div class="faq-full-info" data-faq="nastrojki">
+            <h3 class="faq-grid-title">Помощь по настройкам устройств</h3>
+
+            <div class="faq-full-info-container">
+                <div class="faq-full-info-list">
+                    <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">ANDROID</span>
+                        <p>
+                           Шаг 1. <br>     
+На главном экране проводим пальцем сверху вниз, открываем шторку, затем по шторке проводим сверху вниз, что бы открыть больше настроек, и нажимаем на «шестерёнку».
+                        </p>
+                        <p>
+                            Шаг 2. <br>
+В настройках сверху в поиске пишем «Сеть» и выбираем пункт сеть и переходим в нужный профиль SIM карты
+                        </p>
+                        <p>
+                            Шаг 3. <br>
+Ищем на странице параметр «Точки доступа»
+                        </p>
+                        <p>
+                            Шаг 4. <br>
+Нажимаем на «плюсик».
+                        </p>
+
+                        <p>
+                            Шаг 5.
+Прописываем необходимые настройки, затем нажимаем на «три точки» и сохраняем настройки
+                        </p>
+                    </div>
+                     <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">IPHONE</span>
+                        <p>
+                           Шаг 1. <br>
+Для того, чтобы настроить подключение Iphone к Интернету, перейдите в раздел «Настройки».
+                        </p>
+                        <p>
+                            Шаг 2. <br>
+Заходим в «настройки» — «сотовая связь».
+                        </p>
+                        <p>
+Шаг 3. <br>
+Выбираем необходимый номер телефона
+                        </p>
+                        <p>
+                            Шаг 4. <br>
+Выбираем «Сотовая сеть передачи данных».
+                        </p>
+                        <p>
+                            Шаг 5. <br>
+Прописываем необходимые настройки во всех полях
+                        </p>
+                    </div>
+                     <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">IPAD</span>
+                        <p>
+                           Шаг 1. <br>
+                           Для того, чтобы настроить подключение iPad к Интернету, перейдите в раздел Настройки.
+                        </p>
+                        <p>
+                           Шаг 2. <br>
+                           В левом меню открывшегося окна выберите пункт Сотовые данные.
+                        </p>
+                        <p>
+                           Шаг 3. <br>
+                           В открывшемся окне выберите пункт Настройка APN
+                        </p>
+                        <p>
+                           Шаг. 4 <br>
+                           В окне настроек APN задайте следующие параметры: <br>
+APN: vpn.beeline.msk
+                        </p>
+                        <p>
+                           Имя пользователя: @ekomobile
+                        </p>
+                        <p>
+                           Пароль: internet
+                        </p>
+                    </div>
+                     <div class="faq-full-info-item">
+                        <span class="faq-full-info-title">Общая информация по настройкам модемов</span>
+                        <p>
+                           Шаг 1. <br>
+На модеме (в инструкции) есть наклейка или гравировка с указанием IP адреса типа XXX.XXX.X.X в некоторых случаях так же указан логин и пароль от настроек роутера. Нам необходимо в поисковой строке браузера (можно с телефона) указать IP адрес устройства и перейти на данный сайт, стандартный логин и пароль admin admin.
+                        </p>
+                        <p>
+                           Шаг 2. <br>
+Переходим во вкладку «Advance Settings (продвинутые настройки)» «APN (точка доступа)».
+                        </p>
+                        <p>
+                           Шаг 3. <br>
+Прописываем необходимые настройки и сохраняем.
+                        </p>
+                        <p>
+                           <b>Дополнительная информация:</b> <br>
+На различных устройствах может отличаться внешний вид интерфейса, ниже указаны различные примеры, где находятся необходимые настройки на разных устройствах.
+                        </p>
+                        <p>
+                           Keenetic «Интернет» > «Mobile» (Модем 4G/3G).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-full-info-links">
+                     <a class="faq-full-info-link" href="#">Тарифы</a>   
+                    <a class="faq-full-info-link" href="#">Связь и услуги</a>   
+                    <a class="faq-full-info-link" href="#">Перенос номера</a>   
+                    <a class="faq-full-info-link" href="#">Платежи и финансы</a>   
+                    <a class="faq-full-info-link" href="#">Международная связь</a>   
+                    <a class="faq-full-info-link" href="#">Расходы и управление услугами</a>   
+                    <a class="faq-full-info-link" href="#">Безопасность и защита данных</a>   
+                    <a class="faq-full-info-link" href="#">Помощь по настройкам устройств</a>   
+                    <a class="faq-full-info-link" href="#">Техподдержка</a>   
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+</section>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/slider.js"></script>
+<script src="assets/js/faq.js"></script>
+</body>
+</html>
