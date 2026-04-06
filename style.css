@@ -78,6 +78,12 @@ h3 {
     color: #2C3E50;
 }
 
+.about .container {
+    @media screen and (max-width: 768px) {
+        padding: 0 10px;
+    }
+}
+
 .publications,
 .about {
     display: flex;
@@ -156,6 +162,20 @@ h3 {
     align-items: center;
     gap: 15px;
 }
+.brand-image-left {
+    overflow: hidden;
+    
+}
+.brand-image-left img.brand-images__ellipse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    opacity: .5;
+}
 
 .brand-image-left,
 .brand-image-right {
@@ -165,6 +185,8 @@ h3 {
     justify-content: center;
     flex-basis: 50%;
     min-height: 608px;
+    border-radius: 50px;
+    overflow: hidden;
 }
 
 .brand-image__text {
@@ -261,6 +283,7 @@ h3 {
     overflow: hidden;
     position: relative;
     height: 206px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .brand-card:not(:first-child) {
@@ -681,7 +704,7 @@ h3 {
 
 .media-slider {
     width: 100%;
-    height: 351px;
+    height: 363px;
     position: relative;
     border-radius: 36px 0 0 36px;
     overflow: hidden;
@@ -1321,8 +1344,23 @@ h3 {
     position: absolute;
 }
 
+.event:first-child .card {
+    transform: translateX(-15%) !important;
+}
+
+.event:last-child .card {
+    transform: translateX(-90%) !important;
+}
+
 .timeline .event:not(:first-child) .year {
     transform: translateX(10px);
+}
+.event .card {
+    background: white;
+}
+.event .card.card--blue {
+    background: #2F4456;
+    color: white;
 }
 
 
@@ -1426,6 +1464,18 @@ h3 {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, 0);
+}
+
+.card--transparent {
+    background: transparent;
+    color: #2F4456;
+    border: 1px solid #2F4456;
+}
+
+.card--white {
+    background: #fff;
+    color: #2F4456;
+    border: 1px solid #2F4456;
 }
 
 .event.active .dot-end.clickable {

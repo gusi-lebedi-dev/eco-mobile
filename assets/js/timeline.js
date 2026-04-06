@@ -1,17 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const events = [
-        { year: 2002, text: "Основание Экомобайл", position: "bottom", clickable: true },
+        { year: 2002, text: "Основание Экомобайл", position: "bottom", clickable: true, variant: "blue" },
         { year: 2004, text: "", position: "top", clickable: false },
-        { year: 2006, text: "Первая реализация тарифов физическим лицам через аренду номеров", position: "top", clickable: true },
-        { year: 2008, text: "Период кризиса и реструктуризация", position: "bottom", clickable: true },
+        { year: 2006, text: "Первая реализация тарифов физическим лицам через аренду номеров", position: "top", clickable: true, variant: "transparent" },
+        { year: 2008, text: "Период кризиса и реструктуризация", position: "bottom", clickable: true, variant: "white" },
         { year: 2010, text: "", position: "bottom", clickable: false },
-        { year: 2012, text: "Возвращение к росту", position: "top", clickable: true },
-        { year: 2014, text: "Возвращение к росту", position: "bottom", clickable: true },
-        { year: 2016, text: "Технологическая трансформация", position: "bottom", clickable: true },
+        { year: 2012, text: "Возвращение к росту", position: "top", clickable: true, variant: "blue" },
+        { year: 2014, text: "Возвращение к росту", position: "bottom", clickable: true, variant: "transparent" },
+        { year: 2016, text: "Технологическая трансформация", position: "bottom", clickable: true, variant: "white" },
         { year: 2018, text: "Сложный этап масштабирования", position: "bottom", clickable: false },
         { year: 2020, text: "Новый виток развития", position: "top", clickable: false },
-        { year: 2022, text: "Широкий рост абонентской базы", position: "top", clickable: true },
-        { year: 2026, text: "Широкий рост абонентской базы", position: "bottom", clickable: true }
+        { year: 2022, text: "Широкий рост абонентской базы", position: "top", clickable: false, variant: "blue" },
+        { year: 2024, text: "Широкий рост абонентской базы", position: "top", clickable: true, variant: "blue" },
+        { year: 2026, text: "Широкий рост абонентской базы", position: "bottom", clickable: true, variant: "transparent" }
     ];
 
     const timeline = document.getElementById("timeline");
@@ -67,8 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         eventEl.appendChild(dotEnd);
 
+        const variant = event.variant || 'blue';
         const card = document.createElement("div");
-        card.className = "card";
+        card.className = `card card--${variant}`;
         card.textContent = event.text;
         card.style.position = "absolute";
         card.style.left = "50%";
@@ -77,8 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.textAlign = "center";
         card.style.padding = "16px";
         card.style.borderRadius = "12px";
-        card.style.background = "#344A5F";
-        card.style.color = "#fff";
         card.style.fontSize = "14px";
         card.style.opacity = "0";
         card.style.visibility = "hidden";
