@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const categoryText = this.textContent.trim().toLowerCase();
             const category = categoryText.includes('тариф') ? 'tarif' :
+             categoryText.includes('международная') ? 'mezhdunarod' :
                            categoryText.includes('связ') ? 'svyaz' :
                            categoryText.includes('перенос') ? 'perenos' :
                            categoryText.includes('платеж') || categoryText.includes('финанс') ? 'platezhi' :
-                           categoryText.includes('международн') ? 'mezhdunarod' :
                            categoryText.includes('расход') ? 'rashody' :
                            categoryText.includes('безопасн') ? 'bezopasnost' :
                            categoryText.includes('настройк') ? 'nastrojki' :

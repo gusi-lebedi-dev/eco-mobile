@@ -25,6 +25,16 @@
     <style>
         .faq {
             padding: 200px 0 80px;
+
+            @media screen and (max-width: 768px) {
+                padding: 40px 0;
+            }
+        }
+
+        .faq .container {
+             @media screen and (max-width: 768px) {
+                padding: 0 8.5px;
+            }
         }
 
         .faq h2 {
@@ -37,6 +47,10 @@
             color: #2C3E50;
             margin-bottom: 36px;
             text-transform: none;
+
+            @media screen and (max-width: 768px) {
+                font-size: 24px;
+            }
         }
 
         .search-container {
@@ -142,6 +156,10 @@
         .faq-card-text {
             display: flex;
             flex-direction: column;
+
+            @media screen and (max-width: 1076px) {
+                max-width: 167px;
+            }
         }
 
         .faq-card h4 {
@@ -280,8 +298,17 @@
             font-size: 14px;
             line-height: 19px;
             color: #2C3E50;
-
             max-width: 320px;
+
+            @media screen and (max-width: 1076px) {
+                font-size: 12px;
+            }
+        }
+
+        .faq-full-info {
+            @media screen and (max-width: 768px) {
+                margin-top: 200px;
+            }
         }
 
         .faq-full-info,
@@ -293,6 +320,16 @@
 
         .faq-full-info .faq-grid-title {
             margin-bottom: 0;
+
+             @media screen and (max-width: 768px) {
+                margin: 0;
+            }
+        }
+
+        .faq-full-info-item {
+            @media screen and (max-width: 1076px) {
+                max-width: 478px;
+            }
         }
 
         .faq-full-info-list {
@@ -308,12 +345,16 @@
             font-style: normal;
             font-weight: 500;
             font-size: 24px;
-            line-height: 33px;
+            line-height: 100%;
             color: #2C3E50;
         }
 
         .faq-full-info-item p a {
             color: #F0EFEE;
+        }
+
+        .faq-full-info-item p a.tel {
+            color: rgba(44, 62, 80, 1);
         }
 
         .faq-full-info-item p a:hover {
@@ -349,6 +390,9 @@
             flex-direction: column;
             gap: 16px;
 
+             @media screen and (max-width: 768px) {
+             gap: 10px;
+            }
         }
 
         .faq-full-info-link {
@@ -358,6 +402,16 @@
             font-size: 18px;
             line-height: 25px;
             color: #2C3E50;
+            text-decoration: underline;
+
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                line-height: 100%;
+            }
+        }
+
+        .faq-full-info-link.active {
+            text-decoration: none;
         }
 
         .faq-full-info-list-title {
@@ -371,6 +425,7 @@
         .faq-full-info-item ol,
         .faq-full-info-item ul {
             padding-left: 20px;
+            list-style-type: disc;
         }
 
         .faq-full-info-item ol li,
@@ -415,7 +470,7 @@
 
             .faq-card h4 {
                 font-size: 24px;
-                line-height: 100%;
+                line-height: 120%;
             }
 
             .faq-card p {
@@ -460,8 +515,9 @@
             }
 
             .faq-card.chat a {
-                font-size: 16px;
                 padding: 0 15px;
+                max-width: 170px;
+                width: 100%;
             }
 
             .search-input {
@@ -530,12 +586,16 @@
                 line-height: 100%;
             }
 
-            .faq-full-info-item p b,
+            
             .faq-full-info-item ol li,
             .faq-full-info-item ul li,
             .faq-full-info-item p {
-                font-size: 12px;
+                font-size: 14px;
                 line-height: 100%;
+            }
+
+            .faq-full-info-item p b {
+                font-size: 16px;
             }
         }
 
@@ -1227,7 +1287,8 @@
                             <span class="faq-full-info-title">Как узнать стоимость связи за границей?</span>
                             <p>
                                 Тарифы на международный роуминг получить по запросу в службу поддержки по номеру <a
-                                    href="tel:0522">0522</a> / <a href="tel:495-011-05-22">495-011-05-22</a> или через
+                                    class="tel" href="tel:0522">0522</a> / <a class="tel"
+                                    href="tel:495-011-05-22">495-011-05-22</a> или через
                                 чат в приложении в разделе «справка и поддержка», онлайн чат на сайте <a
                                     href="mailto:ekomobile.ru">ekomobile.ru</a>, по электронной почте <a
                                     href="mailto:info@ekomobile.ru">info@ekomobile.ru</a>.
@@ -1268,8 +1329,9 @@
                         <div class="faq-full-info-item">
                             <span class="faq-full-info-title">Как добавить несколько номеров в один аккаунт?</span>
                             <p>
-                                Можно объединить номера в группу через службу поддержки по номеру <a
-                                    href="tel:0522">0522</a> / <a href="tel:495-011-05-22">495-011-05-22</a>. Один
+                                Можно объединить номера в группу через службу поддержки по номеру <a class="tel"
+                                    href="tel:0522">0522</a> / <a class="tel"
+                                    href="tel:495-011-05-22">495-011-05-22</a>. Один
                                 вход — все номера под рукой.
                             </p>
                         </div>
@@ -1400,7 +1462,8 @@
                         <div class="faq-full-info-item">
                             <span class="faq-full-info-title">Что делать, если телефон потерялся или его украли?</span>
                             <p>
-                                Необходимо обратиться в службу поддержки по тел. 0522 / 495-011-05-22 мы заблокируем
+                                Необходимо обратиться в службу поддержки по тел. <a class="tel" href="tel:0522">0522</a>
+                                / <a class="tel" href="495-011-05-22">495-011-05-22</a> мы заблокируем
                                 услуги связи и проконсультируем о дальнейших действиях по восстановлению доступа
                                 к номеру.
                             </p>
