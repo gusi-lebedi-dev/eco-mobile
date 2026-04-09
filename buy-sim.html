@@ -360,6 +360,8 @@
                 <p>Сим-карта, которая подстраивается под тебя. <br>
                     Экомобайл объединяет сети операторов. <br>
                     Ты выбираешь тариф, а связь остаётся стабильной там, где ты находишься</p>
+                <img class="arrange__title-sim-card" src="assets/images/sim-card.svg" alt="">
+                <img class="arrange__title-shadow" src="assets/images/buy-shadow.svg" alt="">
             </div>
 
 
@@ -445,6 +447,36 @@
                     </div>
                 </div>
                 <a class="all-tarif" href="pricing-plans.html">Посмотреть все тарифы</a>
+            </div>
+
+            <div class="buy-sim__swiper">
+                <h3>Подключайся легко и просто</h3>
+
+                <div class="buy-sim__swiper-slider">
+                    <div class="buy-sim__swiper-slide">
+                        <span>1</span>
+                        <p>Выбери тариф или собери его сам</p>
+                    </div>
+                    <div class="buy-sim__swiper-slide">
+                        <span>2</span>
+                        <p>Закажи сим или есим</p>
+                    </div>
+                    <div class="buy-sim__swiper-slide">
+                        <span>3</span>
+                        <p>Все готово!
+                            Связь начинает работать сразу</p>
+                    </div>
+
+                    <div class="buy-sim__swiper-phone">
+                        <div class="buy-sim__swiper-phone-track">
+                            <img src="assets/images/swiper-slide-1.png" alt="">
+                            <img src="assets/images/swiper-slide-2.png" alt="">
+                            <img src="assets/images/swiper-slide-3.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#">Выбрать тариф</a>
             </div>
 
             <div class="all-occasions">
@@ -733,6 +765,51 @@
                 parent.classList.toggle('active');
             });
         });
+        const card = document.querySelector('.arrange__title-sim-card');
+
+        card.classList.add('ramp');
+
+        card.addEventListener('animationend', () => {
+            card.classList.remove('ramp');
+            card.classList.add('spin');
+        });
+
+        const slides = document.querySelectorAll('.buy-sim__swiper-slide');
+        const phoneTrack = document.querySelector('.buy-sim__swiper-phone-track');
+
+        let current = 0;
+
+        function updateSlider(index) {
+            current = index;
+
+            slides.forEach((slide, i) => {
+                slide.classList.remove('is-active', 'is-second', 'is-third');
+
+                if (i === current) {
+                    slide.classList.add('is-active');
+                } else if (i === (current + 1) % slides.length) {
+                    slide.classList.add('is-second');
+                } else {
+                    slide.classList.add('is-third');
+                }
+            });
+
+
+
+            if (window.innerWidth < 800) {
+                phoneTrack.style.transform = `translateX(-${current * 145}px)`;
+            } else {
+                phoneTrack.style.transform = `translateX(-${current * 218}px)`;
+            }
+        }
+
+        slides.forEach((slide, index) => {
+            slide.addEventListener('click', () => {
+                updateSlider(index);
+            });
+        });
+
+        updateSlider(0);
     </script>
     <script src="assets/js/dealers/script.js"></script>
     <script src="assets/js/app.js"></script>

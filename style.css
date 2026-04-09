@@ -4224,15 +4224,21 @@ h3 {
 }
 
 .arrange__title {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    height: 430px;
     gap: 5px;
-    padding: 111px 0;
+    padding: 51px 0 24px;
+    margin-bottom: 50px;
 
-    @media screen and (max-width:1250px) {
-        padding: 50px 0;
+    @media screen and (max-width:768px) {
+        height: 348px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 0;
     }
 }
 
@@ -6145,4 +6151,368 @@ h3 {
 
 .arrange_content-item:nth-child(3) {
     animation: arrangeItemRise 21s 14s infinite;
+}
+
+.arrange__title-shadow {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 1s;
+    animation: Opacity 6s forwards;
+
+    @media screen and (max-width: 768px) {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+.sim-wrapper {
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translate(-71%, 50%);
+}
+
+.arrange__title-sim-card {
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translateY(-30%) translateX(-71%);
+    transform-origin: center center;
+    width: 191px;
+    height: 155px;
+    z-index: 1;
+    transition: all 1s;
+
+    @media screen and (max-width: 768px) {
+        top: 38%;
+    }
+}
+
+.arrange__title-sim-card.ramp {
+    animation: Ramp 2s forwards;
+
+    @media screen and (max-width: 768px) {
+        animation: none;
+    }
+}
+
+.arrange__title-sim-card.spin {
+    animation: simFlip 6s infinite ease-in-out;
+
+    @media screen and (max-width: 768px) {
+        animation: none;
+    }
+}
+
+@keyframes Ramp {
+    0% {
+        transform: translateY(-1000%) translateX(-71%);
+    }
+
+    100% {
+        transform: translateY(50%) translateX(-71%);
+    }
+}
+
+@keyframes Opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes simFlip {
+
+    0%,
+    20% {
+        transform: translateY(50%) translateX(-71%) scaleX(1);
+    }
+
+    35% {
+        transform: translateY(50%) translateX(-95%) scaleX(0);
+    }
+
+    55%,
+    75% {
+        transform: translateY(50%) translateX(-117%) scaleX(-1);
+    }
+
+    100% {
+        transform: translateY(50%) translateX(-71%) scaleX(1);
+    }
+}
+
+.buy-sim__swiper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 768px) {
+        gap: 64px;
+        margin-bottom: 40px;
+    }
+}
+
+.buy-sim__swiper-slider {
+    position: relative;
+    height: 447px;
+
+    @media screen and (max-width: 800px) {
+        height: 300px;
+    }
+}
+
+.buy-sim__swiper-slide {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 397px;
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url(assets/images/swiper-slide.svg) no-repeat center;
+    cursor: pointer;
+
+    transform: translate(17%, -50%) scale(1);
+    transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+}
+
+.buy-sim__swiper-slide.is-active {
+    transform: translate(17%, -50%) scale(1);
+    z-index: 3;
+
+    @media screen and (max-width: 1076px) {
+        transform: translate(0%, -50%) scale(.9);
+    }
+
+    @media screen and (max-width: 800px) {
+        transform: translate(0%, -50%) scale(0.5);
+    }
+
+    @media screen and (max-width: 700px) {
+        transform: translate(-10%, -50%) scale(0.5);
+    }
+
+    @media screen and (max-width: 630px) {
+        transform: translate(-26%, -50%) scale(0.5);
+    }
+
+    @media screen and (max-width: 500px) {
+        transform: translate(-26%, -50%) scale(0.5);
+    }
+}
+
+.buy-sim__swiper-slide.is-second {
+    transform: translate(150%, -50%) scale(.664);
+    z-index: 2;
+
+    @media screen and (max-width: 1076px) {
+        transform: translate(137%, -50%) scale(.664);
+    }
+
+    @media screen and (max-width: 800px) {
+        transform: translate(85%, -50%) scale(.4);
+    }
+
+    @media screen and (max-width: 700px) {
+        transform: translate(75%, -50%) scale(.4);
+    }
+
+    @media screen and (max-width: 630px) {
+        transform: translate(65%, -50%) scale(.4);
+    }
+
+    @media screen and (max-width: 500px) {
+        transform: translate(55%, -50%) scale(.4);
+    }
+}
+
+.buy-sim__swiper-slide.is-third {
+    transform: translate(210%, -50%) scale(.38);
+    z-index: 1;
+
+    @media screen and (max-width: 1076px) {
+        transform: translate(197%, -50%) scale(.38);
+    }
+
+    @media screen and (max-width: 800px) {
+        transform: translate(125%, -50%) scale(.3);
+    }
+
+    @media screen and (max-width: 700px) {
+        transform: translate(115%, -50%) scale(.3);
+    }
+
+    @media screen and (max-width: 630px) {
+        transform: translate(105%, -50%) scale(.3);
+    }
+}
+
+.buy-sim__swiper-slide span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    border: 3px solid #AF936C;
+    border-radius: 50%;
+
+    font-weight: 500;
+    font-size: 24px;
+    color: #AF936C;
+}
+
+.buy-sim__swiper-slide p {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #2C3E50;
+    max-width: 220px;
+
+    @media screen and (max-width: 768px) {
+        max-width: 125px;
+    }
+}
+
+.buy-sim__swiper-phone {
+    position: absolute;
+    left: 33%;
+    top: 0;
+
+    width: 218px;
+    height: 447px;
+
+    overflow: hidden;
+    border-radius: 41px;
+    z-index: 4;
+
+    @media screen and (max-width: 1150px) {
+        left: 40%;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 148px;
+        height: 303px;
+        border-radius: 30px;
+    }
+}
+
+.buy-sim__swiper-phone::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(assets/images/silver-phone.png) no-repeat center;
+    z-index: 4;
+
+    @media screen and (max-width: 800px) {
+        background-size: contain;
+    }
+}
+
+.buy-sim__swiper-phone::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(assets/images/swiper-slide-bg.png) no-repeat center;
+    z-index: -1;
+}
+
+
+.buy-sim__swiper-phone-track {
+    display: flex;
+    height: 100%;
+    width: calc(218px * 3);
+
+    transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+}
+
+.buy-sim__swiper-phone img {
+    position: relative;
+    width: 218px;
+    height: 100%;
+    top: 0;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    @media screen and (max-width: 800px) {
+        width: 148px;
+    }
+}
+
+.buy-sim__swiper a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    background: #E1FA3F;
+    border-radius: 36px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: #2C3E50;
+    max-width: 139px;
+    height: 38px;
+    margin: 0 auto;
+}
+
+.buy-sim__swiper-phone {
+    position: absolute;
+    left: 33%;
+    top: 0;
+
+    width: 218px;
+    height: 447px;
+
+    overflow: hidden;
+    border-radius: 41px;
+    z-index: 4;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .buy-sim__swiper-phone {
+        width: 155px;
+        height: 320px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 31px;
+    }
+
+    .buy-sim__swiper-phone-track {
+        display: flex;
+        height: 100%;
+        width: 300%;
+        transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .buy-sim__swiper-phone img {
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .buy-sim__swiper-phone {
+        transform: translateX(-30%);
+    }
 }
