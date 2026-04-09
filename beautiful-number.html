@@ -373,7 +373,7 @@
                 </div>
             </div>
 
-            <div class="beautiful-number__form">
+            <div class="beautiful-number__form is-active" data-step="1">
                 <span class="beautiful-number__form-title">Выбери понравившийся номер</span>
 
                 <div class="beautiful-number__form-container">
@@ -422,19 +422,19 @@
 
                         <div class="beautiful-number__form-block">
                             <div class="beautiful-number__direct-number">
-                              
-                                    <div class="single-form__card-top">
-                                        <label class="single-form__switch">
-                                            <input type="checkbox">
-                                            <span class="single-form__slider"></span>
-                                        </label>
-                                         <div class="single-form__card-title">
-                                            Прямой номер
-                                        </div>
-                                    </div>
 
-                                    <span class="beautiful-number__selected-number">+7 (903) 597-74-56</span>
-                            
+                                <div class="single-form__card-top">
+                                    <label class="single-form__switch">
+                                        <input type="checkbox">
+                                        <span class="single-form__slider"></span>
+                                    </label>
+                                    <div class="single-form__card-title">
+                                        Прямой номер
+                                    </div>
+                                </div>
+
+                                <span class="beautiful-number__selected-number">+7 (903) 597-74-56</span>
+
                             </div>
                             <span class="text-free">Бесплатно</span>
                         </div>
@@ -442,11 +442,385 @@
                 </div>
 
                 <div class="beautiful-number__form-buttons">
-                    <button type="button">Назад</button>
+                    <button class="prev-step" type="button">Назад</button>
                     <button class="blue-button" type="button">Продолжить</button>
                 </div>
             </div>
+            <div class="beautiful-number__form" data-step="2">
+                <span class="beautiful-number__form-title">Какой будет тариф?</span>
 
+                <div class="beautiful-number__form-container form-tarif">
+                    <div class="beautiful-number__form-tarif">
+                        <div class="pricing-plans__item category-mobile category-multi visible">
+                            <span class="pricing-plans__item-title">всегда.связь</span>
+
+                            <div class="pricing-plans__item-text">
+                                <span>от 300 минут</span>
+                                <span>от 50 смс</span>
+                                <span>от 30 гб</span>
+                            </div>
+
+                            <div class="pricing-plans__item-price">
+                                <p><strong></strong> </p>
+
+                                <span>490 ₽</span>
+                                <span class="pricing-plans__item-price--mounth">месяц</span>
+                            </div>
+
+                            <a href="pricing-plans/always-connection.html" class="arrow--pricing-plans">
+                                <img class="" src="assets/images/publications/arrow-plans.svg" alt="" srcset="">
+                            </a>
+
+                            <a href="#" class="pricing-plans__button">Выбрать</a>
+                        </div>
+                        <div class="pricing-plans__item category-mobile visible">
+                            <span class="pricing-plans__item-title">городской 495</span>
+
+                            <div class="pricing-plans__item-text">
+                                <p>Без доп услуг</p>
+                            </div>
+
+                            <div class="pricing-plans__item-price">
+                                <p><strong></strong> </p>
+
+                                <span>495 ₽</span>
+                                <span class="pricing-plans__item-price--mounth">месяц</span>
+                            </div>
+
+                            <a href="pricing-plans/city.html" class="arrow--pricing-plans">
+                                <img class="" src="assets/images/publications/arrow-plans.svg" alt="" srcset="">
+                            </a>
+
+                            <a href="#" class="pricing-plans__button">Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="beautiful-number__form-buttons">
+                    <button class="prev-step" type="button">Назад</button>
+                    <button class="blue-button" type="button">Продолжить</button>
+                </div>
+            </div>
+            <div class="beautiful-number__form" data-step="3">
+                <span class="beautiful-number__form-title">Делаем пластиковую SIM или цифровую?</span>
+
+                <div class="beautiful-number__form-container">
+                    <div class="beautiful-number__form-sim">
+                        <div class="beautiful-number__form-sim-item">
+                            <span>eSIM</span>
+                            <p>оформить онлайн</p>
+                        </div>
+                        <div class="beautiful-number__form-sim-item">
+                            <span>Пластиковая SIM</span>
+                            <p>заказать доставку или оформить в офисе</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="beautiful-number__form-buttons">
+                    <button class="prev-step" type="button">Назад</button>
+                    <button class="blue-button" type="button">Продолжить</button>
+                </div>
+            </div>
+            <div class="beautiful-number__form " data-step="4-physical">
+                <span class="beautiful-number__form-title">
+                    Как получить пластиковую SIM?
+                </span>
+
+                <div class="beautiful-number__form-container">
+                    <div class="beautiful-number__form-sim">
+
+                        <div class="beautiful-number__form-sim-item" data-delivery="post">
+                            <span>Получить по почте</span>
+                            <p>по всей России</p>
+                        </div>
+
+                        <div class="beautiful-number__form-sim-item" data-delivery="pickup">
+                            <span>Самовывоз</span>
+                            <p>из офиса м. Павелецкая</p>
+                        </div>
+
+                        <div class="beautiful-number__form-sim-item" data-delivery="cdek">
+                            <span>Получить через Сдэк</span>
+                            <p>в ближайший пункт выдачи вашего города</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="beautiful-number__form-buttons">
+                    <button class="prev-step" type="button">Назад</button>
+                    <button class="blue-button" type="button">Продолжить</button>
+                </div>
+            </div>
+            <div class="beautiful-number__form final sim-recovery__form" data-step="final-esim">
+                <span class="beautiful-number__form-title">Заполни данные для отправки sim карты Почтой России</span>
+
+                <div class="tariff-info">
+                    <div class="tariff-title">
+                        <span>Выбранный тариф:</span>
+                        <span>Всегда связь</span>
+                    </div>
+
+                    <div class="tariff-details">
+                        <div class="tariff-name">300 мин, 50 смс, 30 гб</div>
+
+
+                        <div
+                            style="display:flex; gap:8px; align-items: center; font-size:14px; color:#2C3E50; margin-top:12px;">
+                            <span style="opacity:0.7">Дополнительный номер на базе</span>
+                            <div class="operator-tags">
+                                <div class="tag tag-megafon">Мегафон</div>
+                                <div class="tag tag-mts">МТС</div>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap: 8px; font-size:14px; color:#2C3E50; margin-top:8px;">
+                            <span style="opacity:0.7">Объем интернет-трафика на резервном номере</span>
+                            <span>15 Гб</span>
+                        </div>
+
+                        <div style="margin-top:20px; font-size:18px; font-weight:500; color:#2C3E50;">
+                            Основной номер: <span style="font-weight:500;">+7 (903) 597-74-56</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <p>Оставьте свои контакты и менеджер свяжется с вами для дальнейших действий</p>
+
+                    <div class="inputs-row">
+                        <div class="input-group">
+                            <input type="text" placeholder="Имя" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Фамилия" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="tel" placeholder="Телефон" required>
+                    </div>
+
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="agree" />
+                        <span class="checkmark"></span>
+                        <span class="label-text">
+                            Соглашаюсь на обработку персональных данных
+                        </span>
+                    </label>
+                </div>
+
+                <div class="beautiful-number__form-buttons">
+                    <button type="button" class="prev-step">Назад</button>
+                    <button type="submit" class="blue-button">Оставить заявку</button>
+                </div>
+            </div>
+            <div class="beautiful-number__form final sim-recovery__form" data-step="final-post">
+                <span class="beautiful-number__form-title">
+                    Доставка по почте
+                </span>
+
+                <div class="beautiful-number__form-container">
+                    <div class="beautiful-number__form-fields">
+
+                        <div class="beautiful-number__form-column">
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="text" class="beautiful-number__form-input" id="fio"
+                                    value="Иванов Иван Иванович" placeholder=" ">
+                                <label for="fio" class="beautiful-number__form-label">Фамилия, имя, отчество</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-check">✓</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="text" class="beautiful-number__form-input" id="city"
+                                    value="Московская обл., г.Иваново" placeholder=" ">
+                                <label for="city" class="beautiful-number__form-label">Область, город</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-check">✓</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="text" class="beautiful-number__form-input" id="address"
+                                    value="Иванов Иван Иванович" placeholder=" ">
+                                <label for="address" class="beautiful-number__form-label">Улица, дом, квартира</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-check">✓</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="beautiful-number__form-column">
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="text" class="beautiful-number__form-input" id="index"
+                                    value="+7 (000) 000 00 00" placeholder=" ">
+                                <label for="index" class="beautiful-number__form-label">Почтовый индекс</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-dots">⋯</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="tel" class="beautiful-number__form-input" id="phone"
+                                    value="+7 (000) 000 00 00" placeholder=" ">
+                                <label for="phone" class="beautiful-number__form-label">Контактный номер</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-dots">⋯</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="agree" />
+                        <span class="checkmark"></span>
+                        <span class="label-text">
+                            Соглашаюсь на обработку персональных данных
+                        </span>
+                    </label>
+                </div>
+
+                <div class="beautiful-number__form-buttons">
+                    <button class="prev-step" type="button">Назад</button>
+                    <button class="blue-button" type="submit">Отправить</button>
+                </div>
+            </div>
+            <div class="beautiful-number__form final sim-recovery__form" data-step="final-pickup">
+                <span class="beautiful-number__form-title">
+                    Адрес доставки заказа курьером
+                </span>
+
+                <div class="beautiful-number__form-container">
+                    <div class="beautiful-number__form-fields">
+
+                        <div class="beautiful-number__form-column">
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="text" class="beautiful-number__form-input" id="fio"
+                                    value="Иванов Иван Иванович" placeholder=" ">
+                                <label for="fio" class="beautiful-number__form-label">Фамилия, имя, отчество</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-check">✓</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="text" class="beautiful-number__form-input" id="city"
+                                    value="Московская обл., г.Иваново" placeholder=" ">
+                                <label for="city" class="beautiful-number__form-label">Район </label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-check">✓</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="beautiful-number__form-column">
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="text" class="beautiful-number__form-input" id="index"
+                                    value="+7 (000) 000 00 00" placeholder=" ">
+                                <label for="index" class="beautiful-number__form-label">Улица, дом, квартира</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-dots">⋯</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="tel" class="beautiful-number__form-input" id="phone"
+                                    value="+7 (000) 000 00 00" placeholder=" ">
+                                <label for="phone" class="beautiful-number__form-label">Контактный номер</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-dots">⋯</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="agree" />
+                        <span class="checkmark"></span>
+                        <span class="label-text">
+                            Соглашаюсь на обработку персональных данных
+                        </span>
+                    </label>
+                </div>
+
+                <div class="beautiful-number__form-buttons">
+                    <button class="prev-step" type="button">Назад</button>
+                    <button class="blue-button" type="submit">Отправить</button>
+                </div>
+            </div>
+            <div class="beautiful-number__form final sim-recovery__form" data-step="final-cdek">
+                <span class="beautiful-number__form-title">
+                    Способ получения sim карты
+                </span>
+
+                <div class="beautiful-number__form-container">
+                    <div class="beautiful-number__form-fields">
+
+                        <div class="beautiful-number__form-column">
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="text" class="beautiful-number__form-input" id="fio"
+                                    value="Иванов Иван Иванович" placeholder=" ">
+                                <label for="fio" class="beautiful-number__form-label">Фамилия, имя, отчество</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-check">✓</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="text" class="beautiful-number__form-input" id="city"
+                                    value="Московская обл., г.Иваново" placeholder=" ">
+                                <label for="city" class="beautiful-number__form-label">Область, город</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-check">✓</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="beautiful-number__form-column">
+
+                            <div class="beautiful-number__form-input-group">
+                                <input type="text" class="beautiful-number__form-input" id="index"
+                                    value="+7 (000) 000 00 00" placeholder=" ">
+                                <label for="index" class="beautiful-number__form-label">Почтовый индекс</label>
+                                <div class="beautiful-number__form-actions">
+                                    <button type="button" class="beautiful-number__form-btn-dots">⋯</button>
+                                    <button type="button" class="beautiful-number__form-btn-clear">✕</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="agree" />
+                        <span class="checkmark"></span>
+                        <span class="label-text">
+                            Соглашаюсь на обработку персональных данных
+                        </span>
+                    </label>
+                </div>
+
+                <div class="beautiful-number__form-buttons">
+                    <button class="prev-step" type="button">Назад</button>
+                    <button class="blue-button" type="submit">Отправить</button>
+                </div>
+            </div>
             <div class="quick-faq">
                 <h2 class="quick-faq__title">Частые вопросы</h2>
 
@@ -509,6 +883,9 @@
 
                 </div>
             </div>
+        </div>
+
+
         </div>
     </section>
 
@@ -643,6 +1020,99 @@
 
                 parent.classList.toggle('active');
             });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const forms = document.querySelectorAll(".beautiful-number__form");
+            const nextBtns = document.querySelectorAll(".blue-button");
+            const prevBtns = document.querySelectorAll(".prev-step");
+
+            const simTypeItems = document.querySelectorAll(
+                '[data-step="3"] .beautiful-number__form-sim-item'
+            );
+
+            const deliveryItems = document.querySelectorAll(
+                '[data-step="4-physical"] .beautiful-number__form-sim-item'
+            );
+
+            let currentStep = "1";
+            let simType = null;
+            let deliveryType = null;
+
+            function showStep(step) {
+                forms.forEach(form => {
+                    form.classList.toggle("is-active", form.dataset.step === step);
+                });
+                currentStep = step;
+            }
+
+            simTypeItems.forEach(item => {
+                item.addEventListener("click", function () {
+
+                    simTypeItems.forEach(i => i.classList.remove("is-active"));
+                    this.classList.add("is-active");
+
+                    simType = this.innerText.includes("eSIM")
+                        ? "esim"
+                        : "physical";
+                });
+            });
+
+            deliveryItems.forEach(item => {
+                item.addEventListener("click", function () {
+
+                    deliveryItems.forEach(i => i.classList.remove("is-active"));
+                    this.classList.add("is-active");
+
+                    deliveryType = this.dataset.delivery;
+                });
+            });
+
+            nextBtns.forEach(btn => {
+                btn.addEventListener("click", function () {
+
+                    if (currentStep === "1") return showStep("2");
+                    if (currentStep === "2") return showStep("3");
+
+                    if (currentStep === "3") {
+                        if (!simType) return;
+
+                        if (simType === "esim") {
+                            return showStep("final-esim");
+                        } else {
+                            return showStep("4-physical");
+                        }
+                    }
+
+                    if (currentStep === "4-physical") {
+                        if (!deliveryType) return;
+                        return showStep("final-" + deliveryType);
+                    }
+
+                });
+            });
+
+            prevBtns.forEach(btn => {
+                btn.addEventListener("click", function () {
+
+                    if (currentStep === "2") return showStep("1");
+                    if (currentStep === "3") return showStep("2");
+
+                    if (currentStep === "4-physical") return showStep("3");
+
+                    if (currentStep === "final-esim") return showStep("3");
+
+                    if (currentStep.startsWith("final-")) {
+                        if (simType === "physical") {
+                            return showStep("4-physical");
+                        }
+                    }
+
+                });
+            });
+
         });
     </script>
     <script src="assets/js/dealers/script.js"></script>
