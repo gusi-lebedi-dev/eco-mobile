@@ -2027,11 +2027,13 @@ h3 {
     mask: radial-gradient(circle at 93% 93%, transparent 30px, black 0);
     z-index: 2;
 }
+
 .mobile-off {
     @media screen and (max-width: 1076px) {
         display: none;
     }
 }
+
 .news-item-title {
     font-family: 'Manrope', sans-serif;
     font-style: normal;
@@ -3339,6 +3341,7 @@ h3 {
 
     @media screen and (max-width: 768px) {
         margin-bottom: 40px;
+        gap: 50px;
     }
 }
 
@@ -3392,7 +3395,7 @@ h3 {
     margin-bottom: 16px;
 
     @media screen and (max-width: 650px) {
-        max-width: 313px;
+        max-width: 378px;
     }
 }
 
@@ -3436,23 +3439,25 @@ h3 {
     font-weight: 500;
     font-size: 18px;
     color: #2C3E50;
+}
+.mobile-on {
+    display: none;
 
     @media screen and (max-width: 768px) {
-        font-size: 16px;
+        display: block;
     }
 }
-
 .single-form__price {
     font-weight: 500;
     font-size: 24px;
     color: #2C3E50;
 }
+
 @media screen and (max-width: 1076px) {
     .pricing-plans__single-form.blue .single-form__price {
         font-size: 18px;
     }
 }
-
 
 .single-form__arrow {
     width: 8px;
@@ -3480,6 +3485,10 @@ h3 {
     }
 }
 
+.pricing-plans__single-form .single-form__card-content .single-form__row {
+    font-size: 18px;
+}
+
 .single-form__divider {
     height: 1px;
     background: rgba(44, 62, 80, 0.15);
@@ -3491,7 +3500,7 @@ h3 {
     color: #2C3E50;
 
     @media screen and (max-width: 768px) {
-        font-size: 14px;
+        max-width: 285px;
     }
 }
 
@@ -3550,6 +3559,7 @@ h3 {
     position: relative;
     width: 22px;
     height: 22px;
+    padding: 10px;
 }
 
 .single-form__radio input {
@@ -3655,7 +3665,8 @@ h3 {
 
     @media screen and (max-width: 768px) {
         max-width: 389px;
-        max-height: 539px;
+        max-height: 564px;
+        padding: 24px 0;
     }
 }
 
@@ -3664,6 +3675,12 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 6px;
+
+    @media screen and (max-width: 768px) {
+        max-width: 389px;
+        max-height: 564px;
+        padding: 0 25px;
+    }
 }
 
 .single-result__number input::placeholder {
@@ -3691,6 +3708,10 @@ h3 {
     font-weight: 500;
     font-size: 18px;
     white-space: nowrap;
+
+    @media screen and (max-width: 768px) {
+        left: 24px;
+    }
 }
 
 .custom-colored-placeholder .first-part {
@@ -3749,7 +3770,7 @@ h3 {
         width: 417px;
         height: 423px;
         background-size: contain;
-        left: -35px;
+        left: -15px;
     }
 }
 
@@ -3807,7 +3828,7 @@ h3 {
     font-weight: 500;
     font-size: 18px;
     color: #2C3E50;
-    
+
     @media screen and (max-width: 1076px) {
         font-size: 16px;
     }
@@ -3850,12 +3871,6 @@ h3 {
     }
 }
 
-@media screen and (max-widht: 768px) {
-    .single-result__price-next--button {
-        width: 100px;
-    }
-}
-
 .sim-recovery__form .custom-checkbox,
 .single-result__price-next .custom-checkbox {
     display: inline-flex;
@@ -3865,10 +3880,6 @@ h3 {
     font-size: 14px;
     color: #BFBFBF;
     user-select: none;
-
-    @media screen and (max-width: 768px) {
-        max-width: 214px;
-    }
 }
 
 .sim-recovery__form .custom-checkbox input,
@@ -3886,9 +3897,6 @@ h3 {
     position: relative;
     transition: all 0.2s ease;
 
-    @media screen and (max-width: 768px) {
-        width: 28px;
-    }
 }
 
 .sim-recovery__form .checkmark {
@@ -4164,6 +4172,7 @@ h3 {
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
+    white-space: nowrap;
 }
 
 .single-result__price-button--transparent span.single-result__price-button--title,
@@ -4329,18 +4338,30 @@ h3 {
     gap: 8px;
     align-items: center;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 768px) {
+        gap: 6px;
+    }
 }
 
 .single-form__card-tarif .title {
     font-weight: 500 !important;
     font-size: 18px !important;
     color: #2C3E50 !important;
+
+    @media screen and (max-width: 768px) {
+        line-height: 100%;
+    }
 }
 
 .single-form__card-tarif span {
     font-weight: 300 !important;
     font-size: 14px !important;
     color: rgba(44, 62, 80, 0.5) !important;
+
+    @media screen and (max-width: 768px) {
+        line-height: 100% !important;
+    }
 }
 
 .single-form__card-tarif .operators {
