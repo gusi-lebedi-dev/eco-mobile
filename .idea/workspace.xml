@@ -6,9 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="64c4c736-a9b2-4ee0-8096-9c1907f6ba66" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/timeline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/always-connection.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/always-connection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/backup.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/backup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/city.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/city.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/first-step.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/first-step.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/flight.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/flight.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/flow.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/flow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/in-rhythm.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/in-rhythm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/on-waves.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/on-waves.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/stability.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/stability.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/step.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/step.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/temp.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/temp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/that.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/that.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publications.html" beforeDir="false" afterPath="$PROJECT_DIR$/publications.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +105,8 @@
       <workItem from="1775732725577" duration="1230000" />
       <workItem from="1775740807589" duration="271000" />
       <workItem from="1775809979609" duration="58000" />
-      <workItem from="1775810636058" duration="2786000" />
+      <workItem from="1775810636058" duration="3257000" />
+      <workItem from="1775817151083" duration="4591000" />
     </task>
     <servers />
   </component>

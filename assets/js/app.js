@@ -7,12 +7,12 @@ document.querySelectorAll('.tab-btn').forEach(button => {
 
         this.classList.add('active');
         document.getElementById(tabId).classList.add('active');
-        
+
         if (tabId === 'news') {
             const newsList = document.querySelector('.news-list');
             const newsArticles = document.querySelectorAll('.news-article');
             const newsH3 = document.querySelector('.tab-inner-news h3');
-            
+
             newsArticles.forEach(article => article.style.display = 'none');
             if (newsList) newsList.style.display = 'grid';
             if (newsH3) newsH3.style.display = 'block';
@@ -21,11 +21,39 @@ document.querySelectorAll('.tab-btn').forEach(button => {
             const articleFulls = document.querySelectorAll('.article-full');
             const articlesH3 = document.querySelector('.tab-inner-articles h3');
             const articlesTop = document.querySelector('.articles-top');
-            
+
             articleFulls.forEach(article => article.style.display = 'none');
             if (articlesList) articlesList.style.display = 'grid';
             if (articlesTop) articlesTop.style.display = 'flex';
             if (articlesH3) articlesH3.style.display = 'block';
         }
     });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('phoneInput');
+    if (!input) return;
+
+    const wrapper = document.querySelector('.single-result__number');
+
+    const customPlaceholder = document.createElement('div');
+    customPlaceholder.className = 'custom-colored-placeholder';
+    customPlaceholder.innerHTML = '<span class="first-part">+7</span><span class="rest-part"> (999) 99 99 999</span>';
+
+    input.parentNode.style.position = 'relative';
+    input.parentNode.appendChild(customPlaceholder);
+
+    function updatePlaceholder() {
+        if (input.value === '') {
+            customPlaceholder.style.display = 'block';
+        } else {
+            customPlaceholder.style.display = 'none';
+        }
+    }
+
+    input.addEventListener('input', updatePlaceholder);
+    input.addEventListener('blur', updatePlaceholder);
+    input.addEventListener('focus', updatePlaceholder);
+
+    updatePlaceholder();
 });
