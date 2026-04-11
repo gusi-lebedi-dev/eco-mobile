@@ -2688,6 +2688,10 @@ h3 {
     margin-bottom: 50px;
 }
 
+.services .pricing-filters {
+    gap: 24px;
+}
+
 .pricing-filters__network,
 .pricing-filters__plans {
     display: flex;
@@ -2766,6 +2770,45 @@ h3 {
     }
 }
 
+.services__show-all {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    margin: 0 auto;
+    background: #2C3E50;
+    border-radius: 20px;
+    max-width: 168px;
+    height: 49px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.services .pricing-plans__list {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 1300px) {
+        justify-content: center;
+        grid-template-columns: repeat(2, 0fr);
+    }
+
+    @media screen and (max-width: 1076px) {
+        grid-template-columns: repeat(2, 0fr);
+    }
+
+    @media screen and (max-width: 860px) {
+        grid-template-columns: repeat(1, 0fr);
+        margin-bottom: 40px;
+    }
+}
+
 .pricing-plans__item {
     position: relative;
     display: flex;
@@ -2775,6 +2818,12 @@ h3 {
     padding: 22px;
     background: url(assets/images/pricing-plans/pricing-plans.svg) no-repeat center;
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.services .pricing-plans__item {
+    width: 398px;
+    background: url(assets/images/services.svg) no-repeat center;
+padding: 50px 36px;
 }
 
 .pricing-plans__item:not(.visible) {
@@ -2789,6 +2838,10 @@ h3 {
     height: 55px;
     top: 35.5%;
     right: 0;
+}
+
+.services .arrow--pricing-plans {
+    top: 0;
 }
 
 .arrow--pricing-plans {
@@ -2843,6 +2896,21 @@ h3 {
     margin-bottom: 79px;
 }
 
+.services .pricing-plans__item-title {
+    margin-bottom: 12px;
+    max-width: 300px;
+    border-radius: 0;
+    border: none;
+    align-items: start;
+    justify-content: start;
+    padding: 0;
+    font-weight: 100;
+    font-size: 34px;
+    line-height: 47px;
+    color: #2C3E50;
+    height: auto;
+}
+
 .pricing-plans__item-text {
     display: flex;
     flex-direction: column;
@@ -2861,6 +2929,15 @@ h3 {
     font-size: 14px;
     color: #2C3E50;
     max-width: 194px;
+}
+
+.services  .pricing-plans__item-text p,
+.services .pricing-plans__item-text {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2C3E50;
+    max-width: 100%;
 }
 
 .pricing-plans__item-price {
