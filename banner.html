@@ -702,6 +702,61 @@
         }
     }
 
+    .new-modal-banner__item--gradient::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(269.97deg, rgba(255, 255, 255, 0) 15.46%, #DDDDDD 37.07%, #568DBD 93.29%);
+    }
+
+    .new-modal-banner__item--gradient.new-modal-banner__item .home-new-banner__picture img {
+        margin: 0 0 0 auto;
+    }
+
+    .new-modal-banner__item--gradient .home-new-banner__item-content {
+        left: 81px;
+        transform: translate(0, -50%);
+        gap: 10px;
+        @media screen and (max-width: 768px) {
+            left: 20px;
+            top: 50px;
+            transform: translate(0, 0);
+            align-items: flex-start;
+            justify-content: start;
+        }
+    }
+
+    .new-modal-banner__item--gradient .home-new-banner__item-content--title {
+        margin-bottom: 9px;
+        white-space: wrap;
+        max-width: 805px !important;
+
+        @media screen and (max-width: 1076px) {
+            font-size: 40px;
+            line-height: 100%;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 27px !important;
+            position: unset !important;
+            max-width: 343px !important;
+        }
+    }
+
+    .new-modal-banner__item--gradient .home-new-banner__button {
+
+        @media screen and (max-width: 768px) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            max-width: 100%;
+            width: 100%;
+        }
+
+    }
+
 </style>
 <div class="container">
     <div class="home-new-banner">
@@ -726,140 +781,143 @@
                     </div>
                 </div>
 
-<!--                <div data-modal-id="modal-1" class="home-new-banner__modal">-->
-<!--                    <div class="home-new-banner__modal-item">-->
-<!--                        <svg class="home-new-banner__modal-close" width="64" height="64" viewBox="0 0 64 64" fill="none"-->
-<!--                             xmlns="http://www.w3.org/2000/svg">-->
-<!--                            <path d="M22.6066 21.3934C22.2161 21.0029 21.5829 21.0029 21.1924 21.3934C20.8019 21.7839 20.8019 22.4171 21.1924 22.8076L22.6066 21.3934ZM40.9914 42.6066C41.3819 42.9971 42.0151 42.9971 42.4056 42.6066C42.7961 42.2161 42.7961 41.5829 42.4056 41.1924L40.9914 42.6066ZM21.1924 41.1924C20.8019 41.5829 20.8019 42.2161 21.1924 42.6066C21.5829 42.9971 22.2161 42.9971 22.6066 42.6066L21.1924 41.1924ZM42.4056 22.8076C42.7961 22.4171 42.7961 21.7839 42.4056 21.3934C42.0151 21.0029 41.3819 21.0029 40.9914 21.3934L42.4056 22.8076ZM21.1924 22.8076L40.9914 42.6066L42.4056 41.1924L22.6066 21.3934L21.1924 22.8076ZM22.6066 42.6066L42.4056 22.8076L40.9914 21.3934L21.1924 41.1924L22.6066 42.6066Z"-->
-<!--                                  fill="black"/>-->
-<!--                        </svg>-->
+                <div data-modal-id="modal-1" class="home-new-banner__modal">
+                    <div class="home-new-banner__modal-item">
+                        <svg class="home-new-banner__modal-close" width="64" height="64" viewBox="0 0 64 64" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.6066 21.3934C22.2161 21.0029 21.5829 21.0029 21.1924 21.3934C20.8019 21.7839 20.8019 22.4171 21.1924 22.8076L22.6066 21.3934ZM40.9914 42.6066C41.3819 42.9971 42.0151 42.9971 42.4056 42.6066C42.7961 42.2161 42.7961 41.5829 42.4056 41.1924L40.9914 42.6066ZM21.1924 41.1924C20.8019 41.5829 20.8019 42.2161 21.1924 42.6066C21.5829 42.9971 22.2161 42.9971 22.6066 42.6066L21.1924 41.1924ZM42.4056 22.8076C42.7961 22.4171 42.7961 21.7839 42.4056 21.3934C42.0151 21.0029 41.3819 21.0029 40.9914 21.3934L42.4056 22.8076ZM21.1924 22.8076L40.9914 42.6066L42.4056 41.1924L22.6066 21.3934L21.1924 22.8076ZM22.6066 42.6066L42.4056 22.8076L40.9914 21.3934L21.1924 41.1924L22.6066 42.6066Z"
+                                  fill="black"/>
+                        </svg>
 
-<!--                        <span class="home-new-banner__modal-title">-->
-<!--                            Всегда там, где связь лучше-->
-<!--                        </span>-->
+                        <span class="home-new-banner__modal-title">
+                            Всегда там, где связь лучше
+                        </span>
 
-<!--                        <p class="home-new-banner__modal-text">-->
-<!--                            SIM Пульс подсказывает, какая SIM сейчас даст более стабильное подключение.-->
-<!--                        </p>-->
+                        <p class="home-new-banner__modal-text">
+                            SIM Пульс подсказывает, какая SIM сейчас даст более стабильное подключение.
+                        </p>
 
-<!--                        <div class="home-new-banner__modal-icons">-->
-<!--                            <div class="home-new-banner__modal-icon">-->
-<!--                                <img src="assets/images/dist/sim-modal-icon.svg" alt="">-->
-<!--                                Подсказка <br>-->
-<!--                                внутри приложения-->
-<!--                            </div>-->
-<!--                            <div class="home-new-banner__modal-icon">-->
-<!--                                <img src="assets/images/dist/sim-modal-icon-2.svg" alt="">-->
-<!--                                Переход <br>-->
-<!--                                в настройки-->
-<!--                            </div>-->
-<!--                            <div class="home-new-banner__modal-icon">-->
-<!--                                <img src="assets/images/dist/sim-modal-icon-3.png" alt="">-->
-<!--                                Выбор нужной SIM-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        <div class="home-new-banner__modal-icons">
+                            <div class="home-new-banner__modal-icon">
+                                <img src="assets/images/dist/sim-modal-icon.svg" alt="">
+                                Подсказка <br>
+                                внутри приложения
+                            </div>
+                            <div class="home-new-banner__modal-icon">
+                                <img src="assets/images/dist/sim-modal-icon-2.svg" alt="">
+                                Переход <br>
+                                в настройки
+                            </div>
+                            <div class="home-new-banner__modal-icon">
+                                <img src="assets/images/dist/sim-modal-icon-3.svg" alt="">
+                                Выбор нужной SIM
+                            </div>
+                        </div>
 
-<!--                        <p class="home-new-banner__modal-subtext">Сервис доступен в мобильном приложении “Экомобайл” на Android</p>-->
+                        <p class="home-new-banner__modal-subtext">Сервис доступен в мобильном приложении “Экомобайл” на Android</p>
 
-<!--                        <div class="home-new-banner__modal-links">-->
-<!--                            <img class="home-new-banner__modal-qr"-->
-<!--                                 src="assets/images/dist/icons/sim-qr.svg" alt="">-->
+                        <div class="home-new-banner__modal-links">
+                            <img class="home-new-banner__modal-qr"
+                                 src="assets/images/dist/icons/sim-qr.svg" alt="">
 
-<!--                            <div>-->
-<!--                                <a href="">-->
-<!--                                    <img src="assets/images/dist/icons/appstore-white.svg" alt="">-->
-<!--                                </a>-->
-<!--                                <a href="">-->
-<!--                                    <img src="assets/images/dist/icons/google-application.svg"-->
-<!--                                         alt="">-->
-<!--                                </a>-->
-<!--                                <a href="">-->
-<!--                                    <img src="assets/images/dist/icons/rustore-application.svg"-->
-<!--                                         alt="">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                            <div>
+                                <a href="">
+                                    <img src="assets/images/dist/icons/appstore-white.svg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="assets/images/dist/icons/google-application.svg"
+                                         alt="">
+                                </a>
+                                <a href="">
+                                    <img src="assets/images/dist/icons/rustore-application.svg"
+                                         alt="">
+                                </a>
+                            </div>
+                        </div>
 
-<!--                        <a href="#" class="home-new-banner__button-modal">-->
-<!--                            Попробовать в приложении-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
+                        <a href="#" class="home-new-banner__button-modal">
+                            Попробовать в приложении
+                        </a>
+                    </div>
+                </div>
 
-<!--                <div data-modal="modal-2" class="home-new-banner__item home-new-banner__for_autopay swiper-slide">-->
-<!--                    <picture class="home-new-banner__picture">-->
-<!--                        <source media="(min-width: 1301px)"-->
-<!--                                srcset="assets/images/dist/banner-sim.png">-->
-<!--                        <source media="(min-width: 950px)"-->
-<!--                                srcset="assets/images/dist/banner-sim-tablet.png">-->
-<!--                        <img src="assets/images/dist/banner-sim-mobile.png"-->
-<!--                             alt="Успей за выгодой" class="home-new-banner__img">-->
-<!--                    </picture>-->
+                <div data-modal="modal-2" class="home-new-banner__item new-modal-banner__item new-modal-banner__item--gradient home-new-banner__for_autopay swiper-slide">
+                    <picture class="home-new-banner__picture">
+                        <source media="(min-width: 1301px)"
+                                srcset="assets/images/dist/banner-sim-2.png">
+                        <source media="(min-width: 950px)"
+                                srcset="assets/images/dist/banner-sim-2.png">
+                        <img src="assets/images/dist/banner-sim-2.png"
+                             alt="Успей за выгодой" class="home-new-banner__img">
+                    </picture>
+                    <div class="home-new-banner__item-content">
+                        <p class="home-new-banner__item-content--title">Безлимит за 490 рублей — сразу при подключении eSIM</p>
+                        <p>Подключи номер онлайн прямо со смартфона - <br> быстро, спокойно и без визита в офис</p>
+                        <a href="#" class="home-new-banner__button">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
 
-<!--                    <a href="#" class="home-new-banner__button home-new-banner__button-two">-->
-<!--                        Подробнее-->
-<!--                    </a>-->
-<!--                </div>-->
+                <div data-modal-id="modal-2" class="home-new-banner__modal">
+                    <div class="home-new-banner__modal-item">
+                        <svg class="home-new-banner__modal-close" width="64" height="64" viewBox="0 0 64 64" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.6066 21.3934C22.2161 21.0029 21.5829 21.0029 21.1924 21.3934C20.8019 21.7839 20.8019 22.4171 21.1924 22.8076L22.6066 21.3934ZM40.9914 42.6066C41.3819 42.9971 42.0151 42.9971 42.4056 42.6066C42.7961 42.2161 42.7961 41.5829 42.4056 41.1924L40.9914 42.6066ZM21.1924 41.1924C20.8019 41.5829 20.8019 42.2161 21.1924 42.6066C21.5829 42.9971 22.2161 42.9971 22.6066 42.6066L21.1924 41.1924ZM42.4056 22.8076C42.7961 22.4171 42.7961 21.7839 42.4056 21.3934C42.0151 21.0029 41.3819 21.0029 40.9914 21.3934L42.4056 22.8076ZM21.1924 22.8076L40.9914 42.6066L42.4056 41.1924L22.6066 21.3934L21.1924 22.8076ZM22.6066 42.6066L42.4056 22.8076L40.9914 21.3934L21.1924 41.1924L22.6066 42.6066Z"
+                                  fill="black"/>
+                        </svg>
 
-<!--                <div data-modal-id="modal-2" class="home-new-banner__modal">-->
-<!--                    <div class="home-new-banner__modal-item">-->
-<!--                        <svg class="home-new-banner__modal-close" width="64" height="64" viewBox="0 0 64 64" fill="none"-->
-<!--                             xmlns="http://www.w3.org/2000/svg">-->
-<!--                            <path d="M22.6066 21.3934C22.2161 21.0029 21.5829 21.0029 21.1924 21.3934C20.8019 21.7839 20.8019 22.4171 21.1924 22.8076L22.6066 21.3934ZM40.9914 42.6066C41.3819 42.9971 42.0151 42.9971 42.4056 42.6066C42.7961 42.2161 42.7961 41.5829 42.4056 41.1924L40.9914 42.6066ZM21.1924 41.1924C20.8019 41.5829 20.8019 42.2161 21.1924 42.6066C21.5829 42.9971 22.2161 42.9971 22.6066 42.6066L21.1924 41.1924ZM42.4056 22.8076C42.7961 22.4171 42.7961 21.7839 42.4056 21.3934C42.0151 21.0029 41.3819 21.0029 40.9914 21.3934L42.4056 22.8076ZM21.1924 22.8076L40.9914 42.6066L42.4056 41.1924L22.6066 21.3934L21.1924 22.8076ZM22.6066 42.6066L42.4056 22.8076L40.9914 21.3934L21.1924 41.1924L22.6066 42.6066Z"-->
-<!--                                  fill="black"/>-->
-<!--                        </svg>-->
+                        <span class="home-new-banner__modal-title">
+                            Всегда там, где связь лучше
+                        </span>
 
-<!--                        <span class="home-new-banner__modal-title">-->
-<!--                            Всегда там, где связь лучше-->
-<!--                        </span>-->
+                        <p class="home-new-banner__modal-text">
+                            SIM Пульс подсказывает, какая SIM сейчас даст более стабильное подключение.
+                        </p>
 
-<!--                        <p class="home-new-banner__modal-text">-->
-<!--                            SIM Пульс подсказывает, какая SIM сейчас даст более стабильное подключение.-->
-<!--                        </p>-->
+                        <div class="home-new-banner__modal-icons">
+                            <div class="home-new-banner__modal-icon">
+                                <img src="assets/images/dist/sim-modal-icon.svg" alt="">
+                                Подсказка <br>
+                                внутри приложения
+                            </div>
+                            <div class="home-new-banner__modal-icon">
+                                <img src="assets/images/dist/sim-modal-icon-2.svg" alt="">
+                                Переход <br>
+                                в настройки
+                            </div>
+                            <div class="home-new-banner__modal-icon">
+                                <img src="assets/images/dist/sim-modal-icon-3.png" alt="">
+                                Выбор нужной SIM
+                            </div>
+                        </div>
 
-<!--                        <div class="home-new-banner__modal-icons">-->
-<!--                            <div class="home-new-banner__modal-icon">-->
-<!--                                <img src="assets/images/dist/sim-modal-icon.svg" alt="">-->
-<!--                                Подсказка <br>-->
-<!--                                внутри приложения-->
-<!--                            </div>-->
-<!--                            <div class="home-new-banner__modal-icon">-->
-<!--                                <img src="assets/images/dist/sim-modal-icon-2.svg" alt="">-->
-<!--                                Переход <br>-->
-<!--                                в настройки-->
-<!--                            </div>-->
-<!--                            <div class="home-new-banner__modal-icon">-->
-<!--                                <img src="assets/images/dist/sim-modal-icon-3.png" alt="">-->
-<!--                                Выбор нужной SIM-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        <p class="home-new-banner__modal-subtext">Сервис доступен в мобильном приложении “Экомобайл” на Android</p>
 
-<!--                        <p class="home-new-banner__modal-subtext">Сервис доступен в мобильном приложении “Экомобайл” на Android</p>-->
+                        <div class="home-new-banner__modal-links">
+                            <img class="home-new-banner__modal-qr"
+                                 src="assets/images/dist/icons/sim-qr.svg" alt="">
 
-<!--                        <div class="home-new-banner__modal-links">-->
-<!--                            <img class="home-new-banner__modal-qr"-->
-<!--                                 src="assets/images/dist/icons/sim-qr.svg" alt="">-->
+                            <div>
+                                <a href="">
+                                    <img src="assets/images/dist/icons/appstore-white.svg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="assets/images/dist/icons/google-application.svg"
+                                         alt="">
+                                </a>
+                                <a href="">
+                                    <img src="assets/images/dist/icons/rustore-application.svg"
+                                         alt="">
+                                </a>
+                            </div>
+                        </div>
 
-<!--                            <div>-->
-<!--                                <a href="">-->
-<!--                                    <img src="assets/images/dist/icons/appstore-white.svg" alt="">-->
-<!--                                </a>-->
-<!--                                <a href="">-->
-<!--                                    <img src="assets/images/dist/icons/google-application.svg"-->
-<!--                                         alt="">-->
-<!--                                </a>-->
-<!--                                <a href="">-->
-<!--                                    <img src="assets/images/dist/icons/rustore-application.svg"-->
-<!--                                         alt="">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-<!--                        <a href="#" class="home-new-banner__button-modal">-->
-<!--                            Попробовать в приложении-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
+                        <a href="#" class="home-new-banner__button-modal">
+                            Попробовать в приложении
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
