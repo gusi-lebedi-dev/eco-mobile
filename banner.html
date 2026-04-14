@@ -396,10 +396,12 @@
         }
     }
 
+    .home-new-banner__button-modal,
     .home-new-banner__button:hover {
         background: #3B5570;
     }
 
+    .home-new-banner__button-modal,
     .home-new-banner__button.is-active {
         background: #EEF1F6;
         color: #2C3E50;
@@ -443,37 +445,43 @@
         background: #2C3E50;
         border-radius: 10px;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 950px) {
             display: flex;
         }
     }
 
     .home-new-banner__modal-item {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
         position: absolute;
         top: 50%;
         left: 50%;
+        padding: 40px 60px;
         transform: translateY(-50%) translateX(-50%);
         width: 1118px;
         height: 816px;
-        background: url("assets/images/dist/sim-modal.png") no-repeat;
+        background: url("assets/images/dist/sim-modal.svg") no-repeat;
         border-radius: 20px;
 
         @media screen and (max-width: 1150px) {
-            background: url("assets/images/dist/sim-modal-tablet.png") no-repeat;
+            background: url("assets/images/dist/sim-modal.svg") no-repeat;
             width: 945px;
-            height: 737px;
+            height: 779px;
             background-size: cover;
         }
         @media screen and (max-width: 950px) {
-            background: url("assets/images/dist/sim-modal-tablet.png") no-repeat;
+            background: url("assets/images/dist/sim-modal-tablet.svg") no-repeat;
             width: 700px;
             height: 737px;
             background-size: cover;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 950px) {
             width: 402px;
             height: 770px;
-            background: url("assets/images/dist/sim-modal-mobile.png") no-repeat;
+            gap: 30px;
+            padding: 60px 32px;
+            background: url("assets/images/dist/sim-modal-mobile.svg") no-repeat;
         }
     }
 
@@ -488,14 +496,11 @@
     }
 
     .home-new-banner__modal-links {
-        position: absolute;
-        bottom: 60px;
-        left: 60px;
         display: flex;
         gap: 36px;
         align-items: center;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 950px) {
             display: none;
         }
     }
@@ -523,6 +528,102 @@
         max-width: 1240px;
         width: max-content;
     }
+
+    .home-new-banner__modal-title {
+        font-family: 'Gotham Pro', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: -0.05em;
+        color: #2C3E50;
+        max-width: 663px;
+        
+        @media screen and (max-width: 1150px) {
+            font-size: 70px;
+        }
+        @media screen and (max-width: 950px) {
+            font-size: 40px;
+            line-height: 100%;
+        }
+    }
+
+    .home-new-banner__modal-text {
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 41px;
+        color: #2C3E50;
+        max-width: 533px;
+
+        @media screen and (max-width: 1150px) {
+            font-size: 25px;
+        }
+
+        @media screen and (max-width: 950px) {
+            font-size: 15px;
+            line-height: 100%;
+            max-width: 296px;
+            margin-bottom: 29px;
+        }
+    }
+
+    .home-new-banner__modal-icons {
+        display: flex;
+        gap: 38px;
+        align-items: start;
+        max-width: 469px;
+
+    }
+
+    .home-new-banner__modal-icons img {
+        width: 95px;
+        height: 95px;
+
+        @media screen and (max-width: 950px) {
+            width: 82px;
+            height: 82px;
+        }
+    }
+
+    .home-new-banner__modal-icon {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        color: #2C3E50;
+        max-width: 153px;
+
+        @media screen and (max-width: 950px) {
+            gap: 10px;
+            font-size: 10px;
+            line-height: 100%;
+        }
+    }
+
+    .home-new-banner__modal-subtext {
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        color: #2C3E50;
+
+        @media screen and (max-width: 950px) {
+            position: absolute;
+            bottom: 36px;
+            left: 36px;
+            font-size: 10px;
+            line-height: 100%;
+        }
+    }
+
 </style>
 <div class="container">
     <div class="home-new-banner">
@@ -549,6 +650,34 @@
                             <path d="M22.6066 21.3934C22.2161 21.0029 21.5829 21.0029 21.1924 21.3934C20.8019 21.7839 20.8019 22.4171 21.1924 22.8076L22.6066 21.3934ZM40.9914 42.6066C41.3819 42.9971 42.0151 42.9971 42.4056 42.6066C42.7961 42.2161 42.7961 41.5829 42.4056 41.1924L40.9914 42.6066ZM21.1924 41.1924C20.8019 41.5829 20.8019 42.2161 21.1924 42.6066C21.5829 42.9971 22.2161 42.9971 22.6066 42.6066L21.1924 41.1924ZM42.4056 22.8076C42.7961 22.4171 42.7961 21.7839 42.4056 21.3934C42.0151 21.0029 41.3819 21.0029 40.9914 21.3934L42.4056 22.8076ZM21.1924 22.8076L40.9914 42.6066L42.4056 41.1924L22.6066 21.3934L21.1924 22.8076ZM22.6066 42.6066L42.4056 22.8076L40.9914 21.3934L21.1924 41.1924L22.6066 42.6066Z"
                                   fill="black"/>
                         </svg>
+
+                        <span class="home-new-banner__modal-title">
+                            Всегда там, где связь лучше
+                        </span>
+
+                        <p class="home-new-banner__modal-text">
+                            SIM Пульс подсказывает, какая SIM сейчас даст более стабильное подключение.
+                        </p>
+
+                        <div class="home-new-banner__modal-icons">
+                            <div class="home-new-banner__modal-icon">
+                                <img src="assets/images/dist/sim-modal-icon.svg" alt="">
+                                Подсказка <br>
+                                внутри приложения
+                            </div>
+                            <div class="home-new-banner__modal-icon">
+                                <img src="assets/images/dist/sim-modal-icon-2.svg" alt="">
+                                Переход <br>
+                                в настройки
+                            </div>
+                            <div class="home-new-banner__modal-icon">
+                                <img src="assets/images/dist/sim-modal-icon-3.png" alt="">
+                                Выбор нужной SIM
+                            </div>
+                        </div>
+
+                        <p class="home-new-banner__modal-subtext">Сервис доступен в мобильном приложении “Экомобайл” на Android</p>
+
                         <div class="home-new-banner__modal-links">
                             <img class="home-new-banner__modal-qr"
                                  src="assets/images/dist/icons/sim-qr.svg" alt="">
@@ -628,11 +757,21 @@
 <!--</div>-->
 <script>
     const buttonBanner = document.querySelector('.home-new-banner__button');
+    const buttonModalBanner = document.querySelector('.home-new-banner__button-modal');
     const modalBanner = document.querySelector('.home-new-banner__modal ');
     const modalBannerClose = document.querySelector('.home-new-banner__modal-close');
+
     buttonBanner.addEventListener('click', function () {
         this.classList.add('is-active');
         modalBanner.classList.add('is-active');
+
+        setTimeout(() => {
+            this.classList.remove('is-active');
+        }, 2000);
+    });
+
+    buttonModalBanner.addEventListener('click', function () {
+        this.classList.add('is-active');
 
         setTimeout(() => {
             this.classList.remove('is-active');
