@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="64c4c736-a9b2-4ee0-8096-9c1907f6ba66" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/dist/sim-modal-tablet.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/dist/sim-modal-tablet.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrange.html" beforeDir="false" afterPath="$PROJECT_DIR$/arrange.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautiful-number.html" beforeDir="false" afterPath="$PROJECT_DIR$/beautiful-number.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/number-activation.html" beforeDir="false" afterPath="$PROJECT_DIR$/number-activation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing-plans/city.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing-plans/city.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +111,8 @@
       <workItem from="1776169374367" duration="10033000" />
       <workItem from="1776238192577" duration="3173000" />
       <workItem from="1776241963300" duration="762000" />
-      <workItem from="1776243994210" duration="605000" />
+      <workItem from="1776243994210" duration="1882000" />
+      <workItem from="1776254318314" duration="6566000" />
     </task>
     <servers />
   </component>

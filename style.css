@@ -3342,6 +3342,7 @@ h3 {
 }
 
 .pricing-plans__connection__title {
+    gap: 16px;
     .pricing-plans__connection__links.is-desktop {
         flex-basis: 33%;
     }
@@ -4510,6 +4511,10 @@ h3 {
 
 .arrange .pricing-plans__connection {
     padding: 51px 65px;
+
+    @media screen and (max-width: 1076px) {
+        padding: 38px 64px;
+    }
 }
 
 .arrange__title {
@@ -4529,6 +4534,11 @@ h3 {
         margin-bottom: 40px;
         padding: 0;
     }
+}
+
+.arrange--no-height .arrange__title {
+    height: auto;
+    margin-top: 33px;
 }
 
 .arrange__title h1 {
@@ -4625,6 +4635,11 @@ h3 {
         background: url(assets/images/requirements-item-mobile.svg) no-repeat center;
     }
 }
+@media screen and (max-width: 870px) {
+    .your-connection .arrange__requirements-item::before {
+        background: url(assets/images/your-connection-requirements-item.svg) no-repeat center;
+    }
+}
 
 .arrange__requirements-item p {
     font-weight: 500;
@@ -4660,6 +4675,22 @@ h3 {
         width: 40px;
         height: 40px;
         font-size: 16px;
+    }
+}
+@media screen and (max-width: 870px) {
+    .your-connection .arrange__requirements-item span {
+        width: 59px;
+        height: 59px;
+        font-size: 23.58px;
+    }
+}
+
+
+.arrange--no-height .arrange_content {
+    margin-bottom: 80px;
+
+    @media screen and (max-width: 1076px) {
+        margin-bottom: 50px;
     }
 }
 
@@ -4743,13 +4774,16 @@ h3 {
 
 @media screen and (max-width: 1076px) {
 
-    .arrange .pricing-plans__connection-phone--mobile,
+    .arrange .pricing-plans__connection-phone--mobile {
+        display: block;
+        bottom: -25px;
+    }
     .arrange .pricing-plans__connection__links {
         display: none;
     }
 
     .arrange .pricing-plans__connection-phone--desktop {
-        display: block;
+        display: none;
     }
 
     .arrange .pricing-plans__connection-phone img {
@@ -4836,6 +4870,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent
 }
 
 .quick-faq__question span {
@@ -4852,6 +4887,31 @@ h3 {
     transition: transform 0.3s ease;
 }
 
+.quick-faq__icon {
+    width: auto;
+    height: auto;
+}
+.quick-faq__icon img {
+    width: 30px;
+    height: 15px;
+}
+
+.number-activation .quick-faq__icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .number-activation .quick-faq__icon,
+    .number-activation .quick-faq__icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
 .quick-faq__item.active {
     gap: 16px;
 }
@@ -4894,6 +4954,37 @@ h3 {
     border: none;
 }
 
+@media screen and (max-width: 1076px) {
+    .buy-sim.arrange .pricing-plans__connection__links {
+        display: flex;
+        align-items: center;
+    }
+
+    .buy-sim.arrange .pricing-plans__connection-phone img {
+        right: 221px;
+    }
+}
+@media screen and (max-width: 885px) {
+    .buy-sim.arrange .pricing-plans__connection__links {
+        display: none;
+    }
+
+    .buy-sim.arrange .pricing-plans__connection-phone {
+        display: none;
+    }
+
+    .buy-sim.arrange .pricing-plans__connection__links.is-mobile .pricing-plans__connection-qr {
+        display: flex;
+    }
+
+    .buy-sim .pricing-plans__connection__title .footer-apps__links {
+        flex-direction: column;
+    }
+    .buy-sim .pricing-plans__connection {
+        max-height: 100%;
+    }
+}
+
 .buy-sim__advantages {
     display: flex;
     flex-wrap: nowrap;
@@ -4925,6 +5016,7 @@ h3 {
 
     @media screen and (max-width: 768px) {
         flex-basis: 100%;
+        height: 86px;
     }
 }
 
@@ -4936,12 +5028,32 @@ h3 {
     margin: 0 auto;
     max-width: 972px;
     padding: 24px;
+
+    @media screen and (max-width: 1076px) {
+        align-items: start;
+    }
+    @media screen and (max-width: 768px) {
+        align-items: center;
+    }
 }
 
 .buy-sim__tarif-list {
     display: flex;
     flex-direction: row;
     gap: 24px;
+
+
+}
+
+@media screen and (max-width: 1076px) {
+    .buy-sim__tarif-list .pricing-plans__item:last-child {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .buy-sim__tarif-list .pricing-plans__item:last-child {
+        display: flex;
+    }
 }
 
 .all-tarif {
@@ -4959,6 +5071,7 @@ h3 {
     font-size: 18px;
     line-height: 100%;
     color: #2C3E50;
+    margin: 0 auto;
 }
 
 @media (max-width: 900px) {
@@ -5149,7 +5262,7 @@ h3 {
     line-height: 46px;
     margin: 0;
 
-    @media screen and (max-width: 1076px) {
+    @media screen and (max-width: 768px) {
         font-size: 24px;
         line-height: 100%;
     }
@@ -5162,7 +5275,7 @@ h3 {
     margin: 0;
     text-align: center;
 
-    @media screen and (max-width: 1076px) {
+    @media screen and (max-width: 768px) {
         font-size: 14px;
         line-height: 100%;
     }
@@ -5173,6 +5286,7 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 36px;
+    margin: 0 auto;
 }
 
 .sim-recovery__section {
@@ -5262,6 +5376,10 @@ h3 {
     outline: none;
 }
 
+.sim-recovery__form-input::placeholder {
+    color: #2C3E5080;
+}
+
 .sim-recovery__form-checkbox {
     display: flex;
     align-items: center;
@@ -5281,6 +5399,12 @@ h3 {
     font-weight: 500;
     cursor: pointer;
     transition: 0.3s;
+    
+    @media screen and (max-width: 768px) {
+        height: 36px;
+        font-size: 16px;
+        width: 176px;
+    }
 }
 
 .sim-recovery__form-button:hover {
@@ -5320,11 +5444,13 @@ h3 {
 
     @media screen and (max-width: 1076px) {
         font-size: 16px;
+        height: 140px;
     }
 
-    @media screen and (max-width: 1076px) {
+    @media screen and (max-width: 768px) {
         font-size: 14px;
         flex-basis: calc(50% - 6px);
+        height: 100px;
     }
 }
 
@@ -5355,6 +5481,19 @@ h3 {
     }
 }
 
+.number-activation .quick-faq__question span {
+    font-size: 24px;
+
+    @media screen and (max-width: 1076px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+}
+
+
+
 .number-activation__banner h1 {
     font-weight: 100;
     font-size: 74px;
@@ -5378,10 +5517,14 @@ h3 {
     line-height: 22px;
     text-align: center;
     color: #2C3E50;
-    max-width: 816px;
+    max-width: 727px;
 
     @media screen and (max-width: 1076px) {
         line-height: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        text-align: left;
     }
 }
 
@@ -5417,11 +5560,16 @@ h3 {
     min-height: 80px;
     justify-content: center;
     border-bottom: 1px solid rgba(217, 217, 217, 1);
+
+    @media screen and (max-width: 768px) {
+        min-height: 50px;
+    }
 }
 
 .number-activation .quick-faq__item.active {
     min-height: 150px;
     padding-bottom: 23.5px;
+    padding-top: 23.5px;
 }
 
 .number-activation__search {
@@ -5555,7 +5703,7 @@ h3 {
     color: #2C3E50;
 
     @media screen and (max-width: 768px) {
-        margin-bottom: 16px;
+        font-size: 16px;
     }
 }
 
@@ -5606,7 +5754,7 @@ h3 {
     text-transform: none;
 
     @media screen and (max-width: 768px) {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 100%;
     }
 }
@@ -5723,6 +5871,15 @@ h3 {
     line-height: 60px;
     color: #2C3E50;
     text-align: left;
+
+    @media screen and (max-width: 1076px) {
+        font-size: 34px;
+        line-height: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 24px;
+    }
 }
 
 .your-connection .arrange__requirements-item {
@@ -5735,17 +5892,22 @@ h3 {
         height: 166px;
         padding: 0 46px;
     }
+    @media screen and (max-width: 870px) {
+        width: 390px;
+        height: 202px;
+        padding: 0 46px;
+    }
 }
 
 .your-connection .arrange__requirements-item p {
     font-weight: 300;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 130%;
     text-align: right;
     color: #FFFFFF;
 
     @media screen and (max-width: 768px) {
-        font-size: 12.5px;
+        font-size: 13.75px;
         line-height: 100%;
     }
 }
@@ -5925,17 +6087,20 @@ h3 {
     height: 28px;
 }
 
-.your-connection__applications-item:last-child a:last-child {
+.your-connection__applications-item:last-child a:nth-child(4) {
     right: 0;
-    top: 62px;
+    top: 95px;
+
+    @media screen and (max-width: 768px) {
+        top: 62px;
+    }
 }
 
-.your-connection__applications-item:last-child a:last-child img {
+.your-connection__applications-item:last-child a:nth-child(4) img {
     width: 118px;
     height: 29px;
 
-    @media screen and (max-width: 768px) {
-    }
+
 }
 
 .arrange__how-connect {
@@ -5960,6 +6125,13 @@ h3 {
 
     @media screen and (max-width: 768px) {
         font-size: 24px;
+        line-height: 100%;
+    }
+}
+
+.arrange__how-connect h3 {
+    @media screen and (max-width: 768px) {
+        font-size: 34px;
         line-height: 100%;
     }
 }
@@ -6089,6 +6261,13 @@ h3 {
 
     @media screen and (max-width: 768px) {
         max-width: 100%;
+    }
+
+}
+
+.arrange__how-connect-list-item p:not(:first-child) {
+    @media screen and (max-width: 550px) {
+        max-width: 130px;
     }
 }
 
@@ -6267,7 +6446,6 @@ h3 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     opacity: 0;
     transform: translateY(100%) scale(1);
     transition: all 7s;
@@ -6275,9 +6453,7 @@ h3 {
     font-style: normal;
     font-weight: 500;
     color: #2C3E50;
-    pointer-events: none;
     animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border-radius: 20px;
     padding: 16px 27px;
     backdrop-filter: blur(10px);
     will-change: transform, opacity;
@@ -6287,7 +6463,7 @@ h3 {
     align-items: flex-start;
     gap: 8px;
     border: 2px solid #B9D09C;
-    border-radius: 36px 36px 36px 0px;
+    border-radius: 36px 36px 36px 0;
     width: 376px;
     height: 83px;
 }
@@ -6676,6 +6852,9 @@ h3 {
     color: #2C3E50;
     max-width: 220px;
 
+    @media screen and (max-width: 1.76px) {
+        font-size: 16px;
+    }
     @media screen and (max-width: 768px) {
         max-width: 125px;
     }
@@ -7068,12 +7247,12 @@ h3 {
 
 .beautiful-number__form-block .single-form__card-title {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 16px !important;
     line-height: 100%;
     color: #2C3E50;
 
     @media screen and (max-width: 768px) {
-        font-size: 14px !important;
+        font-size: 16px !important;
     }
 }
 
@@ -7319,7 +7498,7 @@ h3 {
     border: 1px solid #DEE4EE;
     border-radius: 36px;
     padding: 0 24px;
-    font-size: 16px;
+    font-size: 14px;
     color: #2C3E50;
     outline: none;
 }
@@ -7405,7 +7584,7 @@ h3 {
 
 .beautiful-number__form-input:focus + .beautiful-number__form-label,
 .beautiful-number__form-input:not(:placeholder-shown) + .beautiful-number__form-label {
-    top: 10px;
+    top: 20px;
     font-size: 13px;
     color: #444;
 }
@@ -7416,6 +7595,24 @@ h3 {
     top: 16px;
     display: flex;
     gap: 6px;
+}
+
+.beautiful-number__form {
+    position: relative;
+}
+
+.beautiful-number__form-close {
+    display: none;
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
 }
 
 .beautiful-number__form-btn-check,
@@ -7457,7 +7654,7 @@ h3 {
     width: 100%;
     max-width: 100%;
     height: 100%;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .faq {
