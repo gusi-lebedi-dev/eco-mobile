@@ -477,6 +477,7 @@
         height: 816px;
         background: url("assets/images/dist/sim-modal.svg") no-repeat;
         border-radius: 20px;
+        z-index: 99;
 
         @media screen and (max-width: 1150px) {
             background: url("assets/images/dist/sim-modal-tablet.svg") no-repeat;
@@ -496,6 +497,25 @@
             gap: 30px;
             padding: 60px 32px;
             background: url("assets/images/dist/sim-modal-mobile.svg") no-repeat;
+        }
+    }
+
+    .new-modal-banner__modal-esim .home-new-banner__modal-item {
+        padding: 60px;
+        width: 942px;
+        height: 668px;
+        background: url("assets/images/dist/esim-modal.svg") no-repeat;
+
+        @media screen and (max-width: 950px) {
+            width: 730px;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 402px;
+            height: 770px;
+            gap: 30px;
+            background: url("assets/images/dist/esim-modal-mobile.svg") no-repeat;
+            padding: 60px 32px;
         }
     }
 
@@ -523,6 +543,10 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+    }
+
+    .new-modal-banner__modal-esim  .home-new-banner__modal-links > div {
+        gap: 8px;
     }
 
     .home-new-banner__modal-links > div a {
@@ -558,6 +582,14 @@
         @media screen and (max-width: 950px) {
             font-size: 40px;
             line-height: 100%;
+        }
+    }
+
+    .new-modal-banner__modal-esim .home-new-banner__modal-title {
+        max-width: 760px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 38px;
         }
     }
 
@@ -709,11 +741,41 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(269.97deg, rgba(255, 255, 255, 0) 15.46%, #DDDDDD 37.07%, #568DBD 93.29%);
+        background: linear-gradient(269.97deg, rgba(255, 255, 255, 0) 15.46%, #DDDDDD 29.07%, #568DBD 93.29%);
+
+        @media screen and (max-width: 1076px) {
+            height: 100%;
+            background: linear-gradient(269.97deg, rgba(255, 255, 255, 0) 15.46%, #DDDDDD 41.07%, #568DBD 93.29%);
+        }
+        @media screen and (max-width: 768px) {
+            background: linear-gradient(269.35deg, rgba(255, 255, 255, 0) 0.61%, rgba(151, 185, 214, 0.615479) 33.5%, #568DBD 97.49%);
+            z-index: 1;
+        }
     }
 
     .new-modal-banner__item--gradient.new-modal-banner__item .home-new-banner__picture img {
         margin: 0 0 0 auto;
+
+        @media screen and (max-width: 768px) {
+            position: relative;
+            right: 0;
+        }
+        @media screen and (max-width: 630px) {
+            position: relative;
+            right: 70px ;
+        }
+        @media screen and (max-width: 550px) {
+            position: relative;
+            right: 140px ;
+        }
+        @media screen and (max-width: 500px) {
+            position: relative;
+            right: 210px ;
+        }
+        @media screen and (max-width: 450px) {
+            position: relative;
+            right: 270px ;
+        }
     }
 
     .new-modal-banner__item--gradient .home-new-banner__item-content {
@@ -726,6 +788,7 @@
             transform: translate(0, 0);
             align-items: flex-start;
             justify-content: start;
+            z-index: 2;
         }
     }
 
@@ -755,6 +818,116 @@
             width: 100%;
         }
 
+    }
+
+    .home-new-banner__modal-advantages {
+        display: flex;
+        gap: 128px;
+        align-items: center;
+
+        @media screen and (max-width: 950px) {
+            display: none;
+        }
+    }
+
+    .home-new-banner__modal-advantages-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .home-new-banner__modal-advantages-list span {
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        color: #2C3E50;
+    }
+
+    .home-new-banner__modal-advantages-list ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .home-new-banner__modal-advantages-list ul li {
+        position: relative;
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        color: #2C3E50;
+        padding-left: 23px;
+    }
+
+    .home-new-banner__modal-advantages-list ul li::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 15px;
+        height: 10px;
+        background: url("assets/images/dist/icons/check-mark.svg") no-repeat;
+        background-size: cover;
+    }
+
+    .home-new-banner__requirements {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        @media screen and (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+
+    .home-new-banner__requirements-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 263px;
+        height: 166px;
+        background: url("assets/images/dist/banner-requirements-item.svg") no-repeat;
+
+        @media screen and (max-width: 768px) {
+            background: url("assets/images/dist/banner-requirements-item-mobile.svg") no-repeat;
+            height: 136px;
+        }
+    }
+
+    .home-new-banner__requirements-item p {
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+        max-width: 173px;
+    }
+
+    .home-new-banner__requirements-item span {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background: #2C3E50;
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15.8969px;
+        line-height: 100%;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 50%;
     }
 
 </style>
@@ -851,7 +1024,7 @@
                              alt="Успей за выгодой" class="home-new-banner__img">
                     </picture>
                     <div class="home-new-banner__item-content">
-                        <p class="home-new-banner__item-content--title">Безлимит за 490 рублей — сразу при подключении eSIM</p>
+                        <p class="home-new-banner__item-content--title">Безлимит за 490 рублей — <br> сразу при подключении eSIM</p>
                         <p>Подключи номер онлайн прямо со смартфона - <br> быстро, спокойно и без визита в офис</p>
                         <a href="#" class="home-new-banner__button">
                             Подробнее
@@ -859,7 +1032,7 @@
                     </div>
                 </div>
 
-                <div data-modal-id="modal-2" class="home-new-banner__modal">
+                <div data-modal-id="modal-2" class="home-new-banner__modal new-modal-banner__modal-esim">
                     <div class="home-new-banner__modal-item">
                         <svg class="home-new-banner__modal-close" width="64" height="64" viewBox="0 0 64 64" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
@@ -868,48 +1041,55 @@
                         </svg>
 
                         <span class="home-new-banner__modal-title">
-                            Всегда там, где связь лучше
+                            Подключи eSIM <br> не выходя из дома
                         </span>
 
-                        <p class="home-new-banner__modal-text">
-                            SIM Пульс подсказывает, какая SIM сейчас даст более стабильное подключение.
-                        </p>
-
-                        <div class="home-new-banner__modal-icons">
-                            <div class="home-new-banner__modal-icon">
-                                <img src="assets/images/dist/sim-modal-icon.svg" alt="">
-                                Подсказка <br>
-                                внутри приложения
+                        <div class="home-new-banner__requirements">
+                            <div class="home-new-banner__requirements-item">
+                                <span>1</span>
+                                <p>Для оформления есим перейди или скачай приложение Экомобайл</p>
                             </div>
-                            <div class="home-new-banner__modal-icon">
-                                <img src="assets/images/dist/sim-modal-icon-2.svg" alt="">
-                                Переход <br>
-                                в настройки
+                            <div class="home-new-banner__requirements-item">
+                                <span>2</span>
+                                <p>Заполни свои паспотные данные и подпиши договор</p>
                             </div>
-                            <div class="home-new-banner__modal-icon">
-                                <img src="assets/images/dist/sim-modal-icon-3.png" alt="">
-                                Выбор нужной SIM
+                            <div class="home-new-banner__requirements-item">
+                                <span>3</span>
+                                <p>Оставь свою элекстронную почту и получи qr-код для активации есим</p>
                             </div>
                         </div>
 
-                        <p class="home-new-banner__modal-subtext">Сервис доступен в мобильном приложении “Экомобайл” на Android</p>
 
-                        <div class="home-new-banner__modal-links">
-                            <img class="home-new-banner__modal-qr"
-                                 src="assets/images/dist/icons/sim-qr.svg" alt="">
+                        <div class="home-new-banner__modal-advantages">
+                            <div class="home-new-banner__modal-advantages-list">
+                                <span>В прилижение можно:</span>
+                                
+                                <ul>
+                                    <li>Оформить есим</li>
+                                    <li>Заменить пластиковую сим на есим</li>
+                                    <li>Перенести есим на другое устройство</li>
+                                    <li>Перейти со своим номером на есим</li>
+                                </ul>
+                            </div>
 
-                            <div>
-                                <a href="">
-                                    <img src="assets/images/dist/icons/appstore-white.svg" alt="">
-                                </a>
-                                <a href="">
-                                    <img src="assets/images/dist/icons/google-application.svg"
-                                         alt="">
-                                </a>
-                                <a href="">
-                                    <img src="assets/images/dist/icons/rustore-application.svg"
-                                         alt="">
-                                </a>
+                            <div class="home-new-banner__modal-links">
+
+                                <div>
+                                    <a href="">
+                                        <img src="assets/images/dist/icons/appstore-white.svg" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="assets/images/dist/icons/google-application.svg"
+                                             alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="assets/images/dist/icons/rustore-application.svg"
+                                             alt="">
+                                    </a>
+                                </div>
+
+                                <img class="home-new-banner__modal-qr"
+                                     src="assets/images/dist/icons/esim-qr.svg" alt="">
                             </div>
                         </div>
 
