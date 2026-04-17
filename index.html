@@ -45,7 +45,9 @@
     }
 
     .tab-btn {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 15px 30px;
         font-family: 'Manrope', sans-serif;
         font-weight: 500;
@@ -56,6 +58,11 @@
         color: #2C3E50;
         transition: all 0.3s ease;
         text-align: center;
+        
+        @media screen and (max-width: 1076px) {
+            font-size: 12px;
+            padding: 0 15px;
+        }
     }
 
     .tab-btn:hover {
