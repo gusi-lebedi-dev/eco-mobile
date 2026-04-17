@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Открываем приложение...</title>
+
+
+
+
+</head>
+
+<body>
+<style>
+    body {
+        font-family: -apple-system, "Manrope", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        background: #f8f8f8;
+        margin: 0;
+    }
+
+    .container {
+        max-width: 500px;
+        padding: 0 20px;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: 500;
+        text-align: center;
+
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        p {
+            font-size: 14px;
+        }
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        border-radius: 8px;
+        border: none;
+        background: #2C3E50;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #3B5570;
+    }
+</style>
+<div class="container">
+    <h2>Открываем приложение…</h2>
+    <p>Если приложение не открылось автоматически, установите его.</p>
+    <button onclick="redirectToStore()">Скачать приложение</button>
+</div>
+<script>
+    function detectOS() {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent)) {
+            return "android";
+        }
+
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return "ios";
+        }
+
+        return "other";
+    }
+
+    function redirectToStore() {
+        const os = detectOS();
+
+        if (os === "android") {
+            window.location.href = "https://play.google.com/store/apps/details?id=ru.ekomobile.app";
+        }
+
+        if (os === "ios") {
+            window.location.href = "https://apps.apple.com/ru/app/id6448786246";
+        }
+    }
+
+    window.onload = function () {
+        setTimeout(redirectToStore, 1500);
+    };
+</script>
+</body>
+</html>
