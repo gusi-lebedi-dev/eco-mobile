@@ -150,7 +150,8 @@ h3 {
     .main-tabs-content .brand-image__text {
         padding: 0 39px;
     }
-    .main-tabs-content  .brand-image__text--title{
+
+    .main-tabs-content .brand-image__text--title {
 
     }
 }
@@ -3012,6 +3013,10 @@ h3 {
     line-height: 100%;
     color: #2C3E50;
     margin-bottom: 0;
+}
+
+.services .pricing-plans__item-price span {
+    font-size: 30px;
 }
 
 .pricing-plans__item-price span strong,
@@ -8336,6 +8341,11 @@ h3 {
         padding: 0 75px;
     }
 }
+@media screen and (max-width: 768px) {
+    .services-item__banner.padding--73 {
+        padding: 0 73px;
+    }
+}
 
 .services-item__banner img {
     position: absolute;
@@ -8380,11 +8390,33 @@ h3 {
 
     @media screen and (max-width: 1076px) {
         font-size: 34px;
-        max-width: 448px;
+        max-width: 458px;
     }
     @media screen and (max-width: 768px) {
         font-size: 30px;
         max-width: 254px;
+    }
+}
+
+.services-item__title--mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .services-item__title--desktop {
+        display: none;
+    }
+
+    .services-item__title--mobile {
+        display: block;
+    }
+}
+
+.services-item__title--no-wrap {
+    white-space: nowrap;
+
+    @media screen and (max-width: 800px) {
+        white-space: normal;
     }
 }
 
@@ -8412,7 +8444,7 @@ h3 {
         top: 20px;
         right: 20px;
         font-size: 8px;
-        max-width: 80px;
+        max-width: max-content;
         min-width: 80px;
         height: 22px;
     }
@@ -8521,11 +8553,23 @@ h3 {
     }
 }
 
+.services-item__white-block--title.title-list {
+    font-size: 16px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+}
+
 .services-item__white-block p {
     font-weight: 100;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 130%;
     color: #2C3E50;
+}
+
+.services-item__white-block.big-text p {
+    font-size: 18px;
 
     @media screen and (max-width: 768px) {
         font-size: 14px;
@@ -8631,6 +8675,17 @@ h3 {
     }
 }
 
+.big-text .services-item__white-block--grid span:last-child strong {
+    font-size: 18px;
+    line-height: 100%;
+
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 100%;
+    }
+}
+
+
 .services-item__white-block--grid span:first-child {
     min-width: 118px;
 }
@@ -8683,6 +8738,11 @@ h3 {
     font-size: 18px;
     line-height: 25px;
     color: #2C3E50;
+
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 100%;
+    }
 }
 
 .services__arrow {
