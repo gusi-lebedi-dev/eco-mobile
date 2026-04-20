@@ -5083,12 +5083,14 @@ h3 {
     margin: 0 auto;
     max-width: 972px;
     padding: 24px;
+    margin-bottom: 50px;
 
     @media screen and (max-width: 1076px) {
         align-items: start;
     }
     @media screen and (max-width: 768px) {
         align-items: center;
+        margin-bottom: 40px;
     }
 }
 
@@ -5194,7 +5196,7 @@ h3 {
 
     @media screen and (max-width: 768px) {
         width: 429px;
-        margin-left: 40px;
+        margin-left: 0;
         height: 172px;
     }
 }
@@ -6708,24 +6710,16 @@ h3 {
     transition: all 1s;
 
     @media screen and (max-width: 768px) {
-        top: 38%;
+        top: 2%;
     }
 }
 
 .arrange__title-sim-card.ramp {
     animation: Ramp 2s forwards;
-
-    @media screen and (max-width: 768px) {
-        animation: none;
-    }
 }
 
 .arrange__title-sim-card.spin {
     animation: simFlip 6s infinite ease-in-out;
-
-    @media screen and (max-width: 768px) {
-        animation: none;
-    }
 }
 
 @keyframes Ramp {
