@@ -57,3 +57,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updatePlaceholder();
 });
+
+const eSimBtn = document.querySelector('.single-result__price-button--white');
+const plasticBtn = document.querySelector('.single-result__price-button--transparent');
+
+function switchToWhite(buttonToBecomeWhite, buttonToBecomeTransparent) {
+    buttonToBecomeWhite.classList.remove('single-result__price-button--transparent');
+    buttonToBecomeWhite.classList.add('single-result__price-button--white');
+
+    buttonToBecomeTransparent.classList.remove('single-result__price-button--white');
+    buttonToBecomeTransparent.classList.add('single-result__price-button--transparent');
+}
+
+plasticBtn.addEventListener('click', function() {
+    switchToWhite(plasticBtn, eSimBtn);
+});
+
+eSimBtn.addEventListener('click', function() {
+    switchToWhite(eSimBtn, plasticBtn);
+});
+
+const tabs = document.querySelectorAll('.single-form__plan-tab');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+        tabs.forEach(t => t.classList.remove('is-active'));
+        this.classList.add('is-active');
+    });
+});

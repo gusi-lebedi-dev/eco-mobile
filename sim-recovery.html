@@ -465,13 +465,27 @@
                         </span>
                     </label>
 
-                    <button class="sim-recovery__form-button" type="submit">
+                    <button class="sim-recovery__form-button" type="button">
                         Оставить заявку
                     </button>
 
                 </form>
             </div>
+            <div class="sim-recovery__modal">
 
+
+                <div class="sim-recovery__modal-container">
+                    <svg class="sim-recovery__close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L25 25" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25 1L1 25" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Заявка принята!</span>
+                    <p>
+                        Менеджер свяжется с вами в ближайшее время.
+                        Если заявка была отправлена в выходной, то мы обязательно ответим в будний день.
+                    </p>
+                </div>
+            </div>
         </div>
          </div>
     </section>
@@ -600,6 +614,19 @@
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/news.js"></script>
     <script src="assets/js/articles.js"></script>
+
+    <script>
+        const formButton = document.querySelector('.sim-recovery__form-button');
+        const formModal = document.querySelector('.sim-recovery__modal');
+        const closeModal = document.querySelector('.sim-recovery__close');
+
+        formButton.addEventListener('click', () => {
+            formModal.classList.add('is-active')
+        });
+        closeModal.addEventListener('click', () => {
+            formModal.classList.remove('is-active')
+        });
+    </script>
 </body>
 
 </html>
