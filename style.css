@@ -1970,6 +1970,7 @@ h3 {
     flex-basis: 45%;
     border-radius: 36px;
     overflow: hidden;
+    max-height: 531px;
 }
 
 .news-full-image img {
@@ -1977,6 +1978,10 @@ h3 {
     height: 100%;
     object-fit: cover;
     min-height: 531px;
+
+    @media screen and (max-width: 768px) {
+        min-height: auto;
+    }
 }
 
 .news-full-text {
@@ -2764,6 +2769,11 @@ h3 {
     font-weight: 100;
     font-size: 18px;
     color: #2C3E50;
+}
+
+.pricing-filters__network-item.is-active {
+    background: #2C3E50;
+    color: #EEEFF0;
 }
 
 .pricing-filters__plans-item {
@@ -3930,6 +3940,7 @@ h3 {
     color: #E1FA3F;
 }
 
+.single-result__price-button.is-active,
 .single-result__price-button--white {
     position: relative;
     display: flex;
@@ -3944,12 +3955,14 @@ h3 {
     border-radius: 36px;
     z-index: 1;
     cursor: pointer;
+    white-space: normal;
 
     @media screen and (max-width: 768px) {
         height: 64px;
     }
 }
 
+.single-result__price-button.is-active span,
 .single-result__price-button--white span {
     font-style: normal;
     font-weight: 300;
@@ -3958,6 +3971,7 @@ h3 {
     color: #2C3E50;
 }
 
+.single-result__price-button.is-active span.single-result__price-button--title,
 .single-result__price-button--white span.single-result__price-button--title {
     font-style: normal;
     font-weight: 500;
@@ -4280,6 +4294,10 @@ h3 {
     display: flex;
     gap: 16px;
     z-index: 1;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 
 .single-result__price-type .single-result__price-button--white,
@@ -4519,9 +4537,12 @@ h3 {
     font-weight: 300;
     font-size: 12px;
     color: rgba(44, 62, 80, 0.5);
+
+    cursor: pointer;
 }
 
-.single-form__card-tarif .operator.blue {
+.single-form__card-tarif .operator:hover,
+.single-form__card-tarif .operator.is-active {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -8344,6 +8365,7 @@ h3 {
         padding: 0 75px;
     }
 }
+
 @media screen and (max-width: 768px) {
     .services-item__banner.padding--73 {
         padding: 0 73px;
@@ -8569,6 +8591,10 @@ h3 {
     font-size: 14px;
     line-height: 130%;
     color: #2C3E50;
+
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+    }
 }
 
 .services-item__white-block.big-text p {
@@ -8857,6 +8883,7 @@ h3 {
         line-height: 100%;
     }
 }
+
 .sim-recovery__modal-container p {
     font-family: 'Manrope', sans-serif;
     font-style: normal;
@@ -8873,3 +8900,304 @@ h3 {
     }
 }
 
+
+.pricing-plans__modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 1000;
+}
+
+.pricing-plans__modal р3 {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    color: #2C3E50;
+
+}
+
+.pricing-plans__modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pricing-plans__modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.pricing-plans__modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    max-width: 1108px;
+    max-height: 100%;
+    margin: 20px;
+    background: #FFFFFF;
+    border-radius: 36px;
+    overflow-y: auto;
+    z-index: 1;
+
+    @media screen and (max-width: 1076px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.pricing-plans__modal-block {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+}
+
+.pricing-plans__modal-block:last-child {
+    padding-top: 240px;
+    width: 281px;
+
+    @media screen and (max-width: 1076px) {
+        padding-top: 0;
+    }
+}
+
+.pricing-plans__modal-block--title {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    .pricing-plans__modal-block--title h3 {
+        font-size: 28px;
+        line-height: 100%;
+    }
+}
+
+.pricing-plans__modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    
+    @media screen and (max-width: 1076px) {
+        top: -45%;
+    }
+    @media screen and (max-width: 807px) {
+        top: -53%;
+    }
+    @media screen and (max-width: 768px) {
+        top: -66%;
+    }
+    @media screen and (max-width: 560px) {
+        top: -72%;
+    }
+    @media screen and (max-width: 439px) {
+        top: -76%;
+    }
+}
+
+.pricing-plans__modal-features {
+    display: flex;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 100%;
+    color: #2C3E50;
+    text-align: center;
+}
+
+.pricing-plans__modal-block .method-receipt {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pricing-plans__modal-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #2C3E50;
+}
+
+.method-receipt .single-result__price-button {
+    background: #EEF1F6;
+}
+
+.method-receipt .single-result__price-button span {
+    color: #2C3E50;
+}
+
+.method-receipt .single-result__price-button.is-active {
+    background: #2C3E50;
+}
+
+.method-receipt .single-result__price-button.is-active span {
+    color: white;
+}
+
+.pricing-plans__modal-form,
+.pricing-plans__modal-form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pricing-plans__modal-form .beautiful-number__form-input-group input {
+    background: #EEF1F6;
+}
+
+.pricing-plans__modal-form .beautiful-number__form-input:focus + .beautiful-number__form-label,
+.pricing-plans__modal-form .beautiful-number__form-input:not(:placeholder-shown) + .beautiful-number__form-label {
+    top: 14px;
+}
+
+.pricing-plans__modal-form  .beautiful-number__form-label {
+    color: #2C3E5080 !important;
+    font-size: 14px;
+}
+.pricing-plans__modal-form  .beautiful-number__form-input {
+    color: #2C3E50;
+    font-size: 14px;
+}
+
+.pricing-plans__modal-final {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 32px;
+    background: #2C3E50;
+    border-radius: 36px;
+}
+.pricing-plans__modal-final .single-result__price-next--button {
+    max-width: 100% ;
+    width: 100%;
+    cursor: pointer;
+}
+.pricing-plans__modal-final--row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.pricing-plans__modal-final--row span {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+}
+
+.pricing-plans__modal-final--row.price span {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: #FFFFFF;
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.pricing-plans__modal .sim-recovery__form .checkmark, .pricing-plans__modal .single-result__price-next .checkmark {
+    min-width: 18px;
+}
+
+.pricing-plans__modal-final--row div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pricing-plans__modal-final--row div span:first-child {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.pricing-plans__progress {
+    width: 100%;
+    max-width: 320px;
+    font-family: sans-serif;
+}
+
+.pricing-plans__progress-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 8px;
+    color: #2C3E50;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.pricing-plans__progress-percent {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2C3E50;
+    line-height: 100%;
+}
+
+.pricing-plans__progress-bar {
+    width: 100%;
+    height: 11px;
+    background: #F0EFEE;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.pricing-plans__progress-fill {
+    height: 100%;
+    background: #B9D09C;
+    border-radius: 999px;
+    transition: width 0.4s ease;
+}
+
+.mobile-off--service {
+    display: block;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile-on--service {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}
+
+.services-item--big-width {
+    max-width: 800px;
+
+    @media screen and (max-width: 1076px){
+        max-width: 630px !important;
+    }
+}

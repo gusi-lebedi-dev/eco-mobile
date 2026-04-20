@@ -58,23 +58,17 @@ document.addEventListener('DOMContentLoaded', function () {
     updatePlaceholder();
 });
 
-const eSimBtn = document.querySelector('.single-result__price-button--white');
-const plasticBtn = document.querySelector('.single-result__price-button--transparent');
+document.querySelectorAll('.single-result__price-button').forEach(button => {
+    button.addEventListener('click', function () {
 
-function switchToWhite(buttonToBecomeWhite, buttonToBecomeTransparent) {
-    buttonToBecomeWhite.classList.remove('single-result__price-button--transparent');
-    buttonToBecomeWhite.classList.add('single-result__price-button--white');
+        const parent = this.closest('.single-result__price-type');
 
-    buttonToBecomeTransparent.classList.remove('single-result__price-button--white');
-    buttonToBecomeTransparent.classList.add('single-result__price-button--transparent');
-}
+        parent.querySelectorAll('.single-result__price-button')
+            .forEach(btn => btn.classList.remove('is-active'));
 
-plasticBtn.addEventListener('click', function() {
-    switchToWhite(plasticBtn, eSimBtn);
-});
+        this.classList.add('is-active');
 
-eSimBtn.addEventListener('click', function() {
-    switchToWhite(eSimBtn, plasticBtn);
+    });
 });
 
 const tabs = document.querySelectorAll('.single-form__plan-tab');

@@ -388,7 +388,7 @@
                                     <div class="single-form__card-tarif">
                                         <span>Дополнительный номер на базе </span>
                                         <div class="operators">
-                                            <div class="operator blue">
+                                            <div class="operator is-active">
                                                 Мегафон
                                             </div>
                                             <div class="operator ">
@@ -416,7 +416,7 @@
                                     <div class="single-form__card-tarif">
                                         <span>Дополнительный номер на базе </span>
                                         <div class="operators">
-                                            <div class="operator blue">
+                                            <div class="operator is-active">
                                                 Мегафон
                                             </div>
                                             <div class="operator ">
@@ -444,7 +444,7 @@
                                     <div class="single-form__card-tarif">
                                         <span>Дополнительный номер на базе </span>
                                         <div class="operators">
-                                            <div class="operator blue">
+                                            <div class="operator is-active">
                                                 Мегафон
                                             </div>
                                             <div class="operator ">
@@ -508,11 +508,11 @@
                         </div>
 
                         <div class="single-result__price-type">
-                            <div class="single-result__price-button--white">
+                            <div class="single-result__price-button single-result__price-button--transparent is-active">
                                 <span class="single-result__price-button--title">еСИМ</span>
                                 <span>оформить онлайн</span>
                             </div>
-                            <div class="single-result__price-button--transparent">
+                            <div class="single-result__price-button single-result__price-button--transparent">
                                 <span class="single-result__price-button--title">Пластиковая СИМ</span>
                                 <span>заказать доставку или оформить в офисе</span>
                             </div>
@@ -836,6 +836,21 @@
             }
         });
     </script>
+
+<script>
+    const operatorsBlocks = document.querySelectorAll('.operators');
+
+    operatorsBlocks.forEach(block => {
+        const operators = block.querySelectorAll('.operator');
+
+        operators.forEach(operator => {
+            operator.addEventListener('click', function() {
+                operators.forEach(op => op.classList.remove('is-active'));
+                this.classList.add('is-active');
+            });
+        });
+    });
+</script>
 </body>
 
 </html>
