@@ -3430,6 +3430,11 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  transition: 0.5s ease;
+}
+
+.tariff-item.constellations:hover {
+  background-image: url(../images/photos/tariff-item-background-hover.webp);
 }
 
 .tariff-item__inner {
@@ -3466,6 +3471,10 @@ section {
   opacity: 0.7;
 }
 
+.tariff-item.constellations:hover .tariff-item__name {
+  color: white;
+}
+
 .tariff-item__connect {
   position: absolute;
   bottom: 0;
@@ -3489,6 +3498,10 @@ section {
           flex-direction: column;
   gap: 8px;
   margin-top: auto;
+}
+
+.tariff-item.constellations:hover .tariff-item__features {
+  color: white;
 }
 
 .tariff-item__description {
@@ -3524,6 +3537,10 @@ section {
 
 .tariff-item__price {
   font-weight: 500;
+}
+
+.tariff-item.constellations:hover .tariff-item__price {
+  color: white;
 }
 
 .tariff-item__price-value {

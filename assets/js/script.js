@@ -785,7 +785,6 @@ $(document).ready(function () {
   });*/
 });
 document.addEventListener('DOMContentLoaded', () => {
-  // Fancybox init
 
   Fancybox.bind('[data-fancybox]');
 
@@ -807,7 +806,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, modalNotFoundTimeOut);
   }
 
-  // Step modal title 1-4 / Step modal desc 1-2
 
   const tariffBtn = document.querySelectorAll('[data-tariff-btn');
 
@@ -839,13 +837,11 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }
 
-        //console.log(tariffTitle);
         tariffModalTitleField.value = tariffTitle;
       });
     });
   }
 
-  // Step modal desc 3-4
   const modalBtnNext = document.querySelectorAll('[data-modal-next]');
 
   if (modalBtnNext) {
@@ -871,8 +867,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
-  // Input mask
 
   let imPhone = new Inputmask({
     mask: '+7 (999) 999-99-99',
@@ -903,7 +897,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cookiesBanner.classList.remove('show');
   });*/
 
-  // Overlay
 
   const overlay = document.querySelector('.overlay');
 
@@ -915,7 +908,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Menu header mobile
 
   const headerBurger = document.querySelector('[data-mobile-trigger]');
   const mobileNav = document.querySelector('.mobile-nav');
@@ -939,15 +931,13 @@ document.addEventListener('DOMContentLoaded', () => {
       overlayHandle();
     });
     overlay.addEventListener('click', e => {
-      // if (!e.target.closest('.header-burger') && !e.target.closest('.mobile-nav')) {
       mobileNav.classList.remove('open');
       headerBurger.classList.remove('active');
       overlayHandle();
-      // }
+
     });
 
   }
-  // Menu service
 
   const serviceBtn = document.querySelector('[data-service-trigger]');
   const mediaQuery = window.matchMedia('(max-width: 1279px)');
@@ -1015,18 +1005,15 @@ document.addEventListener('DOMContentLoaded', () => {
             el.addEventListener('click', e => {
               e.preventDefault();
 
-              // Проверяем, находится ли кликнутый элемент в модалке
               const isInModal = e.currentTarget.closest('#modal-numbers-new');
               const isMainPage = !isInModal;
 
-              // Если клик в модалке - обрабатываем только модалку, и наоборот
               const container = isInModal ? document.getElementById('modal-numbers-new') : document;
 
               const tabsNavItemData = e.currentTarget.getAttribute('data-target');
               const tabsContentAll = container.querySelectorAll('[data-content]');
               const tabsContentItem = container.querySelector(`[data-content="${tabsNavItemData}"]`);
 
-              // Убираем active только у элементов в том же контейнере
               const allTabsInContainer = container.querySelectorAll('[data-tabs-nav] a');
               allTabsInContainer.forEach(elem => {
                 elem.classList.remove('active');
@@ -1054,8 +1041,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabsRateNumbers = new Tabs('rate-numbers');
   const tabsRateNumbersModal = new Tabs('rate-numbers-modal');
   const tabsTariff = new Tabs('tariff');
-
-  // Tariff change price & minute
 
   const tabsTariffRate = document.querySelector('[data-tabs="rate"]');
 
@@ -1104,8 +1089,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
-  // Change phone numbers && price
 
   const phoneNumbers = document.querySelectorAll('[data-phone]');
 
@@ -1157,8 +1140,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Section show
-
   const triggerBtn = document.querySelectorAll('[data-target-section]');
 
   if (triggerBtn) {
@@ -1202,8 +1183,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Anchors
-
   const anchors = document.querySelectorAll('[data-anchor]');
 
   if (anchors) {
@@ -1222,10 +1201,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollTarget = document.getElementById(href);
 
         const topOffset = document.querySelector('.header').offsetHeight;
-        // const topOffset = 184; // если не нужен отступ сверху
         const elementPosition = scrollTarget.getBoundingClientRect().top;
         const offsetPosition = elementPosition - topOffset;
-        // const offsetPosition = elementPosition;
 
         window.scrollBy({
           top: offsetPosition,
@@ -2104,33 +2081,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let isUpdating = false;
 
-    // Функция для получения текущего значения выбранного параметра
     function getSelectedValue(name) {
       const selector = `input[name="${name}"]:checked`;
       const radio = document.querySelector(selector);
       return radio ? radio.getAttribute(`data-rng-${name}`) : null;
     }
 
-    // Функция для установки значения радио-кнопки
     function setRadioValue(name, value) {
       const selector = `input[name="${name}"][data-rng-${name}="${value}"]`;
       const radio = document.querySelector(selector);
       if (radio) radio.checked = true;
     }
 
-    // Основная функция для обработки изменений
     function handleChange(event, combinations) {
       if (isUpdating) return;
       isUpdating = true;
 
-      const changedType = event.target.name; // Тип измененного параметра (opr, minute, sms, gb)
-      const changedValue = event.target.getAttribute(`data-rng-${changedType}`); // Новое значение
+      const changedType = event.target.name;
+      const changedValue = event.target.getAttribute(`data-rng-${changedType}`);
 
-      // Получаем текущие значения всех параметров
       const currentMinute = getSelectedValue('minute');
       const currentOpr = getSelectedValue('opr');
 
-      // Поиск комбинации с приоритетом текущих минут
       let combination;
       if (!currentOpr) {
         combination = combinations.find(
@@ -2150,7 +2122,6 @@ document.addEventListener('DOMContentLoaded', () => {
         );
       }
 
-      // Если не нашли комбинацию с текущими минутами, ищем любую подходящую
       if (!combination && changedType === 'gb') {
         combination = combinations.find(comb => comb.gb === changedValue);
       } else if (!combination && changedType === 'sms') {
@@ -2161,7 +2132,6 @@ document.addEventListener('DOMContentLoaded', () => {
         combination = combinations.find(comb => comb.minute === changedValue);
       }
 
-      // Если комбинация найдена, обновляем параметры
       if (combination) {
         // Обновляем только те параметры, которые не были изменены
         if (changedType !== 'opr') setRadioValue('opr', combination.opr);
@@ -2174,7 +2144,6 @@ document.addEventListener('DOMContentLoaded', () => {
       isUpdating = false;
     }
 
-    // Назначаем обработчики событий на все радио-кнопки
     rngFields.forEach(radio => {
       radio.addEventListener('change', function (e) {
         rngName === 'trf1' ? handleChange(e, trf1) : null;
