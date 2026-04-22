@@ -3497,7 +3497,7 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
-  margin-top: auto;
+  margin-top: 68px;
 }
 
 .tariff-item.constellations:hover .tariff-item__features {
