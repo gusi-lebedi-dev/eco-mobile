@@ -906,6 +906,7 @@
 
 .home-new-banner-sl-pagination.swiper-pagination-bullets.new-pagination {
     left: 0;
+    bottom: -12px;
     width: 100%;
     gap: 16px;
 }
