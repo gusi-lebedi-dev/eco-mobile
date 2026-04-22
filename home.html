@@ -475,6 +475,23 @@
         <!--    </div>-->
         <!--  </section>-->
         <style>
+            .home-new-banner-sl {
+                padding: 0 !important;
+                @media screen and (max-width: 1301px) {
+                    max-width: 842px;
+                }
+                @media screen and (max-width: 950px) {
+                    max-width: 418px;
+                }
+            }
+            
+            @media screen and (max-width: 768px) {
+                .home-new-banner-sl-pagination {
+                    display: flex !important;
+
+                }
+            }
+
             .new-modal-banner__people {
                 position: absolute;
                 bottom: 0;
@@ -495,19 +512,27 @@
             .new-modal-banner__item {
                 border-radius: 24px;
                 overflow: hidden;
-                height: 471px;
-
-                @media screen and (max-width: 1024px) {
+                height: 487px;
+                margin-bottom: 24px !important;
+                @media screen and (max-width: 1301px) {
                     height: 331px;
                 }
 
-                @media screen and (max-width: 768px) {
-                    height: 425px;
+                @media screen and (max-width: 950px) {
+                    height: 342px !important;
+                    margin-bottom: 12px !important;
                 }
             }
 
             .new-modal-banner__item .home-new-banner__picture {
                 object-fit: cover;
+
+                @media screen and (max-width: 1301px) {
+                    height: 331px;
+                }
+                @media screen and (max-width: 950px) {
+                    height: 296px;
+                }
             }
 
             .new-modal-banner__item .home-new-banner__picture img {
@@ -688,7 +713,7 @@
 
             .home-new-banner__item {
                 position: relative;
-                margin: 80px auto;
+                margin: 0 auto;
                 max-width: 1240px;
             }
 
@@ -1107,65 +1132,66 @@
                 <div class="home-new-banner-sl swiper">
                     <div class="swiper-wrapper">
                         <!-- Новый слайд с модалкой -->
-                        <div data-modal="modal-2"
-                             class="home-new-banner__item new-modal-banner__item new-modal-banner__item--gradient home-new-banner__for_autopay swiper-slide">
+                        <div
+                             class="home-new-banner__item new-modal-banner__item home-new-banner__for_autopay swiper-slide">
+                            <img class="home-new-banner__item--logo" src="assets/images/about/logo-ecomobail.svg" alt="">
                             <picture class="home-new-banner__picture">
                                 <source media="(min-width: 1301px)"
-                                        srcset="assets/images/dist/banner-sim-2.png">
+                                        srcset="assets/images/home-slider/home-slider-1.webp">
                                 <source media="(min-width: 950px)"
-                                        srcset="assets/images/dist/banner-sim-2.png">
-                                <img src="assets/images/dist/banner-sim-2.png"
+                                        srcset="assets/images/home-slider/home-slider-1-tablet.webp">
+                                <img src="assets/images/home-slider/home-slider-1-mobile.webp"
                                      alt="Успей за выгодой" class="home-new-banner__img">
                             </picture>
-                            <div class="home-new-banner__item-content">
-                                <p class="home-new-banner__item-content--title">Безлимит за 490 рублей — <br> сразу при
-                                    подключении eSIM</p>
-                                <p>Подключи номер онлайн прямо со смартфона - <br> быстро, спокойно и без визита в офис</p>
-                                <a href="#" class="home-new-banner__button">
-                                    Подробнее
-                                </a>
-                            </div>
+                            <a class="home-new-banner__button" href="pricing-plans/backup.html">Узнать подробнее</a>
                         </div>
                         <div data-modal="modal-2"
-                             class="home-new-banner__item new-modal-banner__item new-modal-banner__item--gradient home-new-banner__for_autopay swiper-slide">
+                             class="home-new-banner__item new-modal-banner__item home-new-banner__for_autopay swiper-slide">
+                            <img class="home-new-banner__item--logo" src="assets/images/about/logo-ecomobail.svg" alt="">
                             <picture class="home-new-banner__picture">
                                 <source media="(min-width: 1301px)"
-                                        srcset="assets/images/dist/banner-sim-2.png">
+                                        srcset="assets/images/home-slider/home-slider-2.webp">
                                 <source media="(min-width: 950px)"
-                                        srcset="assets/images/dist/banner-sim-2.png">
-                                <img src="assets/images/dist/banner-sim-2.png"
+                                        srcset="assets/images/home-slider/home-slider-2-tablet.webp">
+                                <img src="assets/images/home-slider/home-slider-2-mobile.webp"
                                      alt="Успей за выгодой" class="home-new-banner__img">
                             </picture>
-                            <div class="home-new-banner__item-content">
-                                <p class="home-new-banner__item-content--title">Безлимит за 490 рублей — <br> сразу при
-                                    подключении eSIM</p>
-                                <p>Подключи номер онлайн прямо со смартфона - <br> быстро, спокойно и без визита в офис</p>
-                                <a href="#" class="home-new-banner__button">
-                                    Подробнее
-                                </a>
-                            </div>
+                            <a class="home-new-banner__button" href="">Узнать подробнее</a>
                         </div>
-                        <div data-modal="modal-2"
-                             class="home-new-banner__item new-modal-banner__item new-modal-banner__item--gradient home-new-banner__for_autopay swiper-slide">
+                        <div
+                             class="home-new-banner__item new-modal-banner__item home-new-banner__for_autopay swiper-slide">
+                            <img class="home-new-banner__item--logo" src="assets/images/about/logo-ecomobail.svg" alt="">
                             <picture class="home-new-banner__picture">
                                 <source media="(min-width: 1301px)"
-                                        srcset="assets/images/dist/banner-sim-2.png">
+                                        srcset="assets/images/home-slider/home-slider-3.webp">
                                 <source media="(min-width: 950px)"
-                                        srcset="assets/images/dist/banner-sim-2.png">
-                                <img src="assets/images/dist/banner-sim-2.png"
+                                        srcset="assets/images/home-slider/home-slider-3-tablet.webp">
+                                <img src="assets/images/home-slider/home-slider-3-mobile.svg"
                                      alt="Успей за выгодой" class="home-new-banner__img">
                             </picture>
-                            <div class="home-new-banner__item-content">
-                                <p class="home-new-banner__item-content--title">Безлимит за 490 рублей — <br> сразу при
-                                    подключении eSIM</p>
-                                <p>Подключи номер онлайн прямо со смартфона - <br> быстро, спокойно и без визита в офис</p>
-                                <a href="#" class="home-new-banner__button">
-                                    Подробнее
-                                </a>
+                            <a class="home-new-banner__button" href="">Узнать подробнее</a>
+                        </div>
+                        <div
+                             class="home-new-banner__item new-modal-banner__item home-new-banner__for_autopay swiper-slide">
+                            <img class="home-new-banner__item--logo" src="assets/images/about/logo-ecomobail.svg" alt="">
+                            <picture class="home-new-banner__picture">
+                                <source media="(min-width: 1301px)"
+                                        srcset="assets/images/home-slider/home-slider-4.svg">
+                                <source media="(min-width: 950px)"
+                                        srcset="assets/images/home-slider/home-slider-4-tablet.svg">
+                                <img src="assets/images/home-slider/home-slider-4-mobile.svg"
+                                     alt="Успей за выгодой" class="home-new-banner__img">
+                            </picture>
+                            <div class="home-new-banner__item-buttons home-new-banner__item-buttons--desktop">
+                                <a class="home-new-banner__button" href="">Подтвердить</a>
+                                <a class="home-new-banner__button home-new-banner__button--transparent" href="">Частые вопросы</a>
+                                <a class="home-new-banner__button home-new-banner__button--transparent" href="">Как проверить количество номров</a>
                             </div>
+                            <a class="home-new-banner__button home-new-banner__item-buttons--mobile" href="">Узнать подробнее</a>
+
                         </div>
                     </div>
-                    <div class="home-new-banner-sl-pagination"></div>
+                    <div class="home-new-banner-sl-pagination new-pagination"></div>
                 </div>
             </div>
 
@@ -1768,7 +1794,6 @@
         },
         pagination: {
             el: `.home-new-banner-sl-pagination`,
-            type: 'bullet',
             clickable: true
         },
         breakpoints: {
