@@ -1,0 +1,872 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <base href="/"> -->
+
+  <title>Главная</title>
+  <meta name="description" content="" />
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- Отключение кэширования -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="icon" href="assets/assets/images/favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/assets/images/favicon/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="assets/assets/images/favicon/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="assets/assets/images/favicon/favicon-apple.png" />
+  <meta property="og:image" content="" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/libs.min.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- Верхняя панель - служебная навигация -->
+      <div class="header__top">
+        <nav class="header-audience">
+          <ul class="header-audience__list">
+            <li>
+              <a href="/" class="header-audience__link">Частным лицам</a>
+            </li>
+            <li>
+              <a href="/korporativnym-klientam/" class="header-audience__link">Бизнесу</a>
+            </li>
+            <li>
+              <a href="/cooperation/" class="header-audience__link">Партнерам</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-utils">
+          <a href="/poplnit-balans/" class="btn btn_small">Пополнить баланс</a>
+          <a href="tel:+74950110522" class="header-phone">+7 495 011-05-22</a>
+        </div>
+      </div>
+
+      <!-- Основная навигация -->
+      <div class="header__main">
+        <a href="./" class="header-logo">
+          <img class="header-logo__img" src="assets/images/icons/logo.svg" alt="Ekomobile" />
+        </a>
+        <div class="header-nav">
+          <nav class="header-nav__group">
+            <div class="header-nav__item header-nav__item--dropdown">
+              <a href="/tariffs" class="btn btn_secondary btn_small header-nav__trigger" aria-haspopup="true"
+                aria-expanded="false">
+                Тарифы
+              </a>
+              <div class="header-nav-dropdown" role="menu" aria-label="Тарифы">
+                <div class="header-nav-dropdown__inner">
+                  <div class="header-nav-dropdown__cards" aria-label="Разделы тарифов">
+                    <a class="header-nav-card" href="/tariffs/mobile-internet">
+                      <span class="header-nav-card__title">МОБИЛЬНЫЙ<br />ИНТЕРНЕТ</span>
+                      <img class="header-nav-card__img header-nav-card__img--lte" src="assets/images/icons/lte.svg"
+                        alt="МОБИЛЬНЫЙ ИНТЕРНЕТ" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                    <a class="header-nav-card" href="/tariffs/mobile">
+                      <span class="header-nav-card__title">МОБИЛЬНАЯ<br />СВЯЗЬ</span>
+                      <img class="header-nav-card__img header-nav-card__img--mobile"
+                        src="assets/images/icons/mobile-connection.svg" alt="МОБИЛЬНАЯ СВЯЗЬ" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                    <a class="header-nav-card" href="/tariffs/multi">
+                      <span class="header-nav-card__title">МУЛЬТИ-<br />ТАРИФЫ</span>
+                      <img class="header-nav-card__img header-nav-card__img--multi" src="assets/images/icons/multi-tariffs.svg"
+                        alt="МУЛЬТИ-ТАРИФЫ" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                    <a class="header-nav-card" href="/tariffs/smart-devices">
+                      <span class="header-nav-card__title">ТАРИФЫ ДЛЯ<br />УМНЫХ УСТРОЙСТВ</span>
+                      <img class="header-nav-card__img header-nav-card__img--smart-devices"
+                        src="assets/images/icons/smart-devices.svg" alt="ТАРИФЫ ДЛЯ УМНЫХ УСТРОЙСТВ" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                  </div>
+
+                  <div class="header-nav-dropdown__links">
+                    <a class="header-nav-dropdown__link" href="/mnp/">Перейти в Экомобайл со своим номером</a>
+                    <a class="header-nav-dropdown__link" href="/esim/">Оформить eSim</a>
+                    <span class="header-nav-dropdown__link">
+                      Выбрать красивый номер
+                    </span>
+                    <a class="header-nav-dropdown__link" href="/sim-card/">Заказать SIM-карту</a>
+                    <a class="header-nav-dropdown__link" href="/sim-restore/">Восстановить SIM-карту</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-nav__item header-nav__item--dropdown">
+              <a href="#" class="btn btn_secondary btn_small header-nav__trigger" aria-haspopup="true"
+                aria-expanded="false">
+                Услуги
+              </a>
+              <div class="header-nav-dropdown" role="menu" aria-label="Услуги">
+                <div class="header-nav-dropdown__inner">
+                  <div class="header-nav-dropdown__cards header-nav-dropdown__cards--three" aria-label="Разделы услуг">
+                    <a class="header-nav-card" href="/services/security">
+                      <span class="header-nav-card__title">БЕЗОПАС<br />НОСТЬ</span>
+                      <img class="header-nav-card__img" src="assets/images/icons/security.svg" alt="БЕЗОПАСНОСТЬ" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                    <a class="header-nav-card" href="/services/pay-by-phone">
+                      <span class="header-nav-card__title">ОПЛАТА<br />С ТЕЛЕФОНА</span>
+                      <img class="header-nav-card__img" src="assets/images/icons/hand-coins.svg" alt="ОПЛАТА С ТЕЛЕФОНА" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                    <a class="header-nav-card" href="/services/call-management">
+                      <span class="header-nav-card__title">УПРАВЛЕНИЕ<br />ЗВОНКАМИ</span>
+                      <img class="header-nav-card__img" src="assets/images/icons/management.svg" alt="УПРАВЛЕНИЕ ЗВОНКАМИ" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                  </div>
+
+                  <div class="header-nav-dropdown__links">
+                    <a class="header-nav-dropdown__link" href="/services/mobile-internet">Мобильный интернет</a>
+                    <a class="header-nav-dropdown__link" href="/services/roaming">Международный роуминг</a>
+                    <a class="header-nav-dropdown__link" href="/services/travel-rf">В поездках по РФ</a>
+                    <a class="header-nav-dropdown__link" href="/services/intercity-calls">Междугородние звонки</a>
+                    <a class="header-nav-dropdown__link" href="/services/partners">Подписки партнеров</a>
+                    <a class="header-nav-dropdown__link" href="/services/entertainment">Развлекательные сервисы</a>
+                    <a class="header-nav-dropdown__link" href="/services">Все услуги</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn_secondary btn_small active">Активация номера</a>
+
+            <div class="header-nav__item header-nav__item--dropdown">
+              <a href="/about" class="btn btn_secondary btn_small header-nav__trigger" aria-haspopup="true"
+                aria-expanded="false">
+                О компании
+              </a>
+              <div class="header-nav-dropdown" role="menu" aria-label="О компании">
+                <div class="header-nav-dropdown__inner">
+                  <div class="header-nav-dropdown__cards header-nav-dropdown__cards--three" aria-label="Разделы">
+                    <a class="header-nav-card" href="/contacts">
+                      <span class="header-nav-card__title">КОНТАКТЫ</span>
+                      <img class="header-nav-card__img" src="assets/images/icons/contact.svg" alt="КОНТАКТЫ" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                    <a class="header-nav-card" href="/news">
+                      <span class="header-nav-card__title">НОВОСТИ</span>
+                      <img class="header-nav-card__img" src="assets/images/icons/newspaper.svg" alt="НОВОСТИ" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                    <a class="header-nav-card" href="/articles">
+                      <span class="header-nav-card__title">СТАТЬИ</span>
+                      <img class="header-nav-card__img" src="assets/images/icons/chart-bar.svg" alt="СТАТЬИ" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                  </div>
+
+                  <div class="header-nav-dropdown__links header-nav-dropdown__links--blank" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+
+            <a href="/contacts" class="btn btn_secondary btn_small">Контакты</a>
+
+            <div class="header-nav__item header-nav__item--dropdown">
+              <a href="/help" class="btn btn_secondary btn_small header-nav__trigger" aria-haspopup="true"
+                aria-expanded="false">
+                Помощь
+              </a>
+              <div class="header-nav-dropdown" role="menu" aria-label="Помощь">
+                <div class="header-nav-dropdown__inner">
+                  <div class="header-nav-dropdown__cards header-nav-dropdown__cards--three" aria-label="Разделы">
+                    <a class="header-nav-card" href="/contacts">
+                      <span class="header-nav-card__title">Тарифы</span>
+                      <img class="header-nav-card__img" src="assets/images/icons/settings.svg" alt="Тарифы" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                    <a class="header-nav-card" href="/news">
+                      <span class="header-nav-card__title">Платежи<br />и финансы</span>
+                      <img class="header-nav-card__img" src="assets/images/icons/finance.svg" alt="Платежи и финансы" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                    <a class="header-nav-card" href="/articles">
+                      <span class="header-nav-card__title">Безопасность<br /> и защита данных</span>
+                      <img class="header-nav-card__img" src="assets/images/icons/security.svg"
+                        alt="Безопасность и защита данных" />
+                      <span class="header-nav-card__arrow" aria-hidden="true"></span>
+                    </a>
+                  </div>
+
+                  <div class="header-nav-dropdown__links header-nav-dropdown__links--blank" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+
+          </nav>
+        </div>
+        <a href="/poplnit-balans/" class="header__pay--mobile btn btn_small">Пополнить баланс</a>
+        <a href="#search" class="header__search-btn btn btn_secondary btn--icon-only">
+        </a>
+        <a href="https://lk.ekomobile.ru/user/login" class="btn header-login-btn">
+          <div class="btn__icon"></div>
+          <span class="btn__text">Войти</span>
+        </a>
+        <button class="header-burger btn btn--icon-only" type="button" data-nav-trigger aria-label="Открыть меню"
+          aria-expanded="false">
+          <img class="btn__icon" src="assets/images/icons/burger-primary.svg" alt="Меню" />
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile меню (по макету): открывается по клику на burger -->
+  <div class="header-mobile-menu" data-nav-menu aria-hidden="true">
+    <div class="header-mobile-menu__panel">
+      <div class="header-mobile-menu__top">
+        <div class="header-mobile-menu__top-links">
+          <nav class="header-audience header-audience--mobile" aria-label="Аудитория">
+            <ul class="header-audience__list">
+              <li>
+                <a href="/" class="header-audience__link is-active">Частным лицам</a>
+              </li>
+              <li>
+                <a href="/korporativnym-klientam/" class="header-audience__link">Бизнесу</a>
+              </li>
+              <li>
+                <a href="/cooperation/" class="header-audience__link">Партнерам</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="https://lk.ekomobile.ru/user/login" class="btn header-login-btn header-login-btn--mobile">
+            <div class="btn__icon"></div>
+            <span class="btn__text">Войти</span>
+          </a>
+        </div>
+        <div class="header-mobile-menu__search">
+          <input class="header-mobile-menu__search-input" type="search" placeholder="" aria-label="Поиск" />
+          <button class="btn btn--icon-only header-mobile-menu__search-btn" type="button" aria-label="Поиск"></button>
+          <button class="header-mobile-menu__close" type="button" data-nav-close aria-label="Закрыть меню"></button>
+        </div>
+      </div>
+
+      <div class="header-mobile-menu__section">
+        <div class="header-mobile-menu__title">Тарифы</div>
+
+        <!-- Используем внутренние блоки dropdown (без .header-nav-dropdown, чтобы не было absolute-позиционирования) -->
+        <div class="header-nav-dropdown__inner header-nav-dropdown__inner--mobile">
+          <div class="header-nav-dropdown__cards" aria-label="Разделы тарифов">
+            <a class="header-nav-card" href="/tariffs/mobile-internet">
+              <span class="header-nav-card__title">МОБИЛЬНЫЙ<br />ИНТЕРНЕТ</span>
+              <img class="header-nav-card__img header-nav-card__img--lte" src="assets/images/icons/lte.svg"
+                alt="МОБИЛЬНЫЙ ИНТЕРНЕТ" />
+            </a>
+            <a class="header-nav-card" href="/tariffs/mobile">
+              <span class="header-nav-card__title">МОБИЛЬНАЯ<br />СВЯЗЬ</span>
+              <img class="header-nav-card__img header-nav-card__img--mobile" src="assets/images/icons/mobile-connection.svg"
+                alt="МОБИЛЬНАЯ СВЯЗЬ" />
+            </a>
+            <a class="header-nav-card" href="/tariffs/multi">
+              <span class="header-nav-card__title">МУЛЬТИТАРИФЫ</span>
+              <img class="header-nav-card__img header-nav-card__img--multi" src="assets/images/icons/multi-tariffs.svg"
+                alt="МУЛЬТИТАРИФЫ" />
+            </a>
+            <a class="header-nav-card" href="/tariffs/smart-devices">
+              <span class="header-nav-card__title">ТАРИФЫ ДЛЯ<br />УМНЫХ<br />УСТРОЙСТВ</span>
+              <img class="header-nav-card__img header-nav-card__img--smart-devices" src="assets/images/icons/smart-devices.svg"
+                alt="ТАРИФЫ ДЛЯ УМНЫХ УСТРОЙСТВ" />
+            </a>
+          </div>
+
+          <div class="header-nav-dropdown__links">
+            <a class="header-nav-dropdown__link" href="/mnp/">Перейти в Экомобайл со своим номером</a>
+            <a class="header-nav-dropdown__link" href="/esim/">Оформить eSim</a>
+            <span class="header-nav-dropdown__link">Выбрать красивый номер</span>
+            <a class="header-nav-dropdown__link" href="/sim-card/">Заказать SIM-карту</a>
+            <a class="header-nav-dropdown__link" href="/sim-restore/">Восстановить SIM-карту</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-mobile-menu__section">
+        <div class="header-mobile-menu__title">Услуги</div>
+        <div class="header-nav-dropdown__inner header-nav-dropdown__inner--mobile">
+          <div class="header-nav-dropdown__cards header-nav-dropdown__cards--three" aria-label="Разделы услуг">
+            <a class="header-nav-card" href="/services/security">
+              <span class="header-nav-card__title">БЕЗОПАСНОСТЬ</span>
+              <img class="header-nav-card__img" src="assets/images/icons/security.svg" alt="БЕЗОПАСНОСТЬ" />
+            </a>
+            <a class="header-nav-card" href="/services/pay-by-phone">
+              <span class="header-nav-card__title">ОПЛАТА<br />С ТЕЛЕФОНА</span>
+              <img class="header-nav-card__img" src="assets/images/icons/hand-coins.svg" alt="ОПЛАТА С ТЕЛЕФОНА" />
+            </a>
+            <a class="header-nav-card" href="/services/call-management">
+              <span class="header-nav-card__title header-nav-card__title--center">УПРАВЛЕНИЕ ЗВОНКАМИ</span>
+              <img class="header-nav-card__img" src="assets/images/icons/management.svg" alt="УПРАВЛЕНИЕ ЗВОНКАМИ" />
+            </a>
+          </div>
+
+          <div class="header-nav-dropdown__links">
+            <a class="header-nav-dropdown__link" href="/services/mobile-internet">Мобильный интернет</a>
+            <a class="header-nav-dropdown__link" href="/services/roaming">Международный роуминг</a>
+            <a class="header-nav-dropdown__link" href="/services/travel-rf">В поездках по РФ</a>
+            <a class="header-nav-dropdown__link" href="/services/intercity-calls">Междугородние звонки</a>
+            <a class="header-nav-dropdown__link" href="/services/partners">Подписки партнеров</a>
+            <a class="header-nav-dropdown__link" href="/services/entertainment">Развлекательные сервисы</a>
+            <a class="header-nav-dropdown__link" href="/services">Все услуги</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="header-mobile-menu__section">
+        <div class="header-mobile-menu__title">Активация номера</div>
+      </a>
+
+      <div class="header-mobile-menu__section header-mobile-menu__section--company">
+        <div class="header-mobile-menu__title">О компании</div>
+        <div class="header-nav-dropdown__inner header-nav-dropdown__inner--mobile">
+          <div class="header-nav-dropdown__cards header-nav-dropdown__cards--three " aria-label="Разделы">
+            <a class="header-nav-card" href="/contacts">
+              <span class="header-nav-card__title header-nav-card__title--center">КОНТАКТЫ</span>
+              <img class="header-nav-card__img" src="assets/images/icons/contact.svg" alt="КОНТАКТЫ" />
+            </a>
+            <a class="header-nav-card" href="/news">
+              <span class="header-nav-card__title header-nav-card__title--center">НОВОСТИ</span>
+              <img class="header-nav-card__img" src="assets/images/icons/newspaper.svg" alt="НОВОСТИ" />
+            </a>
+            <a class="header-nav-card" href="/articles">
+              <span class="header-nav-card__title header-nav-card__title--center">СТАТЬИ</span>
+              <img class="header-nav-card__img" src="assets/images/icons/chart-bar.svg" alt="СТАТЬИ" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <!--       
+    </div>
+  </body>
+</html> -->
+<main class="main main--home">
+  <section class="running-line">
+  <div class="swiper running-line__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide running-line__item">До 6.00 21 сентября ведутся технические работы - в это время
+        могут быть перебои в работе мобильной связи и интернета</div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- <section class="banner banner--home">
+    <div class="container">
+      <div class="swiper banner-home-swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="banner-slide swiper-slide banner-slide-1">
+            <picture class="banner-media">
+              <source srcset="assets/images/photos/home-banner-1-mobile.webp 1x, assets/images/photos/home-banner-1-mobile@2x.webp 2x"
+                media="(max-width: 768.98px)" type="image/webp" />
+              <source srcset="assets/images/photos/home-banner-1-tablet.webp 1x, assets/images/photos/home-banner-1-tablet@2x.webp 2x"
+                media="(max-width: 1023.98px)" type="image/webp" />
+              <source
+                srcset="assets/images/photos/home-banner-1-desktop.webp 1x, assets/images/photos/home-banner-1-desktop@2x.webp 2x"
+                type="image/webp" />
+              <img class="banner-image" src="assets/images/photos/home-banner-1-desktop.webp"
+                srcset="assets/images/photos/home-banner-1-desktop@2x.webp 2x" alt="Связь будет ловить" />
+            </picture>
+            <a href="/about" class="banner-action btn btn_large">
+              Связь<br/>
+              будет<br/>
+              ловить
+            </a>
+          </div>
+        </div>
+        <div class="sl-nav">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <section class="banner banner--home">
+    <div class="container">
+      <div class="banner-slide banner-slide-1">
+        <picture class="banner-media">
+          <source srcset="assets/images/photos/home-banner-1-mobile.webp 1x, assets/images/photos/home-banner-1-mobile@2x.webp 2x"
+            media="(max-width: 768.98px)" type="image/webp" />
+          <source srcset="assets/images/photos/home-banner-1-tablet.webp 1x, assets/images/photos/home-banner-1-tablet@2x.webp 2x"
+            media="(max-width: 1023.98px)" type="image/webp" />
+          <source srcset="assets/images/photos/home-banner-1-desktop.webp 1x, assets/images/photos/home-banner-1-desktop@2x.webp 2x"
+            type="image/webp" />
+          <img class="banner-image" src="assets/images/photos/home-banner-1-desktop.webp"
+            srcset="assets/images/photos/home-banner-1-desktop@2x.webp 2x" alt="Связь будет ловить" />
+        </picture>
+        <div class="banner-content">
+          <ul class="banner-content__list">
+            <li class="banner-content__item">
+              без постоянной абонентской платы
+            </li>
+            <li class="banner-content__item">
+              будь всегда на связи
+            </li>
+            <li class="banner-content__item">
+              плати только за фактическое потребление
+            </li>
+          </ul>
+          <a href="#" class="banner-action banner-action--desktop btn btn_accent">
+            Узнать подробнее
+          </a>
+        </div>
+        <div class="banner-caption">
+          Связь<br />
+          будет<br />
+          ловить
+        </div>
+
+        <a href="#" class="banner-action banner-action--mobile btn btn_accent">
+          Узнать подробнее
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="quicklinks">
+    <div class="container">
+      <div class="quicklinks__container">
+        <a class="btn btn_secondary quicklinks__item" href="https://lk.ekomobile.ru/user/login">
+          <img class="btn__icon" src="assets/images/icons/person-primary.svg" alt="Личный кабинет" />
+          Личный кабинет
+        </a>
+        <a class="btn btn_secondary quicklinks__item" href="#">
+          <img class="btn__icon quicklinks__icon" src="assets/images/icons/web-primary.svg" alt="Услуги" />
+          Услуги
+        </a>
+        <a class="btn btn_secondary quicklinks__item" href="#">
+          <img class="btn__icon quicklinks__icon" src="assets/images/icons/check-primary.svg" alt="Частые вопросы" />
+          Частые вопросы
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tariffs tariffs_home section-padding">
+    <div class="swiper tariffs__swiper tariffs__swiper--home full-bleed">
+      <div class="swiper-wrapper">
+        <div class="tariff-item swiper-slide">
+          <div class="tariff-item__inner">
+            <a href="#" class="tariff-item__name">всегда.связь</a>
+            <a href="#" class="tariff-item__next-link">
+              <div class="btn-next btn-next--animated">
+              </div>
+            </a>
+            <ul class="tariff-item__features">
+              <li>от 300 минут</li>
+              <li>от 50 смс</li>
+              <li>от 30 ГБ</li>
+            </ul>
+            <div class="tariff-item__footer">
+              <a href="#" class="tariff-item__promo"><strong>Доп номер</strong> - плати когда пользуешься</a>
+              <div class="tariff-item__price">
+                <div class="tariff-item__price-value">490 ₽</div>
+                <div class="tariff-item__price-period">месяц</div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="tariff-item__connect btn btn_accent">
+            Подключить
+          </a>
+        </div>
+        <div class="tariff-item swiper-slide">
+          <div class="tariff-item__inner">
+            <a href="#" class="tariff-item__name">стабильность</a>
+            <a href="#" class="tariff-item__next-link">
+              <div class="btn-next btn-next--animated">
+              </div>
+            </a>
+            <ul class="tariff-item__features">
+              <li>110 гб</li>
+            </ul>
+            <div class="tariff-item__description">Чтобы не зависеть<br />от обстоятельств</div>
+            <div class="tariff-item__footer">
+              <div class="tariff-item__price">
+                <div class="tariff-item__price-value">1000 ₽</div>
+                <div class="tariff-item__price-period">месяц</div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="tariff-item__connect btn btn_accent">
+            Подключить
+          </a>
+        </div>
+        <div class="tariff-item swiper-slide">
+          <div class="tariff-item__inner">
+            <a href="#" class="tariff-item__name">резервный</a>
+            <a href="#" class="tariff-item__next-link">
+              <div class="btn-next btn-next--animated">
+              </div>
+            </a>
+            <ul class="tariff-item__features">
+              <li>1 гб за 10₽</li>
+            </ul>
+            <div class="tariff-item__description">Запасной интернет,<br />который выручит</div>
+            <div class="tariff-item__footer">
+              <div class="tariff-item__price">
+                <div class="tariff-item__price-value">600 ₽</div>
+                <div class="tariff-item__price-period">месяц</div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="tariff-item__connect btn btn_accent">
+            Подключить
+          </a>
+        </div>
+        <div class="tariff-item swiper-slide">
+          <div class="tariff-item__inner">
+            <a href="#" class="tariff-item__name">шаринг</a>
+            <a href="#" class="tariff-item__next-link">
+              <div class="btn-next btn-next--animated">
+              </div>
+            </a>
+            <ul class="tariff-item__features">
+              <li>от 100 гб</li>
+            </ul>
+            <div class="tariff-item__description">Интернет, который<br />включается тогда,<br />когда нужен</div>
+            <div class="tariff-item__footer">
+              <div class="tariff-item__price">
+                <div class="tariff-item__price-value">0 ₽</div>
+                <div class="tariff-item__price-period">месяц</div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="tariff-item__connect btn btn_accent">
+            Подключить
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="payment payment--home">
+    <div class="container">
+      <form action="#" class="payment__form" id="paymentForm">
+        <div class="payment__content">
+          <div class="payment__title">Будь на связи где угодно</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label visually-hidden" for="phoneNumber">Номер телефона</label>
+              <div class="input-with-prefix">
+                <div class="input-prefix">+7</div>
+                <input class="form-control" type="tel" placeholder="(XXX) XX-XX-XX" id="phoneNumber" required>
+              </div>
+              <div class="form-error" id="phoneError"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label visually-hidden" for="amount">Сумма пополнения</label>
+              <div class="input-with-suffix">
+                <input class="form-control" type="number" placeholder="500" min="1" max="15000" id="amount" required>
+                <div class="input-suffix">₽</div>
+              </div>
+              <div class="form-error" id="amountError"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label visually-hidden" for="paymentMethod">Способ оплаты</label>
+              <select class="form-control custom-select js-select-payment" id="paymentMethod" required>
+                <option value="sbp">СБП</option>
+                <option value="elecsnet" selected>Элекснет</option>
+              </select>
+              <div class="form-error" id="paymentMethodError"></div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn payment__submit-btn" id="paymentButton">
+          Оплатить
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section class="promo promo--home">
+  <div class="container">
+    <div class="promo__container">
+      <div class="promo__block promo__block--left">
+        <a href="#" class="promo-card promo-card--number">
+          <div class="promo-card__icons">
+            <img src="assets/images/photos/promo-number-icon-ellipse.webp" alt=""
+              class="promo-card__icon-ellipse promo-card__icon-ellipse--top">
+            <img src="assets/images/photos/promo-number-icon-ellipse.webp" alt=""
+              class="promo-card__icon-ellipse promo-card__icon-ellipse--right">
+            <img src="assets/images/photos/promo-number-icon-ellipse.webp" alt=""
+              class="promo-card__icon-ellipse promo-card__icon-ellipse--left">
+          </div>
+          <div class="promo-card__blur-wrapper">
+            <div class="promo-card__blur">
+            </div>
+          </div>
+          <span class="promo-card__text">Красивый<br />номер</span>
+          <div class="btn-next btn-next--white"></div>
+        </a>
+        <a href="#" class="promo-card promo-card--transfer">
+          <div class="promo-card__text">
+            Переходи<br />со своим<br />номером
+          </div>
+          <div class="btn-next btn-next--white"></div>
+        </a>
+      </div>
+      <div class="promo__block promo__block--right">
+        <div class="promo-card promo-card--app">
+          <div class="promo-card__text">
+            мобильное<br />приложение
+          </div>
+          <a href="#" class="promo-card__link">
+            <div class="btn-next btn-next--icon-animated"></div>
+          </a>
+        </div>
+        <div class="promo-card promo-card--esim">
+          <div class="promo-card__text">
+            Оформить<br />esim
+          </div>
+          <a href="#" class="promo-card__request btn btn_accent">
+            Оставить заявку
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="media">
+    <div class="container">
+
+      <div class="media-slider">
+
+        <div class="media-slide active">
+          <img src="assets/images/media-slider/media-slide-1.svg" class="media-bg" alt="">
+          <img src="assets/images/media-slider/media-slide-1-tablet.svg" class="media-bg-tablet" alt="">
+          <img src="assets/images/media-slider/media-slide-1-mobile.svg" class="media-bg-mobile" alt="">
+
+          <!--                    <div class="media-overlay"></div>-->
+
+          <div class="media-logo">
+            <img src="assets/images/media-slider/slide-logo.png" alt="">
+          </div>
+
+          <div class="media-content">
+            <div class="media-date">26 Ноября. /CNEWS/.</div>
+            <h2 class="media-title">
+              Половина россиян хотят получать деньги назад за неиспользованный трафик
+            </h2>
+            <p class="media-text">
+              Согласно опросу, проведенному агрегатором мобильной связи «Экомобайл», пользователи
+              стремятся самостоятельно контролировать свои тарифы. Почти половина опрошенных (48%) хотели
+              бы обменивать неиспользованные гигабайты на деньги, а 41% заявили о необходимости полного
+              безлимита на все мобильные услуги.
+            </p>
+          </div>
+
+          <a href="#" target="_blank" class="media-button">подробнее</a>
+        </div>
+        <div class="media-slide">
+          <img src="assets/images/media-slider/media-slide-2.svg" class="media-bg" alt="">
+          <img src="assets/images/media-slider/media-slide-1-tablet.svg" class="media-bg-tablet" alt="">
+          <img src="assets/images/media-slider/media-slide-1-mobile.svg" class="media-bg-mobile" alt="">
+          <!--                    <div class="media-overlay"></div>-->
+
+          <div class="media-logo vilvet">
+            <img src="assets/images/media-slider/slide-logo-2.png" alt="">
+          </div>
+
+          <div class="media-content">
+            <div class="media-date">15 января. /ТАСС/.</div>
+            <h2 class="media-title">
+              Опрошенные россияне недовольны стоимостью мобильной связи
+            </h2>
+            <p class="media-text">
+              Россияне считают главными раздражающими факторами в работе мобильных операторов навязывание
+              дополнительных услуг, плохую связь и высокую стоимость. Об этом говорится
+              в исследовании агрегатора услуг мобильной связи в России "Экомобайл", которое есть у ТАСС.
+            </p>
+          </div>
+
+          <a href="#" target="_blank" class="media-button">подробнее</a>
+
+        </div>
+        <div class="media-slide">
+          <img src="assets/images/media-slider/media-slide-3.svg" class="media-bg" alt="">
+          <img src="assets/images/media-slider/media-slide-1-tablet.svg" class="media-bg-tablet" alt="">
+          <img src="assets/images/media-slider/media-slide-1-mobile.svg" class="media-bg-mobile" alt="">
+          <!--                    <div class="media-overlay"></div>-->
+
+          <div class="media-logo">
+            <img src="assets/images/media-slider/slide-logo.png" alt="">
+          </div>
+
+          <div class="media-content">
+            <div class="media-date">10 января. /КОМПЬЮТЕРРА/.</div>
+            <h2 class="media-title">
+              Что такое агрегатор мобильной связи и зачем он нужен
+            </h2>
+            <p class="media-text">
+              Агрегатор мобильной связи — это площадка, которая объединяет предложения разных операторов и
+              позволяет пользователю выбрать подходящий тариф под свои задачи. По сути, это инструмент
+              свободы выбора. Как работает модель и кому она выгодна, рассказывает основатель компании
+              «Экомобайл» Игорь Жиленко.
+            </p>
+          </div>
+
+          <a href="#" target="_blank" class="media-button">подробнее</a>
+
+        </div>
+
+        <div class="media-dots"></div>
+
+        <img class="media-arrow" src="assets/images/media-slider/media-arrow.svg" alt="">
+
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-nav-sections">
+        <div class="footer-nav--column">
+          <ul class="footer-nav__list">
+            <li><a href="#">Частным лицам</a></li>
+            <li><a href="#">Корпоративным клиентам</a></li>
+            <li><a href="#">Сотрудничество</a></li>
+            <li><a href="#">Наши ИТ-решения</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-services--column">
+          <ul class="footer-services__list">
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Активация номеров</a></li>
+            <li><a href="#">eSIM</a></li>
+            <li><a href="#">Тарифы</a></li>
+            <li><a href="#">Красивые номера</a></li>
+            <li><a href="#">Мобильный интернет</a></li>
+            <li><a href="#">Связь в путешествиях</a></li>
+            <li><a href="#">Помощь</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-apps" data-type="apps">
+        <div>
+          <div class="footer-apps__title">
+            Вся связь у тебя<br />
+            в телефоне
+          </div>
+          <div class="footer-apps__text">
+            Приложение Экомобайл — чтобы управлять тарифом по-простому: услуги, расходы, баланс.
+          </div>
+        </div>
+        <div class="footer-apps__stores">
+          <div class="footer-apps__qrcode">
+            <img decoding="async" src="assets/images/icons/application-qrcode.svg" alt="qrcode" />
+          </div>
+          <div class="footer-apps__links">
+            <a href="https://play.google.com/store/apps/details?id=ru.ekomobile.app" class="footer-apps__link"
+              target="_blank" rel="noopener">
+              <img decoding="async" src="assets/images/icons/google-button.svg" alt="Google Play" />
+            </a>
+            <a href="https://apps.apple.com/ru/app/экомобайл/id6448786246" class="footer-apps__link" target="_blank"
+              rel="noopener">
+              <img decoding="async" src="assets/images/icons/appstore-button.svg" alt="App Store" />
+            </a>
+            <a href="https://www.rustore.ru/catalog/app/ru.ekomobile.app" class="footer-apps__link" target="_blank"
+              rel="noopener">
+              <img decoding="async" src="assets/images/icons/rustore-button.svg" alt="RuStore" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-contacts hidden" data-type="contacts">
+        <a href="tel:0522" class="footer-contacts__header">
+          <svg class='icon' width='27' height='27'>
+            <use xlink:href='assets/images/icons/sprite.svg#phone-fill'></use>
+          </svg>
+          <div class="footer-contacts__title">0522</div>
+        </a>
+
+        <div class="footer-contacts__info">
+          <div class="footer-contacts__text">
+            В сети Билайн и Теле2 — по РФ, кроме Республики Крым и г. Севастополь
+          </div>
+          <div class="footer-contacts__text">
+            В сети Мегафон и МТС — по Москве и Московской области бесплатно
+          </div>
+        </div>
+
+        <div class="footer-contacts__phone-block">
+          <a href="tel:+74950110522" class="footer-contacts__phone">+7 495 011-05-22</a>
+          <div class="footer-contacts__text">
+            (Круглосуточно, доступен для звонков по всему миру)
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <div class="footer-social">
+          <a href="https://vk.com/ekomobile" class="footer-social__link" target="_blank" rel="noopener">
+            <img decoding="async" src="assets/images/icons/vk.svg" alt="ВКонтакте" />
+          </a>
+          <a href="https://t.me/ekomobile_official_group" class="footer-social__link" target="_blank" rel="noopener">
+            <img decoding="async" src="assets/images/icons/tg.svg" alt="Telegram" />
+          </a>
+        </div>
+        <div class="footer-legal__main">
+          <ul class="footer-documents">
+            <li><a href="docs/dogovor-oferty.pdf" target="_blank">Условия оказания услуг</a></li>
+            <li>
+              <a href="docs/privacy-politics.pdf" target="_blank">Политика конфиденциальности</a>
+            </li>
+            <li><a href="docs/company-detail.pdf" target="_blank">Реквизиты</a></li>
+            <li><a href="#modal-director" data-fancybox>Написать директору</a></li>
+          </ul>
+
+          <div class="footer-providers">
+            <div class="footer-providers__title">Услуги связи предоставляются:</div>
+            <ul class="footer-providers__list">
+              <li>ПАО «ВымпелКом»</li>
+              <li>ПАО «МегаФон»</li>
+              <li>ПАО «МТС»</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+<script src="assets/libs/fancybox/fancybox.umd.js"></script>
+<script src="assets/libs/tom-select/tom-select.complete.min.js"></script>
+<script src="assets/js/home.js"></script>
+<script src="assets/js/slider.js"></script>
+
+</body>
+
+</html>

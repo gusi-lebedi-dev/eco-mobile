@@ -79,3 +79,27 @@ tabs.forEach(tab => {
         this.classList.add('is-active');
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const advantages = document.querySelector('.advantages');
+    const items = document.querySelectorAll('.advantages-item');
+    let currentIndex = 0;
+    items[0]?.classList.add('active');
+    advantages?.addEventListener('click', function () {
+        if (window.innerWidth > 768) {
+            advantages.classList.toggle('active');
+        }
+
+        items.forEach(item => item.classList.remove('active'));
+        currentIndex = (currentIndex + 1) % items.length;
+        items[currentIndex].classList.add('active');
+    });
+
+    document.querySelectorAll('.brand-card').forEach(card => {
+        card.addEventListener('click', function () {
+            const cardId = this.getAttribute('data-card');
+            document.querySelectorAll('.brand-card').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+})

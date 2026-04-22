@@ -1,21 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const events = [
-        { year: 2002, text: "Основание Экомобайл", position: "bottom", clickable: true, variant: "blue", cardWidth: "221px" },
-        { year: 2004, text: "", position: "top", clickable: false },
-        { year: 2006, text: "Первая реализация тарифов физическим лицам через аренду номеров", position: "top", clickable: true, variant: "transparent", cardWidth: "258px" },
-        { year: 2008, text: "Разработан собственный продукт информационной системы", position: "bottom", clickable: true, variant: "transparent", cardWidth: "239px" },
-        { year: 2010, text: "", position: "bottom", clickable: false },
-        { year: 2012, text: "Расширение спектра телеком-сервисов. Работа с полным жизненным циклом абонента", position: "top", clickable: true, variant: "transparent", cardWidth: "245px" },
-        { year: 2014, text: "Первые брендированные SIM-карты Экомобайл", position: "bottom", clickable: true, variant: "transparent", cardWidth: "240px" },
-        { year: 2014, text: "Выход на рынок мигрантского сегмента.", position: "top", clickable: true, variant: "transparent", cardWidth: "257px" },
-        { year: 2014, text: "Запуск собственной биллинговой системы. Первый шаг к платформенной модели", position: "top", clickable: true, variant: "transparent", cardWidth: "276px" },
-        { year: 2016, text: "Охват регионов РФ за 2 года. Запуск планшетов с SIM-картами Экомобайл", position: "bottom", clickable: true, variant: "transparent", cardWidth: "369px" },
-        { year: 2018, text: "Сложный этап масштабирования", position: "bottom", clickable: false },
-        { year: 2020, text: "Новый виток развития", position: "top", clickable: false },
-        { year: 2022, text: "Широкий рост абонентской базы", position: "top", clickable: false, variant: "blue", cardWidth: "220px" },
-        { year: 2024, text: "Запуск новых продуктов - приложений, продуктов M2M и др.", position: "top", clickable: true, variant: "transparent", cardWidth: "292px" },
-        { year: 2026, text: "Широкий рост абонентской базы", position: "bottom", clickable: true, variant: "blue", cardWidth: "221px" }
-    ];
+    const events = window.timelineData || [];
 
     const timeline = document.getElementById("timeline");
     const startYear = 2002;
@@ -108,8 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.left = "50%";
         card.style.transform = "translateX(-50%)";
 
-        if (event.cardWidth) {
-            card.style.width = event.cardWidth;
+        if (event.card_width) {
+            card.style.width = event.card_width;
             card.style.maxWidth = "90vw";
         } else {
             card.style.width = "max-content";
