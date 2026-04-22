@@ -5923,6 +5923,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   border-radius: 36px 0 0 36px;
   overflow: hidden;
   font-family: 'Manrope', sans-serif;
+  margin: 0 auto;
 }
 
 .media-slide {
@@ -5977,9 +5978,16 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
 
 @media screen and (max-width: 870px) {
 
-  .media-text,
   .media-date {
     max-width: 350px;
+  }
+  .media-text {
+    max-width: 200px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .media-button {
@@ -6061,6 +6069,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   text-align: left;
   text-transform: none;
   max-width: 606px;
+  margin-top: 0;
 
   @media screen and (max-width: 1076px) {
     max-width: 395px;
@@ -6139,4 +6148,47 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   border-radius: 50%;
   cursor: pointer;
   z-index: 2;
+}
+
+.tariff-item-all {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 415px;
+  width: 292px;
+}
+
+.tariff-item-all__link {
+  height: 70px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.tariff-item-all__link--application {
+  position: absolute;
+  bottom: 27px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 49px;
+  width: 123px;
+}
+
+.tariff-item-all--mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  .tariff-item-all--desktop {
+    display: none;
+  }
+
+  .tariff-item-all--mobile {
+    display: flex;
+    margin: 24px auto 0;
+  }
 }
