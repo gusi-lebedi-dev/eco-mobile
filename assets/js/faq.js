@@ -76,5 +76,40 @@ document.addEventListener('DOMContentLoaded', function() {
         if (twoBlock) twoBlock.style.display = '';
         if (fastCommands) fastCommands.style.display = '';
         arrows.forEach(arrow => arrow.style.transform = '');
+        
+        if (searchInput) {
+            searchInput.value = '';
+            const inputEvent = new Event('input', { bubbles: true });
+            searchInput.dispatchEvent(inputEvent);
+        }
+    }
+
+    const searchInput = container.querySelector('.search-input');
+    const faqCards = container.querySelectorAll('.faq-card');
+    
+    if (searchInput && faqCards.length > 0) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.trim().toLowerCase();
+            
+            faqCards.forEach(card => {
+                const textElements = card.querySelectorAll('h4, p');
+                const searchableText = Array.from(textElements).map(el => el.textContent.toLowerCase()).join(' ');
+                if (searchTerm === '' || searchableText.includes(searchTerm)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            const mainTitle = container.querySelector('h3.faq-grid-title.main-title');
+            const gridCards = container.querySelectorAll('.faq-grid .faq-card');
+            const gridVisible = Array.from(gridCards).some(card => card.style.display !== 'none');
+            mainTitle.style.display = gridVisible ? '' : 'none';
+            
+            const twoTitle = container.querySelector('.faq-two-container h3.faq-grid-title');
+            const twoCards = container.querySelectorAll('.faq-two-block-container .faq-card');
+            const twoVisible = Array.from(twoCards).some(card => card.style.display !== 'none');
+            if (twoTitle) twoTitle.style.display = twoVisible ? '' : 'none';
+        });
     }
 });

@@ -7922,6 +7922,12 @@ h3 {
     border-radius: 36px;
     align-self: stretch;
     padding: 52px 75px;
+    max-width: 398px;
+    min-height: 394px;
+
+    @media screen and (max-width:1300px) {
+          min-height: 277px;
+    }
 }
 
 .chat-text h4 {
