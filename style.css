@@ -4308,6 +4308,12 @@ h3 {
     }
 }
 
+.pricing-plans__single .single-result__price-type {
+    @media screen and (max-width: 768px) {
+        flex-direction: row;
+    }
+}
+
 .single-result__price-type .single-result__price-button--white,
 .single-result__price-type .single-result__price-button--transparent {
     height: 100px;
