@@ -900,21 +900,58 @@
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const unlimitedCheckbox = document.querySelectorAll('.single-form__switch input[type="checkbox"]')[0];
-            const priceElement = document.querySelector('.single-result__price .big');
-            const initialText = priceElement.textContent.trim();
-            const basePrice = parseInt(initialText.replace('₽', ''));
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Pricing script loaded');
+            const tarifRadios = document.querySelectorAll('input[name="tarif"]');
+            const unlimitedCheckbox = document.querySelector('.single-form__switch input[type="checkbox"]');
+            const formPriceEl = document.querySelector('.single-form__price');
+            const resultPriceEl = document.querySelector('.single-result__price-content .big');
+
+            const prices = {
+                'Без пакетов': 595,
+                'Пакет S': 940,
+                'Пакет M': 1080,
+                'Пакет L': 1580,
+                'Пакет VIP': 1880
+            };
             const addonPrice = 159;
 
-            function updatePrice() {
-                const total = unlimitedCheckbox.checked ? basePrice + addonPrice : basePrice;
-                priceElement.textContent = total + '₽';
+            function getSelectedTarifPrice() {
+                console.log('getSelectedTarifPrice called');
+                for (const radio of tarifRadios) {
+                    if (radio.checked) {
+                        const card = radio.closest('.single-form__select-card');
+                        const spans = card ? card.querySelectorAll('span') : [];
+                        const text = spans.length > 0 ? spans[0].textContent.trim() : '';
+                        const price = prices[text] || 595;
+                        return price;
+                    }
+                }
+                return 595;
             }
 
-            unlimitedCheckbox.addEventListener('change', updatePrice);
+            function updatePrices() {
+                const basePrice = getSelectedTarifPrice();
+                const addon = unlimitedCheckbox && unlimitedCheckbox.checked ? addonPrice : 0;
+                const total = basePrice + addon;
+            
+                
+                formPriceEl.textContent = basePrice + ' ₽';
+                resultPriceEl.textContent = total + '₽';
+                const monthlyEl = document.querySelector('.single-form__row span:last-child');
+                if (monthlyEl) {
+                    monthlyEl.textContent = (basePrice - 100) + ' ₽';
+                }
+                
+            }
 
-            updatePrice();
+            document.addEventListener('change', function(e) {
+                if (e.target.matches('input[name="tarif"]') || e.target.matches('.single-form__switch input[type="checkbox"]')) {
+                    updatePrices();
+                }
+            });
+
+            setTimeout(updatePrices, 100); 
         });
     </script>
 

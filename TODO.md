@@ -1,6 +1,13 @@
-# FAQ Search Implementation TODO
+# TODO: Pricing Plans City.html Tarif Price Update
 
-- [x] Step 1: Create this TODO.md
-- [x] Step 2: Edit assets/js/faq.js to add real-time search logic
-- [x] Step 3: Test functionality (changes applied successfully)
-- [x] Step 4: Complete task
+## Plan Steps
+- [ ] Step 1: Create this TODO.md file ✅
+- [ ] Step 2: Add comprehensive JavaScript for tarif radio buttons price updates and refactor unlimited checkbox integration ✅
+  - Map prices to package names
+  - Dynamic total calculation (tarif + unlimited addon)
+  - Update .single-form__price and .single-result__price-content .big
+  - Init with default selection
+- [ ] Step 3: Update TODO.md with progress
+- [ ] Step 4: Test functionality (provide browser open command)
+
+Current status: Step 2 complete. Proceeding to Step 3 & 4.
