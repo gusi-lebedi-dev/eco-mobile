@@ -102,4 +102,30 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
         });
     });
+
+    document.querySelector('.services-item__connect').addEventListener('click', function () {
+        const modal = document.querySelector('.services-item__modal-connection');
+        modal.classList.add('is-active');
+    })
+    document.querySelector('.services-item__modal-close').addEventListener('click', function () {
+        const modal = document.querySelector('.services-item__modal-connection');
+        const modalFinish = document.querySelector('.services-item__modal-connection--finish');
+        modal.classList.remove('is-active');
+        modalFinish.classList.remove('is-active');
+    })
+
+    document.querySelector('.services-item__modal-finish-close').addEventListener('click', function () {
+        const modalFinish = document.querySelector('.services-item__modal-connection--finish');
+        modalFinish.classList.remove('is-active');
+    })
+
+    document.querySelector('.services-item__modal--next').addEventListener('click', function () {
+        const modalFinish = document.querySelector('.services-item__modal-connection--finish');
+        const modal = document.querySelector('.services-item__modal-connection');
+        modal.classList.remove('is-active');
+        modalFinish.classList.add('is-active');
+    })
+
+
 })
+

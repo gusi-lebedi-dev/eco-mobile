@@ -15,6 +15,7 @@
     <meta property="og:image" content=""/>
     <title>EkoMobile - Самый выгодный роуминг</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/css/modal-connection.css">
     <link rel="stylesheet" href="../assets/fonts/fonts.css">
     <link rel="stylesheet" href="../assets/css/dealers.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -355,6 +356,47 @@
 
 <section class="services-item">
     <div class="container">
+        <div class="services-item__modal-connection">
+            <div class="services-item__modal-container">
+                <svg class="services-item__modal-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L25 25" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25 1L1 25" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+
+                <h4>Подключить услугу</h4>
+                <span>Самый выгодный роуминг</span>
+                <form>
+                    <input placeholder="Имя" type="text">
+                    <input placeholder="Телефон" type="tel">
+                    <input placeholder="Email" type="email">
+                    <label class="custom-checkbox">
+                        <input type="checkbox"/>
+                        <span class="checkmark"></span>
+                        <span class="label-text">
+                                    Соглашаюсь на обработку персональных данных
+                                </span>
+                    </label>
+                </form>
+
+                <button class="services-item__modal--next" type="button">Отправить заявку</button>
+
+            </div>
+        </div>
+        <div class="services-item__modal-connection services-item__modal-connection--finish ">
+            <div class="services-item__modal-container">
+                <svg class="services-item__modal-close services-item__modal-finish-close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L25 25" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25 1L1 25" stroke="#2C3E50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+
+                <h4>Заявка принята!</h4>
+                <p>Наш сотрудник свяжется в ближайшее время.
+                    Если заявка была отправлена в выходной, то мы обязательно ответим в будний день.</p>
+
+            </div>
+        </div>
         <div class="services-item__banner roaming">
             <img class="services-item__banner-desktop" src="../assets/images/services/1-tb-500.svg" alt="">
             <img class="services-item__banner-tablet" src="../assets/images/services/1-tb-500-tablet.svg" alt="">
@@ -399,7 +441,7 @@
                             интернет — только в сети билайн
                         </p>
                     </div>
-                    <a href="#">Подключить</a>
+                    <a class="services-item__connect" href="#">Подключить</a>
                 </div>
                 <div class="services-item__section">
                     <div class="services-item__white-block">

@@ -4021,6 +4021,7 @@ h3 {
     }
 }
 
+.services-item__modal-container .custom-checkbox,
 .sim-recovery__form .custom-checkbox,
 .single-result__price-next .custom-checkbox {
     display: inline-flex;
@@ -4032,11 +4033,13 @@ h3 {
     user-select: none;
 }
 
+.services-item__modal-container .custom-checkbox input,
 .sim-recovery__form .custom-checkbox input,
 .single-result__price-next .custom-checkbox input {
     display: none;
 }
 
+.services-item__modal-container .checkmark,
 .sim-recovery__form .checkmark,
 .single-result__price-next .checkmark {
     width: 18px;
@@ -4059,6 +4062,8 @@ h3 {
 /* .single-result__price-next .custom-checkbox input:checked+.checkmark {
     padding: 1px;
 } */
+
+.services-item__modal-container .custom-checkbox,
 .sim-recovery__form .custom-checkbox {
     display: flex;
     align-items: center;
@@ -4069,7 +4074,8 @@ h3 {
     }
 }
 
-.sim-recovery__form .custom-checkbox input:checked + .checkmark::after,
+.services-item__modal-container .custom-checkbox input:checked + .checkmark::after,
+.sim-recovery__form .custom-checkbox ,
 .single-result__price-next .custom-checkbox input:checked + .checkmark::after {
     content: "";
     position: absolute;
@@ -4080,13 +4086,14 @@ h3 {
     background: #D9D9D9;
     border-radius: 50%;
 }
-
+.services-item__modal-container .custom-checkbox input:checked + .checkmark::after,
 .sim-recovery__form .custom-checkbox input:checked + .checkmark::after {
     background: rgba(44, 62, 80, 1);
     width: 8px;
     height: 8px;
 }
 
+.services-item__modal-container .custom-checkbox .label-text,
 .sim-recovery__form .custom-checkbox .label-text,
 .single-result__price-next .custom-checkbox .label-text {
     font-style: normal;
@@ -4095,7 +4102,8 @@ h3 {
     color: #FFFFFF;
 }
 
-.sim-recovery__form .custom-checkbox .label-text {
+.services-item__modal-container .custom-checkbox .label-text,
+.sim-recovery__form .custom-checkbox {
     color: rgba(44, 62, 80, 1);
     font-size: 12px;
 }
