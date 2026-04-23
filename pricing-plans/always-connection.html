@@ -838,17 +838,148 @@
     </script>
 
 <script>
-    const operatorsBlocks = document.querySelectorAll('.operators');
+    document.addEventListener('DOMContentLoaded', function() {
+        const planTabs = document.querySelectorAll('.single-form__plan-tab');
+        const cardsContainer = document.querySelector('.single-form__select-cards');
+        const priceCardPrice = document.querySelector('.single-form__price');
+        const totalPriceBig = document.querySelector('.single-result__price .big');
+        const subscriptionRow = document.querySelector('.single-form__card-content .single-form__row:nth-child(1) span:last-child');
+        const connectionRow = document.querySelector('.single-form__card-content .single-form__row:nth-child(3) span:last-child');
+        const esimBtn = document.querySelector('.single-result__price-type .single-result__price-button:nth-child(1)');
+        const plasticBtn = document.querySelector('.single-result__price-type .single-result__price-button:nth-child(2)');
 
-    operatorsBlocks.forEach(block => {
-        const operators = block.querySelectorAll('.operator');
+        const tabData = {
+            'Билайн': {
+                operators: ['Мегафон', 'МТС'],
+                showEsim: true,
+                tariffs: [
+                    { title: '300 мин, 50 смс, 30 гб', price: 590, traffic: '15 Гб' },
+                    { title: '500 мин, 100 смс, 50 гб', price: 750, traffic: '25 Гб' },
+                    { title: '1000 мин, 100 смс, 100 гб', price: 1000, traffic: '50 Гб' }
+                ]
+            },
+            'Мегафон': {
+                operators: ['Билайн', 'МТС'],
+                showEsim: false,
+                tariffs: [
+                    { title: '1000 мин, 300 смс, 60 гб', price: 850, traffic: '30 Гб' },
+                    { title: '1500 мин, 300 смс, 80 гб', price: 1000, traffic: '40 Гб' },
+                    { title: '2000 мин, 100 смс, 100 гб', price: 1150, traffic: '50 Гб' },
+                    { title: '3000 мин, 300 смс, 100 гб', price: 1300, traffic: '50 Гб' }
+                ]
+            },
+            'Мтс': {
+                operators: ['Мегафон', 'Билайн'],
+                showEsim: true,
+                tariffs: [
+                    { title: '500 мин, 100 смс, 20 гб', price: 600, traffic: '15 Гб' },
+                    { title: '1000 мин, 500 смс, 30 гб', price: 800, traffic: '15 Гб' },
+                    { title: '2000 мин, 1000 смс, 50 гб', price: 1000, traffic: '25 Гб' },
+                    { title: '3500 мин, 1000 смс, 50 гб', price: 1400, traffic: '25 Гб' }
+                ]
+            }
+        };
 
-        operators.forEach(operator => {
-            operator.addEventListener('click', function() {
-                operators.forEach(op => op.classList.remove('is-active'));
-                this.classList.add('is-active');
+        function updatePriceDisplay(price) {
+            if (priceCardPrice) priceCardPrice.textContent = price + ' ₽';
+            if (totalPriceBig) totalPriceBig.textContent = price + '₽';
+            if (subscriptionRow) subscriptionRow.textContent = (price - 100) + ' ₽';
+            if (connectionRow) connectionRow.textContent = '100 ₽';
+        }
+
+        function renderTab(tabName) {
+            const data = tabData[tabName];
+            if (!data || !cardsContainer) return;
+
+            planTabs.forEach(tab => {
+                if (tab.textContent.trim() === tabName) {
+                    tab.classList.add('is-active');
+                } else {
+                    tab.classList.remove('is-active');
+                }
+            });
+
+            cardsContainer.innerHTML = '';
+            data.tariffs.forEach((tariff, index) => {
+                const card = document.createElement('div');
+                card.className = 'single-form__select-card tarif';
+                
+                const operatorsHtml = data.operators.map((op, opIndex) => 
+                    `<div class="operator${opIndex === 0 ? ' is-active' : ''}">${op}</div>`
+                ).join('');
+
+                card.innerHTML = `
+                    <div>
+                        <div class="single-form__card-tarif">
+                            <span class="title">${tariff.title}</span>
+                        </div>
+                        <div class="single-form__card-tarif">
+                            <span>Дополнительный номер на базе </span>
+                            <div class="operators">
+                                ${operatorsHtml}
+                            </div>
+                        </div>
+                        <div class="single-form__card-tarif">
+                            <span>Объем интернет-трафика <br>на резервном номере </span>
+                            <p>${tariff.traffic}</p>
+                        </div>
+                    </div>
+                    <label class="single-form__radio">
+                        <input type="radio" name="tarif" ${index === 0 ? 'checked' : ''}>
+                        <span></span>
+                    </label>
+                `;
+                cardsContainer.appendChild(card);
+            });
+
+            updatePriceDisplay(data.tariffs[0].price);
+
+            if (data.showEsim) {
+                if (esimBtn) {
+                    esimBtn.style.display = '';
+                    esimBtn.classList.add('is-active');
+                }
+                if (plasticBtn) plasticBtn.classList.remove('is-active');
+            } else {
+                if (esimBtn) {
+                    esimBtn.style.display = 'none';
+                    esimBtn.classList.remove('is-active');
+                }
+                if (plasticBtn) plasticBtn.classList.add('is-active');
+            }
+
+            const radios = cardsContainer.querySelectorAll('input[name="tarif"]');
+            radios.forEach((radio, idx) => {
+                radio.addEventListener('change', function() {
+                    if (this.checked) {
+                        updatePriceDisplay(data.tariffs[idx].price);
+                    }
+                });
+            });
+
+            const operatorsBlocks = cardsContainer.querySelectorAll('.operators');
+            operatorsBlocks.forEach(block => {
+                const operators = block.querySelectorAll('.operator');
+                operators.forEach(operator => {
+                    operator.addEventListener('click', function() {
+                        operators.forEach(op => op.classList.remove('is-active'));
+                        this.classList.add('is-active');
+                    });
+                });
+            });
+        }
+
+        planTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabName = this.textContent.trim();
+                renderTab(tabName);
             });
         });
+
+        const activeTab = document.querySelector('.single-form__plan-tab.is-active');
+        if (activeTab) {
+            renderTab(activeTab.textContent.trim());
+        }
     });
 </script>
 </body>
