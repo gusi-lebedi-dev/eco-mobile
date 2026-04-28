@@ -2870,7 +2870,11 @@ h3 {
     height: 415px;
     padding: 22px;
     background: url(assets/images/pricing-plans/pricing-plans.svg) no-repeat center;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.beautiful-number__form-container .pricing-plans__item.is-active {
+    background: url(assets/images/pricing-plans/pricing-plans-hover.svg) no-repeat center;;
 }
 
 .services .pricing-plans__item {
@@ -2927,7 +2931,19 @@ h3 {
     transition: background 1s linear;
 }
 
+.beautiful-number__form-container .pricing-plans__item .pricing-plans__button {
+    background: #2C3E50;
+    border: 2px solid #2C3E50;
+    color: white;
+    transition: all 0.5s ease;
+}
+
 .pricing-plans__button:hover {
+    background: transparent;
+}
+
+.beautiful-number__form-container .pricing-plans__item.is-active .pricing-plans__button {
+    color: #2C3E50;
     background: transparent;
 }
 
@@ -4075,7 +4091,7 @@ h3 {
 }
 
 .services-item__modal-container .custom-checkbox input:checked + .checkmark::after,
-.sim-recovery__form .custom-checkbox ,
+.sim-recovery__form .custom-checkbox,
 .single-result__price-next .custom-checkbox input:checked + .checkmark::after {
     content: "";
     position: absolute;
@@ -4086,6 +4102,7 @@ h3 {
     background: #D9D9D9;
     border-radius: 50%;
 }
+
 .services-item__modal-container .custom-checkbox input:checked + .checkmark::after,
 .sim-recovery__form .custom-checkbox input:checked + .checkmark::after {
     background: rgba(44, 62, 80, 1);
@@ -7117,6 +7134,9 @@ h3 {
 .beautiful-number__advantages {
     display: flex;
     gap: 24px;
+    align-items: center;
+    height: 100%;
+    min-height: 78px;
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -7139,15 +7159,32 @@ h3 {
     font-size: 18px;
     line-height: 100%;
     color: #2C3E50;
+    transition: all 0.3s ease;
+    width: 100%;
 
     @media screen and (max-width: 768px) {
         flex-basis: auto;
     }
 }
 
-.beautiful-number__advantages-item img {
+.beautiful-number__advantages-item:hover {
+    height: 78px;
+    flex-basis: 35%;
+
+    @media screen and (max-width: 768px) {
+        flex-basis: auto;
+        height: 68px;
+    }
+}
+
+.beautiful-number__advantages-item svg {
+    transition: all 0.3s ease;
     width: 30px;
     height: 30px;
+}
+
+.beautiful-number__advantages-item:hover svg path {
+    stroke: #E1FA3F;
 }
 
 .beautiful-number__form {
@@ -7164,6 +7201,9 @@ h3 {
         margin-bottom: 50px;
         padding: 57px 50px 34px;
         gap: 40px;
+        min-height: 690px;
+        height: 100%;
+        justify-content: space-between;
     }
 
     @media screen and (max-width: 768px) {
@@ -7207,11 +7247,13 @@ h3 {
 
     @media screen and (max-width: 1076px) {
         justify-content: start;
+        height: 100%;
     }
-
-
 }
 
+.beautiful-number__form.final .beautiful-number__form-container {
+    height: max-content;
+}
 
 @media screen and (max-width: 768px) {
     .beautiful-number__form-container.form-tarif {
@@ -7222,19 +7264,23 @@ h3 {
 .beautiful-number__form-tarif {
     display: flex;
     gap: 24px;
-
-    @media screen and (max-width: 768px) {
-        flex-direction: column;
-    }
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+.beautiful-number__form-tarif::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
 }
 
 .beautiful-number__form-filters {
     display: flex;
     gap: 8px;
-
-    @media screen and (max-width: 768px) {
-        flex-wrap: wrap;
-    }
+    max-width: 490px;
+    flex-wrap: wrap;
 }
 
 .beautiful-number__form-filter {
@@ -7267,11 +7313,11 @@ h3 {
     background: #2C3E50;
     color: #F0EFEE;
 
-    @media screen and (max-width: 1076px) {
-        background: rgba(222, 228, 238, 1);
-        color: rgba(44, 62, 80, 1);
-        border-color: rgba(222, 228, 238, 1);
-    }
+    /*@media screen and (max-width: 1076px) {*/
+    /*    background: rgba(222, 228, 238, 1);*/
+    /*    color: rgba(44, 62, 80, 1);*/
+    /*    border-color: rgba(222, 228, 238, 1);*/
+    /*}*/
 }
 
 .beautiful-number__form-blocks {
@@ -7481,7 +7527,6 @@ h3 {
 
 @media screen and (max-width: 768px) {
     .beautiful-number .pricing-plans__item {
-        flex: 0 0 410px;
         scroll-snap-align: start;
     }
 }
@@ -7621,7 +7666,28 @@ h3 {
 }
 
 .beautiful-number__form .custom-checkbox {
+    position: relative;
     margin-top: 16px;
+    width: 100%;
+    height: max-content;
+    background: transparent;
+}
+
+.beautiful-number__form .custom-checkbox .label-text {
+    font-size: 12px;
+    color: #2C3E50;
+}
+
+.beautiful-number__form .custom-checkbox input:checked + .checkmark::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #2C3E50;
+    border-radius: 50%;
 }
 
 .beautiful-number__form-fields {
@@ -7692,6 +7758,7 @@ h3 {
 
 .beautiful-number__form {
     position: relative;
+    overflow: hidden;
 }
 
 .beautiful-number__form-close {
@@ -7939,8 +8006,8 @@ h3 {
     max-width: 398px;
     min-height: 394px;
 
-    @media screen and (max-width:1300px) {
-          min-height: 277px;
+    @media screen and (max-width: 1300px) {
+        min-height: 277px;
     }
 }
 
@@ -9007,7 +9074,7 @@ h3 {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    
+
     @media screen and (max-width: 1076px) {
         top: -45%;
     }
@@ -9084,11 +9151,12 @@ h3 {
     top: 14px;
 }
 
-.pricing-plans__modal-form  .beautiful-number__form-label {
+.pricing-plans__modal-form .beautiful-number__form-label {
     color: #2C3E5080 !important;
     font-size: 14px;
 }
-.pricing-plans__modal-form  .beautiful-number__form-input {
+
+.pricing-plans__modal-form .beautiful-number__form-input {
     color: #2C3E50;
     font-size: 14px;
 }
@@ -9102,11 +9170,13 @@ h3 {
     background: #2C3E50;
     border-radius: 36px;
 }
+
 .pricing-plans__modal-final .single-result__price-next--button {
-    max-width: 100% ;
+    max-width: 100%;
     width: 100%;
     cursor: pointer;
 }
+
 .pricing-plans__modal-final--row {
     display: flex;
     justify-content: space-between;
@@ -9217,7 +9287,7 @@ h3 {
 .services-item--big-width {
     max-width: 800px;
 
-    @media screen and (max-width: 1076px){
+    @media screen and (max-width: 1076px) {
         max-width: 630px !important;
     }
 }

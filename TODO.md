@@ -1,17 +1,28 @@
-# Tab Switching Implementation for always-connection.html
+# TODO: beautiful-number.html JS Functionality
 
-## Plan Steps:
-- [x] 1. Create this TODO.md
-- [x] 2. Add comprehensive inline JS script to pricing-plans/always-connection.html
-- [x] 3. Update TODO.md after JS addition
-- [x] 4. Implementation complete — ready for manual browser test
-- [x] 5. Mark complete and finish task
+## Plan
 
-**Implementation Summary:**
-- **Билайн**: 3 cards (300/500/1000 mins), operators Мегафон+МТС, prices 590/750/1000₽, eSIM visible.
-- **Мегафон**: 4 cards (1000/1500/2000/3000 mins), operators Билайн+МТС, prices 850/1000/1150/1300₽, eSIM hidden, Plastic SIM auto-selected.
-- **МТС**: 4 cards (500/1000/2000/3500 mins), operators Мегафон+Билайн, prices 600/800/1000/1400₽, eSIM visible.
-- Prices update dynamically: total price, subscription fee (price-100₽), connection fee (100₽).
-- Operator toggles inside cards remain clickable.
-- Static cards are regenerated on load to match the active tab.
+### Step 1: Filter selection logic
+- Add click listeners to `.beautiful-number__form-filter` items.
+- Toggle `is-active` class on clicked filter.
+- Update `.text-free` span with selected filter text.
+- Store value in `selectedPrice` variable.
+
+### Step 2: Number selection logic
+- Add click listeners to `.beautiful-number__list-item` elements.
+- Toggle `is-active` class on clicked number.
+- Update `.beautiful-number__selected-number` span with selected number text.
+- Store value in `selectedNumber` variable.
+
+### Step 3: Direct number toggle logic
+- Listen for `change` on `.single-form__switch input` checkbox.
+- When checked: replace codes `(903)` and `(905)` with `(495)` in all `.beautiful-number__list-item` texts and in `.beautiful-number__selected-number`.
+- When unchecked: restore original codes from `data-original` attribute.
+- Store state in `isDirectNumber` variable.
+
+### Step 4: State variables
+- Maintain `selectedPrice`, `selectedNumber`, `isDirectNumber` at script level.
+
+### Files to edit
+- `beautiful-number.html` (inline script block).
 
