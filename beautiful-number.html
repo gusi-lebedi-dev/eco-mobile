@@ -1173,6 +1173,15 @@
                     </div>
                 </div>
             </div>
+            <div class="beautiful-number__form final-notification sim-recovery__form" data-step="final-notification">
+                <h2>
+                    Заявка принята!
+                </h2>
+                <p>
+                    Менеджер свяжется с вами в ближайшее время.
+                    Если заявка была отправлена в выходной, то мы обязательно ответим в будний день.
+                </p>
+            </div>
 
             <div class="quick-faq">
                 <h2 class="quick-faq__title">Частые вопросы</h2>
@@ -1482,6 +1491,132 @@
 
                 });
             });
+
+            // Обработчик для кнопок submit на финальных формах
+            document.querySelectorAll('[data-step^="final-"] button[type="submit"]').forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    showStep("final-notification");
+                });
+            });
+                  prevBtns.forEach(btn => {
+                btn.addEventListener("click", function () {
+
+                    if (currentStep === "2") return showStep("1");
+                    if (currentStep === "3") return showStep("2");
+
+                    if (currentStep === "4-physical") return showStep("3");
+
+                    if (currentStep === "final-esim") return showStep("3");
+
+                    if (currentStep.startsWith("final-")) {
+                        if (simType === "physical") {
+                            return showStep("4-physical");
+                        }
+                    }
+
+                });
+            });
+
+        });
+    </script>
+    <script src="assets/js/dealers/script.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/news.js"></script>
+    <script src="assets/js/articles.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // State variables
+            let selectedPrice = 'Бесплатно';
+            let selectedNumber = '+7 (903) 597-74-56';
+            let isDirectNumber = false;
+
+            const filters = document.querySelectorAll('.beautiful-number__form-filter');
+            const numberItems = document.querySelectorAll('.beautiful-number__list-item');
+            const selectedNumberSpan = document.querySelector('.beautiful-number__selected-number');
+            const priceSpan = document.querySelector('.text-free');
+            const directNumberToggle = document.querySelector('.single-form__switch input');
+
+            // Extract base numbers (without trailing " 1", " 11" etc.)
+            const baseNumbers = [];
+            numberItems.forEach((item, idx) => {
+                let text = item.textContent.trim();
+                // Remove trailing space+digits (1, 11, 111, etc.)
+                const match = text.match(/^(.*?)\s*$/);
+                // Find trailing ones pattern
+                const trailingMatch = text.match(/^(.*?)\s+(1+)$/);
+                if (trailingMatch) {
+                    baseNumbers.push(trailingMatch[1].trim());
+                } else {
+                    baseNumbers.push(text);
+                }
+            });
+
+            function getSuffix(level) {
+                if (level <= 0) return '';
+                return ' ' + '1'.repeat(level);
+            }
+
+            function updateNumbers(filterIndex) {
+                numberItems.forEach((item, idx) => {
+                    const level = idx + filterIndex; // item 0 + filter 0 = 0 (no suffix)
+                    let text = baseNumbers[idx];
+                    if (isDirectNumber) {
+                        text = text.replace(/\(903\)/g, '(495)').replace(/\(905\)/g, '(495)');
+                    }
+                    text += getSuffix(level);
+                    item.textContent = text;
+                });
+
+                const activeItem = document.querySelector('.beautiful-number__list-item.is-active');
+                if (activeItem) {
+                    selectedNumber = activeItem.textContent.trim();
+                    if (selectedNumberSpan) {
+                        selectedNumberSpan.textContent = selectedNumber;
+                    }
+                }
+            }
+
+            // Initialize for default active filter (index 0)
+            updateNumbers(0);
+
+            // Filter selection
+            filters.forEach((filter, index) => {
+                filter.addEventListener('click', function () {
+                    filters.forEach(f => f.classList.remove('is-active'));
+                    this.classList.add('is-active');
+                    selectedPrice = this.textContent.trim();
+                    if (priceSpan) {
+                        priceSpan.textContent = selectedPrice;
+                    }
+                    updateNumbers(index);
+                });
+            });
+
+            // Number selection
+            numberItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    numberItems.forEach(n => n.classList.remove('is-active'));
+                    this.classList.add('is-active');
+                    selectedNumber = this.textContent.trim();
+                    if (selectedNumberSpan) {
+                        selectedNumberSpan.textContent = selectedNumber;
+                    }
+                });
+            });
+
+            // Direct number toggle
+            if (directNumberToggle) {
+                directNumberToggle.addEventListener('change', function () {
+                    isDirectNumber = this.checked;
+                    const activeFilter = document.querySelector('.beautiful-number__form-filter.is-active');
+                    const filterIndex = activeFilter ? Array.from(filters).indexOf(activeFilter) : 0;
+                    updateNumbers(filterIndex);
+                });
+            }
+        });
+    </script>
 
             prevBtns.forEach(btn => {
                 btn.addEventListener("click", function () {

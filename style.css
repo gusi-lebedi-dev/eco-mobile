@@ -7212,6 +7212,43 @@ h3 {
     }
 }
 
+.beautiful-number__form.final-notification {
+    display: none;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    min-height: 690px;
+    z-index: 9999;
+    padding: 45px;
+}
+.beautiful-number__form.final-notification h2 {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 34px;
+    line-height: 46px;
+    text-align: center;
+    color: #2C3E50;
+}
+
+.beautiful-number__form.final-notification p {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #2C3E50;
+    max-width: 444px;
+}
+
+.beautiful-number__form.final-notification.is-active {
+    display: flex;
+}
+
 .beautiful-number__form-title {
     font-weight: 100;
     font-size: 18px;
@@ -7270,6 +7307,7 @@ h3 {
     -webkit-overflow-scrolling: touch;
     width: 100%;
 }
+
 .beautiful-number__form-tarif::-webkit-scrollbar {
     width: 0;
     height: 0;
